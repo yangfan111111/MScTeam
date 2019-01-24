@@ -1,0 +1,3598 @@
+The contents of the complete deck after it has been shuffled 
+cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+humanPlayer drawn cards[cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+, cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+, cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+, cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+, cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+, cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+, cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+, cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+]
+aiPlayer1 drawn cards[cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+, cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+, cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+, cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+, cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+, cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+, cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+, cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+]
+aiPlayer2 drawn cards[cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+, cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+, cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+, cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+, cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+, cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+, cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+, cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+]
+aiPlayer3 drawn cards[cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+, cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+, cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+, cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+, cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+, cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+, cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+, cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+]
+aiPlayer4 drawn cards[cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+, cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+, cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+, cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+, cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+, cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+, cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+, cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+]
+The topcard is6
+There are 8 cards in your deck
+The active player is 'AI 4'
+Current players Human
+Current players AI 1
+Current players AI 2
+Current players AI 3
+Current players AI 4
+this player should have this many cards 8
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 8
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 8
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 8
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 8
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isFirepower
+The topcard is10
+There are 7 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 7
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 7
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 7
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 12
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 7
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 1The topcard is33
+There are 11 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 11
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 6
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 6
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 11
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 6
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 2The topcard is35
+There are 10 cards in your deck
+Current players Human
+Current players AI 1
+Current players AI 2
+Current players AI 3
+Current players AI 4
+this player should have this many cards 10
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 5
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 5
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 15
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 5
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+There round was a draw and AI 1 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 3The topcard is11
+There are 9 cards in your deck
+Current players Human
+Current players AI 1
+Current players AI 2
+Current players AI 3
+Current players AI 4
+this player should have this many cards 9
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 4
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 4
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 14
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 4
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isFirepower
+
+The current Round : 4The topcard is32
+There are 8 cards in your deck
+Current players Human
+Current players AI 1
+Current players AI 2
+Current players AI 3
+Current players AI 4
+this player should have this many cards 8
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 3
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 3
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 23
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 3
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 5The topcard is5
+There are 7 cards in your deck
+Current players Human
+Current players AI 1
+Current players AI 2
+Current players AI 3
+Current players AI 4
+this player should have this many cards 7
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 2
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 7
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 22
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 2
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 6The topcard is3
+There are 6 cards in your deck
+Current players Human
+Current players AI 1
+Current players AI 2
+Current players AI 3
+Current players AI 4
+this player should have this many cards 6
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 1
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 11
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 21
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 1
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 7The topcard is10
+There are 10 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 10
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 10
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 20
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 8The topcard is28
+There are 9 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 9
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 9
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 19
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 9The topcard is4
+There are 8 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 8
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 8
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 24
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isFirepower
+
+The current Round : 10The topcard is34
+There are 7 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 7
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 10
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 23
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 11The topcard is1
+There are 9 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 9
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 9
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 22
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 12The topcard is3
+There are 11 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 11
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 8
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 21
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 13The topcard is2
+There are 13 cards in your deck
+ THE current player is:Human
+You have selected Size .
+this player should have this many cards 13
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 7
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 20
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isSize
+
+The current Round : 14The topcard is17
+There are 12 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 12
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 9
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 19
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 15The topcard is27
+There are 11 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 11
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 11
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 18
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 16The topcard is30
+There are 10 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 10
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 13
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 17
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 17The topcard is34
+There are 9 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 9
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 15
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 16
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+There round was a draw and AI 2 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 18The topcard is40
+There are 8 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 8
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 14
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 15
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 19The topcard is25
+There are 7 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 7
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 19
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 14
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isFirepower
+
+The current Round : 20The topcard is1
+There are 9 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 9
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 18
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 13
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 21The topcard is36
+There are 8 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 8
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 17
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 15
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 22The topcard is31
+There are 7 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 7
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 16
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 17
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 23The topcard is3
+There are 6 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 6
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 15
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 19
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 24The topcard is5
+There are 5 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 5
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 14
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 21
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 25The topcard is33
+There are 4 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 4
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 13
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 23
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 26The topcard is25
+There are 3 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 3
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 12
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 22
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 27The topcard is18
+There are 2 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 2
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 11
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 21
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 28The topcard is14
+There are 1 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 1
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 19
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 20
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 29The topcard is14
+There are 3 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 3
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 18
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 19
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 30The topcard is38
+There are 5 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 5
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 17
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 18
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 31The topcard is8
+There are 7 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 7
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 16
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 17
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 32The topcard is14
+There are 9 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 9
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 15
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 16
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 33The topcard is30
+There are 11 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 11
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 14
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 15
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 34The topcard is16
+There are 13 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 13
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 13
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 14
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 35The topcard is38
+There are 15 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 15
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 12
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 13
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 36The topcard is21
+There are 17 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 17
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 11
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 12
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 37The topcard is10
+There are 19 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 19
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 10
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 11
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isCargo
+
+The current Round : 38The topcard is8
+There are 18 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 18
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 12
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 10
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 39The topcard is20
+There are 20 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 20
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 11
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 9
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Hurricane'
+the activeCategory isFirepower
+
+The current Round : 40The topcard is32
+There are 22 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 22
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 10
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 8
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 41The topcard is14
+There are 21 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 21
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 9
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 7
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 42The topcard is40
+There are 20 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 20
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 8
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 12
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 2 - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isFirepower
+
+The current Round : 43The topcard is6
+There are 19 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 19
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 10
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 11
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+There round was a draw and AI 2 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 44The topcard is30
+There are 18 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 18
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 9
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 10
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 45The topcard is12
+There are 17 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 17
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 8
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 15
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isFirepower
+
+The current Round : 46The topcard is1
+There are 19 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 19
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 7
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 14
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 47The topcard is16
+There are 21 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 21
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 6
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 13
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 48The topcard is39
+There are 20 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 20
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 5
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 12
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isFirepower
+
+The current Round : 49The topcard is2
+There are 25 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 25
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 4
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 11
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 50The topcard is38
+There are 24 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 24
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 3
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 10
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 51The topcard is34
+There are 23 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 23
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 2
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 15
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 52The topcard is23
+There are 25 cards in your deck
+Current players Human
+Current players AI 2
+Current players AI 3
+this player should have this many cards 25
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 1
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 14
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 53The topcard is21
+There are 24 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 24
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 16
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 54The topcard is4
+There are 23 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 23
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 17
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 55The topcard is36
+There are 22 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 22
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 16
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 56The topcard is8
+There are 21 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 21
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 19
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 57The topcard is18
+There are 20 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 20
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 20
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hornet'
+the activeCategory isSpeed
+
+The current Round : 58The topcard is37
+There are 19 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 19
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 21
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hornet'
+the activeCategory isSpeed
+
+The current Round : 59The topcard is20
+There are 18 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 18
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 22
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 60The topcard is9
+There are 17 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 17
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 23
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 61The topcard is31
+There are 18 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 18
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 22
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Hawk'
+the activeCategory isFirepower
+
+The current Round : 62The topcard is12
+There are 19 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 19
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 21
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 63The topcard is27
+There are 18 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 18
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 22
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 64The topcard is5
+There are 19 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 19
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 21
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isFirepower
+
+The current Round : 65The topcard is1
+There are 18 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 18
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 22
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hurricane'
+the activeCategory isFirepower
+
+The current Round : 66The topcard is7
+There are 17 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 17
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 23
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 67The topcard is24
+There are 16 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 16
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 24
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 68The topcard is39
+There are 15 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 15
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 25
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 69The topcard is11
+There are 14 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 14
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 26
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 70The topcard is14
+There are 13 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 13
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 27
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 71The topcard is16
+There are 14 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 14
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 26
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 72The topcard is10
+There are 15 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 15
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 25
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 73The topcard is29
+There are 16 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 16
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 24
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 74The topcard is34
+There are 17 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 17
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 23
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 75The topcard is13
+There are 18 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 18
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 22
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 76The topcard is32
+There are 17 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 17
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 23
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 77The topcard is9
+There are 16 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 16
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 24
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hawk'
+the activeCategory isFirepower
+
+The current Round : 78The topcard is38
+There are 15 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 15
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 25
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 79The topcard is31
+There are 16 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 16
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 24
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Hawk'
+the activeCategory isFirepower
+
+The current Round : 80The topcard is40
+There are 17 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 17
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 23
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 81The topcard is27
+There are 16 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 16
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 22
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 82The topcard is2
+There are 19 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 19
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 21
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 83The topcard is14
+There are 18 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 18
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 20
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 84The topcard is15
+There are 21 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 21
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 19
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 85The topcard is16
+There are 20 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 20
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 20
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 86The topcard is36
+There are 19 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 19
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 19
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isFirepower
+
+The current Round : 87The topcard is10
+There are 22 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 22
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 18
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 88The topcard is25
+There are 23 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 23
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 17
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 89The topcard is29
+There are 24 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 24
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 16
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 90The topcard is4
+There are 25 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 25
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 15
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 91The topcard is34
+There are 26 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 26
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 14
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 92The topcard is30
+There are 27 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 27
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 13
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 93The topcard is38
+There are 26 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 26
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 14
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 94The topcard is6
+There are 25 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 25
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 13
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 95The topcard is31
+There are 24 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 24
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 12
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 96The topcard is37
+There are 23 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 23
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 17
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 97The topcard is27
+There are 22 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 22
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 18
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isFirepower
+
+The current Round : 98The topcard is20
+There are 21 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 21
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 19
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 99The topcard is40
+There are 20 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 20
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 20
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 100The topcard is19
+There are 19 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 19
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 19
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 101The topcard is14
+There are 18 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 18
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 22
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 102The topcard is12
+There are 17 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 17
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 23
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isFirepower
+
+The current Round : 103The topcard is2
+There are 18 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 18
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 22
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 104The topcard is17
+There are 17 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 17
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 21
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 105The topcard is36
+There are 20 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 20
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 20
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 106The topcard is26
+There are 21 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 21
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 19
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isFirepower
+
+The current Round : 107The topcard is16
+There are 22 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 22
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 18
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 108The topcard is5
+There are 23 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 23
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 17
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Hawk'
+the activeCategory isFirepower
+
+The current Round : 109The topcard is10
+There are 24 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 24
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 16
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 110The topcard is1
+There are 25 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 25
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 15
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 111The topcard is25
+There are 26 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 26
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 14
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 112The topcard is33
+There are 27 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 27
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 13
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 113The topcard is29
+There are 26 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 26
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 12
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 114The topcard is7
+There are 29 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 29
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 11
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 115The topcard is4
+There are 28 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 28
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 12
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 116The topcard is23
+There are 27 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 27
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 13
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isFirepower
+
+The current Round : 117The topcard is34
+There are 28 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 28
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 12
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 118The topcard is24
+There are 29 cards in your deck
+ THE current player is:Human
+You have selected Size .
+this player should have this many cards 29
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 11
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 119The topcard is12
+There are 30 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 30
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 10
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 120The topcard is18
+There are 31 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 31
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 9
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Hawk'
+the activeCategory isFirepower
+
+The current Round : 121The topcard is17
+There are 32 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 32
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 8
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 122The topcard is35
+There are 33 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 33
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 7
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 123The topcard is2
+There are 34 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 34
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 6
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 124The topcard is15
+There are 33 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 33
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 7
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 125The topcard is36
+There are 32 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 32
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 8
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isFirepower
+
+The current Round : 126The topcard is30
+There are 33 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 33
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 7
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 127The topcard is26
+There are 32 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 32
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 6
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 128The topcard is3
+There are 31 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 31
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 9
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 129The topcard is16
+There are 30 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 30
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 10
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 130The topcard is31
+There are 29 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 29
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 11
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 131The topcard is5
+There are 28 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 28
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 12
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 132The topcard is11
+There are 27 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 27
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 13
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 133The topcard is10
+There are 26 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 26
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 14
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isFirepower
+
+The current Round : 134The topcard is38
+There are 27 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 27
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 13
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 135The topcard is1
+There are 28 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 28
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 12
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 136The topcard is39
+There are 29 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 29
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 11
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isCargo
+
+The current Round : 137The topcard is25
+There are 28 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 28
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 12
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 138The topcard is6
+There are 27 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 27
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 13
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 139The topcard is29
+There are 26 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 26
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 14
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 140The topcard is37
+There are 25 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 25
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 13
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 141The topcard is33
+There are 24 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 24
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 16
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Hurricane'
+the activeCategory isFirepower
+
+The current Round : 142The topcard is28
+There are 25 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 25
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 15
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 143The topcard is23
+There are 24 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 24
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 16
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isFirepower
+
+The current Round : 144The topcard is13
+There are 25 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 25
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 15
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isRange
+
+The current Round : 145The topcard is34
+There are 26 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 26
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 14
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 146The topcard is20
+There are 27 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 27
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 13
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 147The topcard is24
+There are 26 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 26
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 14
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isFirepower
+
+The current Round : 148The topcard is8
+There are 25 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 25
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 15
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 149The topcard is12
+There are 24 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 24
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 14
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 150The topcard is19
+There are 23 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 23
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 13
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 151The topcard is18
+There are 22 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 22
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 18
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hornet'
+the activeCategory isSpeed
+
+The current Round : 152The topcard is22
+There are 21 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 21
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 19
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 153The topcard is17
+There are 22 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 22
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 18
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 154The topcard is40
+There are 23 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 23
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 17
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 155The topcard is35
+There are 22 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 22
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 16
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 156The topcard is32
+There are 25 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 25
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 15
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Hornet'
+the activeCategory isSpeed
+
+The current Round : 157The topcard is36
+There are 26 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 26
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 14
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 158The topcard is7
+There are 27 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 27
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 13
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 159The topcard is10
+There are 26 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 26
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 14
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isFirepower
+
+The current Round : 160The topcard is26
+There are 27 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 27
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 13
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isRange
+
+The current Round : 161The topcard is38
+There are 28 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 28
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 12
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 162The topcard is4
+There are 29 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 29
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 11
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 163The topcard is1
+There are 30 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 30
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 10
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 164The topcard is30
+There are 31 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 31
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 9
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 165The topcard is33
+There are 30 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 30
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 10
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 166The topcard is31
+There are 29 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 29
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 11
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 167The topcard is23
+There are 28 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 28
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 12
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 168The topcard is5
+There are 27 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 27
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 13
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 169The topcard is13
+There are 26 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 26
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 14
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isFirepower
+
+The current Round : 170The topcard is15
+There are 27 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 27
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 13
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 171The topcard is34
+There are 26 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 26
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 12
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 172The topcard is11
+There are 29 cards in your deck
+ THE current player is:Human
+You have selected Size .
+this player should have this many cards 29
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 11
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 173The topcard is22
+There are 30 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 30
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 10
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 174The topcard is27
+There are 31 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 31
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 9
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 175The topcard is17
+There are 32 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 32
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 8
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Constellation'
+the activeCategory isRange
+
+The current Round : 176The topcard is37
+There are 33 cards in your deck
+ THE current player is:Human
+You have selected Size .
+this player should have this many cards 33
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 7
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 177The topcard is35
+There are 34 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 34
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 6
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 178The topcard is29
+There are 35 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 35
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 5
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 179The topcard is40
+There are 36 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 36
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 4
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 180The topcard is2
+There are 37 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 37
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 3
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 181The topcard is32
+There are 36 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 36
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 4
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 182The topcard is16
+There are 35 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 35
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 3
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 183The topcard is36
+There are 34 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 34
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 6
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 184The topcard is28
+There are 33 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 33
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 7
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 185The topcard is10
+There are 32 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 32
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 8
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 186The topcard is20
+There are 31 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 31
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 9
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 187The topcard is26
+There are 30 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 30
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 10
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hornet'
+the activeCategory isSpeed
+
+The current Round : 188The topcard is9
+There are 29 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 29
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 11
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hawk'
+the activeCategory isFirepower
+
+The current Round : 189The topcard is38
+There are 28 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 28
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 12
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 190The topcard is24
+There are 27 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 27
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 13
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 191The topcard is4
+There are 26 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 26
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 14
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 192The topcard is39
+There are 25 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 25
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 13
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 193The topcard is1
+There are 24 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 24
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 16
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 194The topcard is19
+There are 23 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 23
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 17
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 195The topcard is13
+There are 22 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 22
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 18
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 196The topcard is18
+There are 21 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 21
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 17
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 197The topcard is34
+There are 20 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 20
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 20
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 198The topcard is7
+There are 21 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 21
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 19
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 199The topcard is15
+There are 20 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 20
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 18
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 200The topcard is6
+There are 19 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 19
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 21
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 201The topcard is11
+There are 18 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 18
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 20
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 202The topcard is14
+There are 17 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 17
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 23
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 203The topcard is22
+There are 16 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 16
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 24
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 204The topcard is30
+There are 15 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 15
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 25
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 205The topcard is27
+There are 14 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 14
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+this player should have this many cards 24
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isFirepower
+
+The current Round : 206The topcard is3
+There are 13 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 13
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 27
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 207The topcard is17
+There are 12 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 12
+top card cardID: 17, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+this player should have this many cards 28
+top card cardID: 4, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 208The topcard is33
+There are 11 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 11
+top card cardID: 33, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 27
+top card cardID: 28, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 209The topcard is37
+There are 10 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 10
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+this player should have this many cards 26
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 210The topcard is8
+There are 9 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 9
+top card cardID: 8, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 31
+top card cardID: 10, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 211The topcard is35
+There are 8 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 8
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 32
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 212The topcard is31
+There are 9 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 9
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 31
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+There round was a draw and Human stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 213The topcard is29
+There are 8 cards in your deck
+ THE current player is:Human
+You have selected Range .
+this player should have this many cards 8
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 30
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 214The topcard is21
+There are 11 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 11
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 29
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 215The topcard is40
+There are 12 cards in your deck
+ THE current player is:Human
+You have selected Speed .
+this player should have this many cards 12
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 28
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Avenger'
+the activeCategory isSpeed
+
+The current Round : 216The topcard is23
+There are 13 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 13
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 27
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 217The topcard is34
+There are 14 cards in your deck
+ THE current player is:Human
+You have selected Firepower .
+this player should have this many cards 14
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 26
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Idris'
+the activeCategory isFirepower
+
+The current Round : 218The topcard is26
+There are 15 cards in your deck
+ THE current player is:Human
+You have selected Cargo .
+this player should have this many cards 15
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 25
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'Vanguard'
+the activeCategory isCargo
+
+The current Round : 219The topcard is35
+There are 16 cards in your deck
+ THE current player is:Human
+You have selected Size .
+this player should have this many cards 16
+top card cardID: 35, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 24
+top card cardID: 7, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hurricane'
+the activeCategory isSize
+
+The current Round : 220The topcard is19
+There are 15 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 15
+top card cardID: 19, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+this player should have this many cards 25
+top card cardID: 32, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 221The topcard is29
+There are 14 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 14
+top card cardID: 29, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 24
+top card cardID: 11, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 222The topcard is18
+There are 13 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 13
+top card cardID: 18, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 27
+top card cardID: 38, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Sabre'
+the activeCategory isSpeed
+
+The current Round : 223The topcard is31
+There are 12 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 12
+top card cardID: 31, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+this player should have this many cards 28
+top card cardID: 6, card name: Hornet, Size: 2, Speed: 5, Range: 3, Firepower: 4, Cargo: 1
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Hornet'
+the activeCategory isSpeed
+
+The current Round : 224The topcard is16
+There are 11 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 11
+top card cardID: 16, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+this player should have this many cards 29
+top card cardID: 5, card name: Hawk, Size: 1, Speed: 3, Range: 2, Firepower: 4, Cargo: 0
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 225The topcard is21
+There are 10 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 10
+top card cardID: 21, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 28
+top card cardID: 14, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 226The topcard is25
+There are 9 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 9
+top card cardID: 25, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 31
+top card cardID: 36, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Merchantman'
+the activeCategory isCargo
+
+The current Round : 227The topcard is40
+There are 8 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 8
+top card cardID: 40, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 32
+top card cardID: 22, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 228The topcard is13
+There are 7 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 7
+top card cardID: 13, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 33
+top card cardID: 24, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 229The topcard is23
+There are 6 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 6
+top card cardID: 23, card name: Merchantman, Size: 7, Speed: 3, Range: 5, Firepower: 6, Cargo: 8
+
+this player should have this many cards 34
+top card cardID: 27, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+
+The current Round : 230The topcard is20
+There are 5 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 5
+top card cardID: 20, card name: Hurricane, Size: 2, Speed: 5, Range: 3, Firepower: 5, Cargo: 0
+
+this player should have this many cards 35
+top card cardID: 39, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 231The topcard is34
+There are 4 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 4
+top card cardID: 34, card name: Idris, Size: 8, Speed: 2, Range: 7, Firepower: 10, Cargo: 6
+
+this player should have this many cards 34
+top card cardID: 30, card name: Constellation, Size: 4, Speed: 5, Range: 7, Firepower: 3, Cargo: 4
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 232The topcard is15
+There are 3 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 3
+top card cardID: 15, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+this player should have this many cards 33
+top card cardID: 2, card name: Avenger, Size: 2, Speed: 5, Range: 4, Firepower: 3, Cargo: 2
+
+There round was a draw and AI 3 stays on. This sometimes appears after game ended, which is expected.
+
+The current Round : 233The topcard is26
+There are 2 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 2
+top card cardID: 26, card name: Vanguard, Size: 3, Speed: 4, Range: 5, Firepower: 5, Cargo: 2
+
+this player should have this many cards 32
+top card cardID: 3, card name: Carrack, Size: 6, Speed: 2, Range: 10, Firepower: 4, Cargo: 6
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Carrack'
+the activeCategory isRange
+
+The current Round : 234The topcard is9
+There are 1 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 1
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 39
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+Winning card belongs to: Human - Won this round ! 
+The winning card was'm50'
+the activeCategory isSpeed
+
+The current Round : 235The topcard is9
+There are 2 cards in your deck
+ THE current player is:Human
+You have selected Size .
+ THE current player is:Human
+You have selected Size .
+this player should have this many cards 2
+top card cardID: 9, card name: m50, Size: 1, Speed: 10, Range: 2, Firepower: 2, Cargo: 0
+
+this player should have this many cards 38
+top card cardID: 37, card name: Orion, Size: 10, Speed: 1, Range: 6, Firepower: 2, Cargo: 9
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'Orion'
+the activeCategory isSize
+
+The current Round : 236The topcard is12
+There are 1 cards in your deck
+Current players Human
+Current players AI 3
+this player should have this many cards 1
+top card cardID: 12, card name: Sabre, Size: 2, Speed: 7, Range: 2, Firepower: 5, Cargo: 0
+
+this player should have this many cards 39
+top card cardID: 1, card name: 350r, Size: 1, Speed: 9, Range: 2, Firepower: 3, Cargo: 0
+
+Winning card belongs to: AI 3 - Won this round ! 
+The winning card was'350r'
+the activeCategory isSpeed
+The winner is AI 3!
+The current Round : 237
