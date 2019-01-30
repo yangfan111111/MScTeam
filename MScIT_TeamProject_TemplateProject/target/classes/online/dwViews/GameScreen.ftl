@@ -1,8 +1,17 @@
 <!DOCTYPE html>
+
 <html>
 
 	<head>
 		<!-- Web page title -->
+		<style type="text/css">
+			#content{
+				border-style:inset;
+				border-color:yellow;
+				border-width:3px;
+			}
+			
+			</style>
     	<title>Top Trumps</title>
     	
     	<!-- Import JQuery, as it provides functions you will probably find useful (see https://jquery.com/) -->
@@ -21,24 +30,51 @@
 
 	</head>
 
-    <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
+    <body onload="initalize()" style="background-color:rgb(205,213,213,0.6)"> <!-- Call the initalize method when the page loads -->
+    
+    	
     	
     	<div class="container">
 
 			<!-- Add your HTML Here -->
-			<table style="width:100%; border:0; cellspacing:0; cellpadding:0">
-			<tr>
-			<td align="center"><h1 align="center">hello,world!!!GameScreen</h1></td>
+		<span id ="content" style = "position:absolute;top:10%;right:20%;display:block;background-color:white">
+			<table style="width:200px">
+			<tr align="center" style="background-color:green">
+			<td><input type="text" id="number" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></td>
+			</tr>
+			<tr align="center">
+			<td><input type="text" id="description" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+			</tr>
+			<tr align="center">
+			<td><img id="show" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100"></td>
 			</tr>
 			<tr>
-			<td align="center"><img id="show" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "300" height="400"></td>
+			<td align="center"><button type="button" onclick="changePicture()" style="width:60;height:40;font-size:12">Change</button></td>
 			</tr>
-			<tr>
-			<td align="center"><button type="button" onclick="changePicture()" style="width:60;height:40;font-size:12;">Picture</button></td>
+			<tr align="center">
+			<td><input type="text" id="cardID" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+			</tr>
+			<tr align="center">
+			<td><input type="text" id="speed" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+			</tr>
+			<tr align="center">
+			<td><input type="text" id="cargo" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+			</tr>
+			<tr align="center">
+			<td><input type="text" id="range" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+			</tr>
+			<tr align="center">
+			<td><input type="text" id="firepower" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+			</tr>
+			<tr align="center">
+			<td><input type="text" id="size" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
 			</tr>
 			</table>
+		</span>
+			
 		</div>
 		
+
 		<script type="text/javascript">
 		
 			// Method that is called on page load
@@ -47,40 +83,89 @@
 				// --------------------------------------------------------------------------
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
+				SQL();
 				
 				// For example, lets call our sample methods
 				//helloJSONList();
 				//helloWord("Student");
-				
 			}
 			
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
 			 var index = 0;
-			 var pictureArray = new Array(12);
-			     pictureArray[0] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg";
-				 pictureArray[1] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Orion.jpg";
-				 pictureArray[2] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/350r.jpg";
-			 	 pictureArray[3] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Avenger.jpg";
-			 	 pictureArray[4] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Carrack.jpg";
-			 	 pictureArray[5] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Constellation.jpg";
-			 	 pictureArray[6] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Hawk.jpg";
-			 	 pictureArray[7] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Hornet.jpg";
-			 	 pictureArray[8] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Hurricane.jpg";
-			 	 pictureArray[9] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Idris.jpg";
-			 	 pictureArray[10] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Merchantman.jpg";
-			 	 pictureArray[11] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/Vanguard.jpg";
-			 	 pictureArray[12] = "http://dcs.gla.ac.uk/~richardm/TopTrumps/m50.jpg";
+			 var cardlist = new Array(39);
+			 
+			function SQL(){
+				
+				var list = new Array(39);
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/OnlineSQL");
+				
+				if (!xhr) {
+  					alert("CORS not supported");
+				}
+				
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					//list = responseText;
+ 					//important!!!!!
+ 					var json = JSON.parse(responseText);
+ 				    //console.log(json);
+ 				    // default 
+ 				    number = document.getElementById('number');
+ 				    cardID = document.getElementById('cardID'); 
+ 				    speed = document.getElementById('speed');
+ 				    cargo = document.getElementById('cargo');
+ 				    range = document.getElementById('range');
+ 				    description = document.getElementById('description');
+ 				    firepower = document.getElementById('firepower');
+ 				    size = document.getElementById('size');
+ 				    // set value 
+ 				    number.value = "playName "+"cardNum";
+ 				    cardID.value = "CardID: "+json[0].cardID;
+ 				    speed.value = "Speed: "+json[0].speed;
+ 				    cargo.value = "Cargo: "+json[0].cargo;
+ 				    range.value = "Rango: "+json[0].range;
+ 				    description.value = "Description: "+json[0].description;
+ 				    firepower.value = "Firepower: "+json[0].firepower;
+ 				    size.value = "Size: "+json[0].size;
+ 				    
+ 				    cardlist = json;
+ 				    return cardlist;
+				};
+				
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();
+			}
 			 
 			function changePicture(){
 				
-			 index = (index+1)%13;
-			 picture = document.getElementById('show'); 
-			 picture.src = pictureArray[index];
-				
+			 	index = (index+1)%40;
+				 // get the element 
+				picture = document.getElementById('show'); 
+			 	cardID = document.getElementById('cardID'); 
+			 	speed = document.getElementById('speed');
+				cargo = document.getElementById('cargo');
+			 	range = document.getElementById('range');
+			 	description = document.getElementById('description');
+			 	firepower = document.getElementById('firepower');
+			 	size = document.getElementById('size');
+			 	number = document.getElementById('number');
+			 	// set the value for all 
+			 	picture.src = cardlist[index].cardPicture;
+			 	cardID.value = "CardID: "+cardlist[index].cardID;
+			 	speed.value = "Speed: "+cardlist[index].speed;
+			    cargo.value = "Cargo: "+cardlist[index].cargo;
+			    range.value = "Rango: "+cardlist[index].range;
+			    description.value = "Description: "+cardlist[index].description;
+			    firepower.value = "Firepower: "+cardlist[index].firepower;
+			    size.value = "Size: "+cardlist[index].size;
+			    number.value = "playName "+"cardNum";
+			 
 			}
 			
+			// -----------------------------------------------------------------------
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
   				var xhr = new XMLHttpRequest();
@@ -107,6 +192,12 @@
 			}
 		
 		</script>
+		
+		<script type="text/javascript">
+		
+		</script>
+		
+		
 		
 		<!-- Here are examples of how to call REST API Methods -->
 		<script type="text/javascript">

@@ -16,6 +16,10 @@ import online.configuration.TopTrumpsJSONConfiguration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 
+import commandline.CardModel;
+import commandline.SQL;
+
+
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
 @Produces(MediaType.APPLICATION_JSON) // This resource returns JSON content
 @Consumes(MediaType.APPLICATION_JSON) // This resource can take JSON content as input
@@ -50,6 +54,19 @@ public class TopTrumpsRESTAPI {
 	// ----------------------------------------------------
 	// Add relevant API methods here
 	// ----------------------------------------------------
+	@GET
+	@Path("/OnlineSQL")
+	public ArrayList<CardModel> onlineSQL() {
+		
+		ArrayList<CardModel> cardList;
+
+		SQL sql = new SQL();
+		
+		cardList = sql.cardList;
+		
+		return cardList;
+	
+	}
 	
 	@GET
 	@Path("/helloJSONList")
@@ -83,5 +100,7 @@ public class TopTrumpsRESTAPI {
 	public String helloWord(@QueryParam("Word") String Word) throws IOException {
 		return "Hello "+Word;
 	}
+	
+	
 	
 }

@@ -48,7 +48,8 @@ public class SQL {
 					int range = result.getInt("Range");
 					int firepower = result.getInt("FirePower");
 					int cargo = result.getInt("Cargo");
-					CardModel card = new CardModel(cardID, description, size, speed, range, firepower, cargo,"");
+					String pictureURL = result.getString("pictureURL");
+					CardModel card = new CardModel(cardID, description, size, speed, range, firepower, cargo, pictureURL);
 					cardList.add(card);
 				}
 				result.close();
@@ -56,7 +57,6 @@ public class SQL {
 				connection.close();
 			} catch (Exception e) {
 				System.err.println(e.fillInStackTrace());
-				;
 				System.exit(0);
 			}
 		}
