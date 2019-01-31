@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-
 <html>
 
 	<head>
 		<!-- Web page title -->
-		<style type="text/css">
-			#content{
-				border-style:inset;
-				border-color:yellow;
-				border-width:3px;
-			}
-			
-			</style>
     	<title>Top Trumps</title>
     	
     	<!-- Import JQuery, as it provides functions you will probably find useful (see https://jquery.com/) -->
@@ -20,61 +10,47 @@
     	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/flick/jquery-ui.css">
 
 		<!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
-		<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">
+	<#--<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
     	<script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
     	<script>vex.defaultOptions.className = 'vex-theme-os';</script>
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css"/>
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"/>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<#--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+
+        <style>
+            html body {
+                background: #e5e5e5;
+            }
+            .head{
+				margin-top: 5px;
+                height: 100px;
+                background-color: #999;
+                color: #fff;
+                font-size:50px;
+                border: 1px solid #ebeee7;
+                box-shadow: 0 0 #333;
+                padding: 15px;
+            }
+		</style>
 
 	</head>
 
-    <body onload="initalize()" style="background-color:rgb(205,213,213,0.6)"> <!-- Call the initalize method when the page loads -->
-    
-    	
+    <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
 
 			<!-- Add your HTML Here -->
-		<span id ="content" style = "position:absolute;top:10%;right:20%;display:block;background-color:white">
-			<table style="width:200px">
-			<tr align="center" style="background-color:green">
-			<td><input type="text" id="number" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="description" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><img id="show" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100"></td>
-			</tr>
-			<tr>
-			<td align="center"><button type="button" onclick="changePicture()" style="width:60;height:40;font-size:12">Change</button></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="cardID" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="speed" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="cargo" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="range" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="firepower" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="size" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			</table>
-		</span>
-			
+            <div>
+                <h1 class="head">Top Trumps Game</h1>
+            </div>
+
+		
 		</div>
 		
-
 		<script type="text/javascript">
 		
 			// Method that is called on page load
@@ -83,89 +59,17 @@
 				// --------------------------------------------------------------------------
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
-				SQL();
 				
 				// For example, lets call our sample methods
 				//helloJSONList();
 				//helloWord("Student");
+				
 			}
 			
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
-			 var index = 0;
-			 var cardlist = new Array(39);
-			 
-			function SQL(){
-				
-				var list = new Array(39);
-				
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/OnlineSQL");
-				
-				if (!xhr) {
-  					alert("CORS not supported");
-				}
-				
-				xhr.onload = function(e) {
- 					var responseText = xhr.response; // the text of the response
- 					//list = responseText;
- 					//important!!!!!
- 					var json = JSON.parse(responseText);
- 				    //console.log(json);
- 				    // default 
- 				    number = document.getElementById('number');
- 				    cardID = document.getElementById('cardID'); 
- 				    speed = document.getElementById('speed');
- 				    cargo = document.getElementById('cargo');
- 				    range = document.getElementById('range');
- 				    description = document.getElementById('description');
- 				    firepower = document.getElementById('firepower');
- 				    size = document.getElementById('size');
- 				    // set value 
- 				    number.value = "playName "+"cardNum";
- 				    cardID.value = "CardID: "+json[0].cardID;
- 				    speed.value = "Speed: "+json[0].speed;
- 				    cargo.value = "Cargo: "+json[0].cargo;
- 				    range.value = "Rango: "+json[0].range;
- 				    description.value = "Description: "+json[0].description;
- 				    firepower.value = "Firepower: "+json[0].firepower;
- 				    size.value = "Size: "+json[0].size;
- 				    
- 				    cardlist = json;
- 				    return cardlist;
-				};
-				
-				// We have done everything we need to prepare the CORS request, so send it
-				xhr.send();
-			}
-			 
-			function changePicture(){
-				
-			 	index = (index+1)%40;
-				 // get the element 
-				picture = document.getElementById('show'); 
-			 	cardID = document.getElementById('cardID'); 
-			 	speed = document.getElementById('speed');
-				cargo = document.getElementById('cargo');
-			 	range = document.getElementById('range');
-			 	description = document.getElementById('description');
-			 	firepower = document.getElementById('firepower');
-			 	size = document.getElementById('size');
-			 	number = document.getElementById('number');
-			 	// set the value for all 
-			 	picture.src = cardlist[index].cardPicture;
-			 	cardID.value = "CardID: "+cardlist[index].cardID;
-			 	speed.value = "Speed: "+cardlist[index].speed;
-			    cargo.value = "Cargo: "+cardlist[index].cargo;
-			    range.value = "Rango: "+cardlist[index].range;
-			    description.value = "Description: "+cardlist[index].description;
-			    firepower.value = "Firepower: "+cardlist[index].firepower;
-			    size.value = "Size: "+cardlist[index].size;
-			    number.value = "playName "+"cardNum";
-			 
-			}
-			
-			// -----------------------------------------------------------------------
+		
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
   				var xhr = new XMLHttpRequest();
@@ -192,12 +96,6 @@
 			}
 		
 		</script>
-		
-		<script type="text/javascript">
-		
-		</script>
-		
-		
 		
 		<!-- Here are examples of how to call REST API Methods -->
 		<script type="text/javascript">
