@@ -43,16 +43,15 @@
 			}
 			.cardBox{
 				margin:15px;
-				float: right;
+				float: left;
 			}
-			.left{
+			.leftPanel{
 				margin:15px;
 				float: left;
-                width:200px;
+                width:300px;
 			}
-			.right{
-                margin-left;
-				margin-left:100px;
+			.rightPanel{
+                overflow:hidden;
 			}
 
 			.imageStyle{
@@ -65,28 +64,31 @@
 	</head>
 
     <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
-    	
-    	<div class="container">
 
-			<!-- Add your HTML Here -->
-            <div>
-                <h1 class="head">Top Trumps Game</h1>
-				<h5 class="head2 bg-info text-white">game progress</h5>
-			</div>
+    <div class="container">
 
-			<div class="left">
-            <div class="selectBox">
+        <!-- Add your HTML Here -->
+        <div>
+            <h1 class="head">Top Trumps Game</h1>
+            <h5 class="head2 bg-info text-white">game progress</h5>
+        </div>
+
+        <div class="leftPanel">
+            <div class="cardBox">
                 <div class="card">
                     <h3 class="card-header">Who is the active player</h3>
                     <div class="card-body">
-                        If the active player is AI, show the attribute he chose.
+                        show the attribute which is the active player's choice.
                     </div>
 
                     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                        <button id="selectButton" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <strong>NEXT:</strong>CATEGORY SELECTION
+                        <button id="selectButton" type="button" class="btn btn-info dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <strong>NEXT: </strong>CATEGORY SELECTION
                         </button>
-                        <div id="selectMenu" class="dropdown-menu" aria-labelledby="selectButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width:100%;">
+                        <div id="selectMenu" class="dropdown-menu" aria-labelledby="selectButton"
+                             x-placement="bottom-start"
+                             style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width:100%;">
                             <a id="size" class="dropdown-item" href="#">SIZE</a>
                             <a id="speed" class="dropdown-item" href="#">SPEED</a>
                             <a id="range" class="dropdown-item" href="#">RANGE</a>
@@ -96,21 +98,23 @@
                     </div>
 
                     <div>
-                        <button id="showWinner" class="btn btn-info btn-block" type="button" >SHOW WINNER</button>
+                        <button id="showWinner" class="btn btn-info btn-block" type="button">SHOW WINNER</button>
                     </div>
 
                 </div>
             </div>
-			</div>
+        </div>
 
-			<div class="right">
-            <div class="cardBox">
+        <div class="rightPanel">
+            <div id="card1" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header">Card5 Header</h3>
+                    <h3 class="card-header">Card1 Header</h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title">Card1 Title</h5>
                     </div>
-                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <img class="imageStyle"
+                         src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                         alt="Card image">
                     <div class="card-body">
                         show attributes1</br>
                         show attributes2</br>
@@ -121,13 +125,15 @@
                 </div>
             </div>
 
-            <div class="cardBox">
+            <div id="card2" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header">Card4 Header</h3>
+                    <h3 class="card-header">Card2 Header</h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title">Card2 Title</h5>
                     </div>
-                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <img class="imageStyle"
+                         src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                         alt="Card image">
                     <div class="card-body">
                         show attributes1</br>
                         show attributes2</br>
@@ -138,13 +144,15 @@
                 </div>
             </div>
 
-            <div class="cardBox">
+            <div id="card3" class="cardBox">
                 <div class="card">
                     <h3 class="card-header">Card3 Header</h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title">Card3 Title</h5>
                     </div>
-                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <img class="imageStyle"
+                         src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                         alt="Card image">
                     <div class="card-body">
                         show attributes1</br>
                         show attributes2</br>
@@ -155,13 +163,15 @@
                 </div>
             </div>
 
-            <div class="cardBox">
+            <div id="card4" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header">Card2 Header</h3>
+                    <h3 class="card-header">Card4 Header</h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title">Card4 Title</h5>
                     </div>
-                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <img class="imageStyle"
+                         src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                         alt="Card image">
                     <div class="card-body">
                         show attributes1</br>
                         show attributes2</br>
@@ -172,13 +182,15 @@
                 </div>
             </div>
 
-            <div class="cardBox">
+            <div id="card5" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header">Card1 Header</h3>
+                    <h3 class="card-header">Card5 Header</h3>
                     <div class="card-body" style="height: 40px">
-                        <h5 class="card-title" >Card5 Title</h5>
+                        <h5 class="card-title">Card5 Title</h5>
                     </div>
-                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <img class="imageStyle"
+                         src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                         alt="Card image">
                     <div class="card-body">
                         show attributes1</br>
                         show attributes2</br>
@@ -188,10 +200,8 @@
                     </div>
                 </div>
             </div>
-
-		</div>
-
-	</div>
+        </div>
+    </div>
 		
 		<script type="text/javascript">
 		
@@ -206,14 +216,48 @@
 				//helloJSONList();
 				//helloWord("Student");
 
-                var change_button = document.getElementById("showWinner");
-                change_button.style.display = "none";
-				
+                hideWinnerButton();
+                //hideSelectButton();
+
+//                for(var i=1;i++;i<5){
+//                    hideCard(i);
+//				}
 			}
 			
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
+
+			function hideCard(cardID) {
+                var card = document.getElementById("card"+cardID);
+                card.style.display = "none";
+            }
+
+            function showCard(cardID) {
+				var card = document.getElementById("card"+cardID);
+				card.style.display= "block" ;
+            }
+
+            function hideWinnerButton(){
+                var button = document.getElementById("showWinner");
+                button.style.display = "none";
+			}
+
+			function showWinnerButton() {
+                var button = document.getElementById("showWinner");
+                button.style.display = "block";
+            }
+
+            function hideSelectButton(){
+                var button = document.getElementById("selectButton");
+                button.style.display = "none";
+			}
+
+            function showSelectButton(){
+                var button = document.getElementById("selectButton");
+                button.style.display = "block";
+			}
+
 
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
