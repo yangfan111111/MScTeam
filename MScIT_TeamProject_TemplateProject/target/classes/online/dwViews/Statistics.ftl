@@ -10,22 +10,69 @@
     	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/flick/jquery-ui.css">
 
 		<!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
-		<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">
+		<#--<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
     	<script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
     	<script>vex.defaultOptions.className = 'vex-theme-os';</script>
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css"/>
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"/>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<#--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
 
+        <style>
+            html body {
+                background: #e5e5e5;
+            }
+            .head{
+                margin-top: 5px;
+                height: 100px;
+                background-color: #999;
+                color: #fff;
+                font-size:50px;
+                border: 1px solid #ebeee7;
+                box-shadow: 0 0 #333;
+                padding: 15px;
+            }
+            .panel-heading{
+                height: 50px;
+                font-size: 30px;
+                text-align: center;
+            }
+            .panel-body{
+                height: 450px;
+                font-size:25px;
+                display: flex;
+                align-items:center;
+                justify-content:center;
+            }
+
+        </style>
 	</head>
 
     <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
+
     	
     	<div class="container">
-	
-			hello,world.Statics
+
 			<!-- Add your HTML Here -->
+            <div>
+                <h1 class="head">Top Trumps Game</h1>
+            </div>
+
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Game Statistics</div>
+				<div class="panel-body statistics">
+					here are statistics
+				</div>
+			</div>
+
+			<div style="text-align: right">
+            <button type="button" class="btn btn-primary btn-lg backButton">Back To Home</button>
+            </div>
+            <#--<a href="http://localhost:7777/toptrumps">Back</a></br>-->
 		
 		</div>
 		
@@ -33,14 +80,18 @@
 		
 			// Method that is called on page load
 			function initalize() {
+
+                $(".backButton").click(function(){
+                    window.location.href="http://localhost:7777/toptrumps"
+                });
 			
 				// --------------------------------------------------------------------------
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
 				
 				// For example, lets call our sample methods
-				helloJSONList();
-				helloWord("Student");
+				//helloJSONList();
+				//helloWord("Student");
 				
 			}
 			

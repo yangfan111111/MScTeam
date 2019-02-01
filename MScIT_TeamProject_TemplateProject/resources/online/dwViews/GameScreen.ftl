@@ -26,7 +26,6 @@
                 background: #e5e5e5;
             }
             .head{
-				margin-top: 5px;
                 height: 100px;
                 background-color: #999;
                 color: #fff;
@@ -34,7 +33,33 @@
                 border: 1px solid #ebeee7;
                 box-shadow: 0 0 #333;
                 padding: 15px;
+				margin: 0px;
             }
+			.head2{
+				height: 40px;
+				font-size: 20px;
+                padding: 8px;
+				margin: 0px;
+			}
+			.cardBox{
+				margin:15px;
+				float: right;
+			}
+			.left{
+				margin:15px;
+				float: left;
+                width:200px;
+			}
+			.right{
+                margin-left;
+				margin-left:100px;
+			}
+
+			.imageStyle{
+                height: 120px;
+				width: 220px;
+				display: block;
+			}
 		</style>
 
 	</head>
@@ -46,10 +71,127 @@
 			<!-- Add your HTML Here -->
             <div>
                 <h1 class="head">Top Trumps Game</h1>
+				<h5 class="head2 bg-info text-white">game progress</h5>
+			</div>
+
+			<div class="left">
+            <div class="selectBox">
+                <div class="card">
+                    <h3 class="card-header">Who is the active player</h3>
+                    <div class="card-body">
+                        If the active player is AI, show the attribute he chose.
+                    </div>
+
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <button id="selectButton" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <strong>NEXT: </strong>CATEGORY SELECTION
+                        </button>
+                        <div id="selectMenu" class="dropdown-menu" aria-labelledby="selectButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width:100%;">
+                            <a id="size" class="dropdown-item" href="#">SIZE</a>
+                            <a id="speed" class="dropdown-item" href="#">SPEED</a>
+                            <a id="range" class="dropdown-item" href="#">RANGE</a>
+                            <a id="firepower" class="dropdown-item" href="#">FIREPOWER</a>
+                            <a id="cargo" class="dropdown-item" href="#">CARGO</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button id="showWinner" class="btn btn-info btn-block" type="button" >SHOW WINNER</button>
+                    </div>
+
+                </div>
+            </div>
+			</div>
+
+			<div class="right">
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card5 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title">Card1 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
             </div>
 
-		
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card4 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title">Card2 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card3 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title">Card3 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card2 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title">Card4 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card1 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title" >Card5 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
 		</div>
+
+	</div>
 		
 		<script type="text/javascript">
 		
@@ -63,13 +205,16 @@
 				// For example, lets call our sample methods
 				//helloJSONList();
 				//helloWord("Student");
+
+                var change_button = document.getElementById("showWinner");
+                change_button.style.display = "none";
 				
 			}
 			
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
-		
+
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
   				var xhr = new XMLHttpRequest();

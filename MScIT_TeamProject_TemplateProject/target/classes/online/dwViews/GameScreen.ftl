@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-
 <html>
 
 	<head>
 		<!-- Web page title -->
-		<style type="text/css">
-			#content{
-				border-style:inset;
-				border-color:yellow;
-				border-width:3px;
-			}
-			
-			</style>
     	<title>Top Trumps</title>
     	
     	<!-- Import JQuery, as it provides functions you will probably find useful (see https://jquery.com/) -->
@@ -20,61 +10,189 @@
     	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/flick/jquery-ui.css">
 
 		<!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
-		<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">
+	<#--<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
     	<script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
     	<script>vex.defaultOptions.className = 'vex-theme-os';</script>
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css"/>
     	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"/>
     	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<#--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+
+        <style>
+            html body {
+                background: #e5e5e5;
+            }
+            .head{
+                height: 100px;
+                background-color: #999;
+                color: #fff;
+                font-size:50px;
+                border: 1px solid #ebeee7;
+                box-shadow: 0 0 #333;
+                padding: 15px;
+				margin: 0px;
+            }
+			.head2{
+				height: 40px;
+				font-size: 20px;
+                padding: 8px;
+				margin: 0px;
+			}
+			.cardBox{
+				margin:15px;
+				float: right;
+			}
+			.left{
+				margin:15px;
+				float: left;
+                width:200px;
+			}
+			.right{
+                margin-left;
+				margin-left:100px;
+			}
+
+			.imageStyle{
+                height: 120px;
+				width: 220px;
+				display: block;
+			}
+		</style>
 
 	</head>
 
-    <body onload="initalize()" style="background-color:rgb(205,213,213,0.6)"> <!-- Call the initalize method when the page loads -->
-    
-    	
+    <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
     	
     	<div class="container">
 
 			<!-- Add your HTML Here -->
-		<span id ="content" style = "position:absolute;top:10%;right:20%;display:block;background-color:white">
-			<table style="width:200px">
-			<tr align="center" style="background-color:green">
-			<td><input type="text" id="number" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="description" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><img id="show" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100"></td>
-			</tr>
-			<tr>
-			<td align="center"><button type="button" onclick="changePicture()" style="width:60;height:40;font-size:12">Change</button></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="cardID" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="speed" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="cargo" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="range" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="firepower" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="size" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			</table>
-		</span>
-			
-		</div>
-		
+            <div>
+                <h1 class="head">Top Trumps Game</h1>
+				<h5 class="head2 bg-info text-white">game progress</h5>
+			</div>
 
+			<div class="left">
+            <div class="selectBox">
+                <div class="card">
+                    <h3 class="card-header">Who is the active player</h3>
+                    <div class="card-body">
+                        If the active player is AI, show the attribute he chose.
+                    </div>
+
+                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <button id="selectButton" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <strong>NEXT:</strong>CATEGORY SELECTION
+                        </button>
+                        <div id="selectMenu" class="dropdown-menu" aria-labelledby="selectButton" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width:100%;">
+                            <a id="size" class="dropdown-item" href="#">SIZE</a>
+                            <a id="speed" class="dropdown-item" href="#">SPEED</a>
+                            <a id="range" class="dropdown-item" href="#">RANGE</a>
+                            <a id="firepower" class="dropdown-item" href="#">FIREPOWER</a>
+                            <a id="cargo" class="dropdown-item" href="#">CARGO</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button id="showWinner" class="btn btn-info btn-block" type="button" >SHOW WINNER</button>
+                    </div>
+
+                </div>
+            </div>
+			</div>
+
+			<div class="right">
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card5 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title">Card1 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card4 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title">Card2 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card3 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title">Card3 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card2 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title">Card4 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <h3 class="card-header">Card1 Header</h3>
+                    <div class="card-body" style="height: 40px">
+                        <h5 class="card-title" >Card5 Title</h5>
+                    </div>
+                    <img class="imageStyle" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
+                    <div class="card-body">
+                        show attributes1</br>
+                        show attributes2</br>
+                        show attributes3</br>
+                        show attributes4</br>
+                        show attributes5
+                    </div>
+                </div>
+            </div>
+
+		</div>
+
+	</div>
+		
 		<script type="text/javascript">
 		
 			// Method that is called on page load
@@ -83,89 +201,20 @@
 				// --------------------------------------------------------------------------
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
-				SQL();
 				
 				// For example, lets call our sample methods
 				//helloJSONList();
 				//helloWord("Student");
+
+                var change_button = document.getElementById("showWinner");
+                change_button.style.display = "none";
+				
 			}
 			
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
-			 var index = 0;
-			 var cardlist = new Array(39);
-			 
-			function SQL(){
-				
-				var list = new Array(39);
-				
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/OnlineSQL");
-				
-				if (!xhr) {
-  					alert("CORS not supported");
-				}
-				
-				xhr.onload = function(e) {
- 					var responseText = xhr.response; // the text of the response
- 					//list = responseText;
- 					//important!!!!!
- 					var json = JSON.parse(responseText);
- 				    //console.log(json);
- 				    // default 
- 				    number = document.getElementById('number');
- 				    cardID = document.getElementById('cardID'); 
- 				    speed = document.getElementById('speed');
- 				    cargo = document.getElementById('cargo');
- 				    range = document.getElementById('range');
- 				    description = document.getElementById('description');
- 				    firepower = document.getElementById('firepower');
- 				    size = document.getElementById('size');
- 				    // set value 
- 				    number.value = "playName "+"cardNum";
- 				    cardID.value = "CardID: "+json[0].cardID;
- 				    speed.value = "Speed: "+json[0].speed;
- 				    cargo.value = "Cargo: "+json[0].cargo;
- 				    range.value = "Rango: "+json[0].range;
- 				    description.value = "Description: "+json[0].description;
- 				    firepower.value = "Firepower: "+json[0].firepower;
- 				    size.value = "Size: "+json[0].size;
- 				    
- 				    cardlist = json;
- 				    return cardlist;
-				};
-				
-				// We have done everything we need to prepare the CORS request, so send it
-				xhr.send();
-			}
-			 
-			function changePicture(){
-				
-			 	index = (index+1)%40;
-				 // get the element 
-				picture = document.getElementById('show'); 
-			 	cardID = document.getElementById('cardID'); 
-			 	speed = document.getElementById('speed');
-				cargo = document.getElementById('cargo');
-			 	range = document.getElementById('range');
-			 	description = document.getElementById('description');
-			 	firepower = document.getElementById('firepower');
-			 	size = document.getElementById('size');
-			 	number = document.getElementById('number');
-			 	// set the value for all 
-			 	picture.src = cardlist[index].cardPicture;
-			 	cardID.value = "CardID: "+cardlist[index].cardID;
-			 	speed.value = "Speed: "+cardlist[index].speed;
-			    cargo.value = "Cargo: "+cardlist[index].cargo;
-			    range.value = "Rango: "+cardlist[index].range;
-			    description.value = "Description: "+cardlist[index].description;
-			    firepower.value = "Firepower: "+cardlist[index].firepower;
-			    size.value = "Size: "+cardlist[index].size;
-			    number.value = "playName "+"cardNum";
-			 
-			}
-			
-			// -----------------------------------------------------------------------
+
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
   				var xhr = new XMLHttpRequest();
@@ -192,12 +241,6 @@
 			}
 		
 		</script>
-		
-		<script type="text/javascript">
-		
-		</script>
-		
-		
 		
 		<!-- Here are examples of how to call REST API Methods -->
 		<script type="text/javascript">
