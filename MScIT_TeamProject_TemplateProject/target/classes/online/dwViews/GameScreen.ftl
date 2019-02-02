@@ -103,10 +103,10 @@
                             </button>
                             <div id="selectMenu" class="dropdown-menu text-muted" aria-labelledby="selectPlayerBt"
                                  style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width:100%;">
-                                <a id="2player" class="dropdown-item" onclick="test(this.id)">2</a>
-                                <a id="3player" class="dropdown-item" onclick="test(this.id)">3</a>
-                                <a id="4player" class="dropdown-item" onclick="test(this.id)">4</a>
-                                <a id="5player" class="dropdown-item" onclick="test(this.id)">5</a>
+                                <a id="2player" class="dropdown-item" onclick="getPlayerNum(this.id)">2</a>
+                                <a id="3player" class="dropdown-item" onclick="getPlayerNum(this.id)">3</a>
+                                <a id="4player" class="dropdown-item" onclick="getPlayerNum(this.id)">4</a>
+                                <a id="5player" class="dropdown-item" onclick="getPlayerNum(this.id)">5</a>
                             </div>
                         </div>
 
@@ -242,7 +242,7 @@
 			// -----------------------------------------
 
 
-            function test(id) {
+            function getPlayerNum(id) {
 			    var text = document.getElementById(id).innerText;
 			    var num = text.valueOf();
                 console.log(num);
