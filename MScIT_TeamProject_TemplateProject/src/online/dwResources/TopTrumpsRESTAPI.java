@@ -1,23 +1,16 @@
 package online.dwResources;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import commandline.CardModel;
+import commandline.SQL;
+import online.configuration.TopTrumpsJSONConfiguration;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-
-import online.configuration.TopTrumpsJSONConfiguration;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-
-import commandline.CardModel;
-import commandline.SQL;
 
 
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
@@ -100,7 +93,13 @@ public class TopTrumpsRESTAPI {
 	public String helloWord(@QueryParam("Word") String Word) throws IOException {
 		return "Hello "+Word;
 	}
-	
+
+	int num;
+	@GET
+	@Path("/setPlayerNum")
+	public void setPlayerNum(int num) throws IOException{
+		this.num=num;
+	}
 	
 	
 }
