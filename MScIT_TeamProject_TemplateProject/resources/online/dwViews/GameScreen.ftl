@@ -47,6 +47,16 @@
 				width: 220px;
 				display: block;
 			}
+			.cardTable input{
+				type:text;
+				Readonly:readonly;
+				disabled:disabled;
+				background-color:white; 
+				border:0 ;
+				text-align:left;
+				font-size:14px;
+			}
+			
 			</style>
     	<title>Top Trumps</title>
     	
@@ -163,30 +173,30 @@
         <div id="cardZone" class="rightPanel">
 		 <div id="card1" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header"><input type="text" id="number1" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
+                    <h3 class="card-header" style="background-color:green"><input id="number1" value="" style="background-color:green;border:0 ;text-align:left ;color:white"></h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title"><input type="text" id="description1" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></h5>
                     </div>
-                    <img id="show1" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100">
+                    <img class="imageStyle" id="show1" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
                     <div class="card-body">
-                    <table>
+                    <table class="cardTable">
 					<tr>
-					<td><input type="text" id="cardID1" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="cardID1" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="speed1" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="speed1" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="cargo1" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="cargo1" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="range1" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="range1" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="firepower1" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="firepower1" value=""></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="size1" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="size1" value=""></td>
 					</tr>
 					</table>
                     </div>
@@ -195,30 +205,30 @@
 
             <div id="card2" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header"><input type="text" id="number2" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
+                    <h3 class="card-header" style="background-color:green"><input type="text" id="number2" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title"><input type="text" id="description2" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></h5>
                     </div>
-                    <img id="show2" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100">
+                    <img class="imageStyle" id="show2" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
                     <div class="card-body">
-                    <table>
+                    <table class="cardTable">
 					<tr>
-					<td><input type="text" id="cardID2" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="cardID2" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="speed2" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="speed2" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="cargo2" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="cargo2" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="range2" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="range2" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="firepower2" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="firepower2" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="size2" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input disabled="disabled" id="size2" value="" ></td>
 					</tr>
 					</table>
                     </div>
@@ -227,31 +237,31 @@
 
             <div id="card3" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header"><input type="text" id="number3" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
+                    <h3 class="card-header" style="background-color:green"><input type="text" id="number3" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title"><input type="text" id="description3" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></h5>
                     </div>
-                    <img id="show3" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100">
+                    <img class="imageStyle" id="show3" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
 
                     <div class="card-body">
-                    <table>
+                    <table class="cardTable">
 					<tr>
-					<td><input type="text" id="cardID3" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="cardID3" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="speed3" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="speed3" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="cargo3" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="cargo3" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="range3" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="range3" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="firepower3" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="firepower3" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="size3" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="size3" disabled="disabled" value="" ></td>
 					</tr>
 					</table>
                     </div>
@@ -260,30 +270,30 @@
 
             <div id="card4" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header"><input type="text" id="number4" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
+                    <h3 class="card-header" style="background-color:green"><input type="text" id="number4" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title"><input type="text" id="description4" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></h5>
                     </div>
-                    <img id="show4" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100">
+                    <img class="imageStyle" id="show4" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
                     <div class="card-body">
-                    <table>
+                    <table class="cardTable">
 					<tr>
-					<td><input type="text" id="cardID4" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="cardID4" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="speed4" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="speed4" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="cargo4" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="cargo4" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="range4" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="range4" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="firepower4" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="firepower4" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="size4" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="size4" disabled="disabled" value="" ></td>
 					</tr>
 					</table>
                     </div>
@@ -292,30 +302,30 @@
 
             <div id="card5" class="cardBox">
                 <div class="card">
-                    <h3 class="card-header"><input type="text" id="number5" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
+                    <h3 class="card-header" style="background-color:green"><input type="text" id="number5" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></h3>
                     <div class="card-body" style="height: 40px">
                         <h5 class="card-title"><input type="text" id="description5" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></h5>
                     </div>
-                     <img id="show5" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100">
+                     <img class="imageStyle" id="show5" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
                     <div class="card-body">
-                    <table>
+                    <table class="cardTable">
 					<tr>
-					<td><input type="text" id="cardID5" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="cardID5" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="speed5" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="speed5" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="cargo5" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="cargo5" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="range5" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="range5" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="firepower5" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="firepower5" disabled="disabled" value="" ></td>
 					</tr>
 					<tr>
-					<td><input type="text" id="size5" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
+					<td><input id="size5" disabled="disabled" value="" ></td>
 					</tr>
 					</table>  
                     </div>
@@ -325,43 +335,7 @@
 		
             
        </div>
-        	
-	<!-- <span id ="content" style = "background-color:white">
-			<table style="width:200px">
-			<tr align="center" style="background-color:green">
-			<td><input type="text" id="number" Readonly="readonly" disabled="disabled" value="" style="background-color:green; border:0 ;text-align:left ;color:white"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="description" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><img id="show" alt="Sabre" align="bottom" src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg" width = "200" height="100"></td>
-			</tr>
-			<tr>
-			<td align="center"><button type="button" onclick="changePicture()" style="width:60;height:40;font-size:12">Change</button></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="cardID" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="speed" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="cargo" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="range" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="firepower" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			<tr align="center">
-			<td><input type="text" id="size" Readonly="readonly" disabled="disabled" value="" style="background-color:white; border:0 ;text-align:left"></td>
-			</tr>
-			</table>
-		</span>
-		 -->		
-		
+        				
 		<script type="text/javascript">
 		
 			// Method that is called on page load
@@ -381,15 +355,15 @@
 			// Add your other Javascript methods Here
 			// -----------------------------------------
 			
+			  var num = 0;
+			
 			  function getPlayerNum(id) {
 
 			    var text = document.getElementById(id).innerText;
 
-			    var num = text.valueOf();
+			    num = text.valueOf();
 
-                console.log(num);
-
-                setPlayerNum();
+                setNum(num);
 
                 hideComponent("selectPlayerBt");
 
@@ -402,12 +376,26 @@
                 }
                 showComponent("cardZone");
             }
+			
+          // get player num test 
+			function setNum(num){
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getNumTest?num="+num);
+				
+				if (!xhr) {
+  					alert("CORS not supported");
+				}
 
-            function setPlayerNum(num){
-
-			    var playerNum = num;
-
-            }
+				// CORS requests are Asynchronous, i.e. we do not wait for a response, instead we define an action
+				// to do when the response arrives 
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+				};
+				
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();	
+				
+			}
 
 			function hideCard(cardID) {
 
@@ -497,14 +485,13 @@
 			
 			
 			function changePicture(){
-				
+					
 			 	index = (index+1)%40;
 				 // get the element 
-				getElementAndSetValue(index,1);
-				getElementAndSetValue(index,2);
-				getElementAndSetValue(index,3);
-				getElementAndSetValue(index,4);
-				getElementAndSetValue(index,5);
+				 
+				for(var i=1;i<num;i++){
+					getElementAndSetValue(index,i);
+				}
 			 	
 			}
 			
@@ -584,6 +571,8 @@
 				// We have done everything we need to prepare the CORS request, so send it
 				xhr.send();		
 			}
+			
+			
 
 		</script>
 		
