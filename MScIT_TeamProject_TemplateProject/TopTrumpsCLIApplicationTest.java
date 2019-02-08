@@ -19,7 +19,7 @@ class TopTrumpsCLIApplicationTest {
 	protected GameLogic g;
 	
 	//Test to ensure players have recieved their cards.
-/*	@Test
+	@Test
 	public void testHumanCardsAfterDistribution() {
 		SQL sql = new SQL();
 		GameLogic g = new GameLogic();
@@ -130,7 +130,7 @@ class TopTrumpsCLIApplicationTest {
 		g.createPlayers();
 		Player p = g.compareCards(g.getSelectedCategory("Speed"));
 		Assert.assertTrue(p.getName().equals("Human"));
-	}*/
+	}
 	
 	//This is an example where the Human selects the "Range" category . 
 	// AI2 is expected to win as it holds the card with the highest value.
