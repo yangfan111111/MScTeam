@@ -44,16 +44,11 @@ public class TopTrumpsRESTAPI {
 	private Boolean isHumanPlayerOutGame = false;
 	private Boolean gameOver = false;
 	private Player roundWinner;
-	private Player aiPlayer1;
-	private Player aiPlayer2;
-	private Player aiPlayer3;
-	private Player aiPlayer4;
 	private ArrayList<Player> players = new ArrayList<Player>();
 	private ArrayList<Player> maximumPlayers;
 	private ArrayList<CardModel> communalPile = new ArrayList<CardModel>();
 	private ArrayList<Player> playersToShuffle = new ArrayList<Player>();
-	ArrayList<Integer> topCardCategoryNumbers = new ArrayList<Integer>();
-	protected ArrayList<Integer> cardsInPlay = new ArrayList<Integer>();
+	private ArrayList<Integer> topCardCategoryNumbers = new ArrayList<Integer>();
 	private ArrayList<Integer> categoryValuesToBeCompared = new ArrayList<Integer>();
 
 	/**
@@ -173,10 +168,6 @@ public class TopTrumpsRESTAPI {
 			players.add(maximumPlayers.get(i));
 		}
 		humanPlayer = players.get(0);
-		aiPlayer1 = players.get(1);
-		aiPlayer2 = players.get(2);
-		aiPlayer3 = players.get(3);
-		aiPlayer4 = players.get(4);
 		distributeCards();
 
 	}
@@ -394,7 +385,7 @@ public class TopTrumpsRESTAPI {
 			roundWinner.addToCurrentCards(communalPile.get(i));
 		}
 		communalPile.clear();
-		// Not sure above .clear() is necessary as there should be no cards there? Could delete?
+		// Not sure above communalPile.clear() is necessary as there should be no cards there? Could delete?
 	}
 
 	/*
