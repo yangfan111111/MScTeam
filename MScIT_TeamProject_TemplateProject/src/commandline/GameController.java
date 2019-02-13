@@ -21,7 +21,7 @@ public class GameController {
 	public void setUpGame() {
 		//add when the game start gameID++
 		GameID = sql.getTheCurrentGameID() + 1;
-		System.err.println(GameID);
+		System.err.println("gameID: "+GameID);
 		theModel.shuffleDeck();
 		theModel.createPlayers();
 		theModel.displayTopCard();
@@ -47,26 +47,30 @@ public class GameController {
 	public void playRoundOne() {
 		
 		while (!theModel.isGameOver()) {
+			
 			if (theModel.chooseFirstActivePlayer() == true) {
 				// theModel.selectCategory();
 				// so at this point we have returned strings?
 				winningPlayer = theModel.compareCards(theModel.getSelectedCategory(theModel.selectCategory()));
 				checkIfWinOrDraw();
-
 				System.out.println("this should be the human");
-
 				playRound();
 
 			} else {
 
 				winningPlayer = theModel.compareCards(theModel.getSelectedCategory(theModel.autoCategory()));
 				checkIfWinOrDraw();
-
-				// theModel.displayTopCard();
-				System.out.println("this should be the ai");
+				
+				
 				playRound();
 				// return true;
 			}
+			RoundID++;
+			System.err.println("\nThe current Round : " + RoundID);
+			// theModel.displayTopCard();
+			System.out.println("this should be the ai");
+			log.writeFile("\nThe current Round : " + RoundID);
+			sql.setRoundDataToSQL(GameID, RoundID, winningPlayer.getName(), theModel.getIsDraw(), theModel.humanIsActivePlayer);
 		}
 		
 		if (theModel.isGameOver()) {
@@ -103,7 +107,7 @@ public class GameController {
 			 // show the GameStatistics
 			System.out.println(sql.getGameStatistics());
 			System.out.println(sql.getAllPlayersScores());
-			 
+			log.writeFileToTestLog();
 		}	
 		return gameOver;
 		
