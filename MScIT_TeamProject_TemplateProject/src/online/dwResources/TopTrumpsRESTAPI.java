@@ -34,7 +34,7 @@ public class TopTrumpsRESTAPI {
 	private Test_log log = new Test_log();
 	private ArrayList<CardModel> shuffledDeck = new ArrayList<CardModel>();
 	protected Player activePlayer;
-
+	int cardsPerPlayer = 0;
 	private int aiPlayerNum;
 	private Player humanPlayer;
 	private boolean humanIsActivePlayer;
@@ -45,11 +45,12 @@ public class TopTrumpsRESTAPI {
 	private Boolean gameOver = false;
 	private Player roundWinner;
 	private ArrayList<Player> players = new ArrayList<Player>();
-	private ArrayList<Player> maximumPlayers;
+	private ArrayList<Player> maximumPlayers = new ArrayList<Player>();
 	private ArrayList<CardModel> communalPile = new ArrayList<CardModel>();
 	private ArrayList<Player> playersToShuffle = new ArrayList<Player>();
 	private ArrayList<Integer> topCardCategoryNumbers = new ArrayList<Integer>();
 	private ArrayList<Integer> categoryValuesToBeCompared = new ArrayList<Integer>();
+	int jj = 0;
 
 	/**
 	 * A Jackson Object writer. It allows us to turn Java objects into JSON strings
@@ -73,67 +74,27 @@ public class TopTrumpsRESTAPI {
 	// ----------------------------------------------------
 	// Add relevant API methods here
 	// ----------------------------------------------------
-	@GET
-	@Path("/OnlineSQL")
-	public ArrayList<CardModel> onlineSQL() {
-
-		ArrayList<CardModel> cardList;
-
-		SQL sql = new SQL();
-
-		cardList = sql.cardList;
-
-		return cardList;
-
-	}
-
-	@GET
-	@Path("/helloJSONList")
-	/**
-	 * Here is an example of a simple REST get request that returns a String. We
-	 * also illustrate here how we can convert Java objects to JSON strings.
-	 * 
-	 * @return - List of words as JSON
-	 * @throws IOException
-	 */
-	public String helloJSONList() throws IOException {
-
-		List<String> listOfWords = new ArrayList<String>();
-		listOfWords.add("Hello");
-		listOfWords.add("World!");
-
-		// We can turn arbatory Java objects directly into JSON strings using
-		// Jackson seralization, assuming that the Java objects are not too complex.
-		String listAsJSONString = oWriter.writeValueAsString(listOfWords);
-
-		return listAsJSONString;
-	}
-
-	@GET
-	@Path("/helloWord")
-	/**
-	 * Here is an example of how to read parameters provided in an HTML Get request.
-	 * 
-	 * @param Word - A word
-	 * @return - A String
-	 * @throws IOException
-	 */
-	public String helloWord(@QueryParam("Word") String Word) throws IOException {
-		return "Hello " + Word;
-	}
-
+	
 	@GET
 	@Path("/setPlayerNum")
-	public void setPlayerNum(int num) throws IOException {
+	public int setPlayerNum(@QueryParam("num") int num) throws IOException {
+		
 		this.aiPlayerNum = num;
+		
+		System.err.println("aiPlayer: "+aiPlayerNum);
+		
+		return this.aiPlayerNum;
 	}
 
 	/*
 	 * The shuffleDeck method creates a shuffled deck of virtual cards.
 	 */
-	public void shuffleDeck() {
+	@GET
+	@Path("/shuffleDeck")
+	public ArrayList<CardModel> shuffleDeck() {
 		Collections.shuffle(sql.cardList);
 		shuffledDeck = sql.cardList;
+		return shuffledDeck;
 	}
 
 	/*
@@ -160,17 +121,22 @@ public class TopTrumpsRESTAPI {
 	 * adds them to the players arraylist, based on the number of AI players
 	 * specified by the user plus the human player (who is at index 0).
 	 */
-
-	public void createPlayers() {
+	@GET
+	@Path("/createPlayers")
+	public ArrayList<Player> createPlayers() throws IOException {
 		int oneHumanPlayer = 1;
+		cardsPerPlayer = shuffledDeck.size() / (aiPlayerNum+oneHumanPlayer);
+		System.err.println("cardsPerPlayer"+cardsPerPlayer);
 		createMaximumPlayerArrayList();
 		for (int i = 0; i < aiPlayerNum + oneHumanPlayer; i++) {
 			players.add(maximumPlayers.get(i));
 		}
 		humanPlayer = players.get(0);
 		distributeCards();
-
+		return players;
 	}
+	
+	
 
 	/*
 	 * The addRemainderCardsToCommunalPile works out the number of cards remaining
@@ -180,9 +146,13 @@ public class TopTrumpsRESTAPI {
 
 	public void addRemainderCardsToCommunalPile() {
 		int remainderOfDeckModuloPlayerSize = shuffledDeck.size() % players.size();
-		for (int i = 0; i < remainderOfDeckModuloPlayerSize; i++) {
-			communalPile.add(shuffledDeck.get(i));
+		//
+		if (remainderOfDeckModuloPlayerSize>0) {
+			for (int i = 0; i < remainderOfDeckModuloPlayerSize; i++) {
+				communalPile.add(shuffledDeck.get(i));
+			}
 		}
+		
 	}
 
 	/*
@@ -193,12 +163,14 @@ public class TopTrumpsRESTAPI {
 
 	public void distributeCards() {
 		addRemainderCardsToCommunalPile();
-		int cardsPerPlayer = shuffledDeck.size() / players.size();
+		
 		for (int i = 0; i < players.size(); i++) {
-			for (int j = 0; j < cardsPerPlayer; j++) {
-				players.get(i).addToCurrentCards(shuffledDeck.get(j));
+			
+			for ( ; jj < cardsPerPlayer*(i+1); jj++) {
+				players.get(i).addToCurrentCards(shuffledDeck.get(jj));
 			}
 		}
+		
 	}
 
 	/*

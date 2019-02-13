@@ -3,7 +3,6 @@ package commandline;
 
 
 import java.util.Collections;
-import java.util.Scanner;
 
 
 
@@ -48,7 +47,9 @@ public class TopTrumpsCLIApplication {
 
 		GameLogic gameLogic = new GameLogic();
 
-		GameController newGame = new GameController(gameLogic);
+		GameView gameView = new GameView();
+
+		GameController newGame = new GameController(gameLogic, gameView);
 
 		// Loop until the user wants to exit the gam
 
@@ -68,34 +69,21 @@ public class TopTrumpsCLIApplication {
 
 			// ----------------------------------------------------
 
-			Scanner scanner = new Scanner(System.in);
-			System.out.println("Do you want to see past results or play a game?\r\n" + 
-					"   1: Print Game Statistics\r\n" + 
-					"   2: Play game\r\n" + 
-					"Enter the number for your selection:");
-			int userChoice = scanner.nextInt();
 			
-			if(userChoice ==2) {
 
 			newGame.setUpGame();
 
 			newGame.playGame();
 
-			} else if (userChoice ==1) {
-				System.out.println(sql.getGameStatistics());
-			} else {
-				System.out.println("Please enter either 1 or 2!");
-			}
+			
 
-//			if (newGame.gameIsOver() == true) {
-//
-//				System.err.print("it com");
-//				
-//				userWantsToQuit = true;
-//				
-//			}
-			
-			
+			if (newGame.gameIsOver() == true) {
+
+				System.err.print("it com");
+				
+				userWantsToQuit = true;
+				
+			}
 
 			//userWantsToQuit=newGame.playGame(); // use this when the user wants to exit the game
 

@@ -3,10 +3,10 @@ import java.util.ArrayList;
 
 public class Player{
 	
-    private ArrayList<CardModel> cardsInHand;//An array of cards hold by the player
-    private String name;//player's name
-    private boolean continueGame;
-    private int score;
+    public ArrayList<CardModel> cardsInHand;//An array of cards hold by the player
+    public String name;//player's name
+    public boolean continueGame;
+    public int score;
     //Constructor
     public Player(String name){
         this.name = name;

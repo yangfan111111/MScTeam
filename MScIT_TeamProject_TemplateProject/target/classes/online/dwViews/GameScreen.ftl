@@ -1,224 +1,414 @@
+<!DOCTYPE html>
+
 <html>
 
-	<head>
-		<!-- Web page title -->
-    	<title>Top Trumps</title>
-    	
-    	<!-- Import JQuery, as it provides functions you will probably find useful (see https://jquery.com/) -->
-    	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-    	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-    	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/flick/jquery-ui.css">
+<head>
+<!-- Web page title -->
+<style type="text/css">
+#content {
+	border-style: inset;
+	border-color: yellow;
+	border-width: 3px;
+}
 
-		<!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
-	<#--<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css">-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-              crossorigin="anonymous">
-    	<script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
-    	<script>vex.defaultOptions.className = 'vex-theme-os';</script>
-    	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css"/>
-    	<link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"/>
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<#--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
-        <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
+html body {
+	background: #e5e5e5;
+}
 
-        <style>
-            html body {
-                background: #e5e5e5;
-            }
-            .head{
-                height: 100px;
-                background-color: #999;
-                color: #fff;
-                font-size:50px;
-                border: 1px solid #ebeee7;
-                box-shadow: 0 0 #333;
-                padding: 15px;
-				margin: 0px;
-            }
-			.head2{
-				height: 40px;
-				font-size: 20px;
-                padding: 8px;
-				margin: 0px;
-			}
-			.cardBox{
-				margin:15px;
-				float: left;
-			}
-			.leftPanel{
-				margin:15px;
-				float: left;
-                width:300px;
-			}
-			.rightPanel{
-                overflow:hidden;
-                display: none;
-			}
+.head {
+	height: 100px;
+	background-color: #999;
+	color: #fff;
+	font-size: 50px;
+	border: 1px solid #ebeee7;
+	box-shadow: 0 0 #333;
+	padding: 15px;
+	margin: 0px;
+}
 
-			.imageStyle{
-                height: 120px;
-				width: 220px;
-				display: block;
-			}
-		</style>
+.head2 {
+	height: 40px;
+	font-size: 20px;
+	padding: 8px;
+	margin: 0px;
+}
 
-	</head>
+.cardBox {
+	margin: 15px;
+	float: left;
+}
 
-    <body onload="initalize()"> <!-- Call the initalize method when the page loads -->
+.leftPanel {
+	margin: 15px;
+	float: left;
+	width: 300px;
+}
 
-    <div class="container">
-        <div>
-            <h1 class="head">Top Trumps Game</h1>
-            <h5 class="head2 bg-info text-white">game progress</h5>
-        </div>
+.rightPanel {
+	overflow: hidden;
+	display: none;
+}
+
+.imageStyle {
+	height: 120px;
+	width: 220px;
+	display: block;
+}
+
+.cardTable input {
+	type: text;
+	Readonly: readonly;
+	disabled: disabled;
+	background-color: white;
+	border: 0;
+	text-align: left;
+	font-size: 14px;
+}
+</style>
+<title>Top Trumps</title>
+
+<!-- Import JQuery, as it provides functions you will probably find useful (see https://jquery.com/) -->
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+<link rel="stylesheet"
+	href="https://code.jquery.com/ui/1.11.1/themes/flick/jquery-ui.css">
+
+<!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
+
+<!-- <link rel="stylesheet" href="http://dcs.gla.ac.uk/~richardm/TREC_IS/bootstrap.min.css"> -->
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+<script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
+
+<script>vex.defaultOptions.className = 'vex-theme-os';</script>
+
+<link rel="stylesheet"
+	href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css" />
+
+<link rel="stylesheet"
+	href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css" />
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+
+<link rel="stylesheet"
+	href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
 
 
-            <div class="leftPanel">
-                <div class="cardBox">
-                    <div class="card">
-                        <h3 class="card-header">Who is the active player</h3>
-                        <div class="card-body">
-                            show the attribute which is the active player's choice.
-                        </div>
+</head>
 
-                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                            <button id="selectButton" type="button" class="btn btn-info dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: none">
-                                <strong>NEXT: </strong>CATEGORY SELECTION
-                            </button>
-                            <div id="selectMenu" class="dropdown-menu" aria-labelledby="selectButton"
-                                 style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width:100%;">
-                                <a id="selectSize" class="dropdown-item" href="#">SIZE</a>
-                                <a id="selectSpeed" class="dropdown-item" href="#">SPEED</a>
-                                <a id="selectRange" class="dropdown-item" href="#">RANGE</a>
-                                <a id="selectFirepower" class="dropdown-item" href="#">FIREPOWER</a>
-                                <a id="selectCargo" class="dropdown-item" href="#">CARGO</a>
-                            </div>
-                        </div>
+<body onload="initalize()"
+	style="background-color: rgb(205, 213, 213, 0.6)">
+	<!-- Call the initalize method when the page loads -->
 
-                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                            <button id="selectPlayerBt" type="button" class="btn btn-info dropdown-toggle"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                How many players do you want in this game?
-                            </button>
-                            <div id="selectMenu" class="dropdown-menu text-muted" aria-labelledby="selectPlayerBt"
-                                 style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width:100%;">
-                                <a id="2player" class="dropdown-item" onclick="getPlayerNum(this.id)">2</a>
-                                <a id="3player" class="dropdown-item" onclick="getPlayerNum(this.id)">3</a>
-                                <a id="4player" class="dropdown-item" onclick="getPlayerNum(this.id)">4</a>
-                                <a id="5player" class="dropdown-item" onclick="getPlayerNum(this.id)">5</a>
-                            </div>
-                        </div>
+	<div class="container">
 
-                        <div>
-                            <button id="showWinner" class="btn btn-info btn-block" type="button" style="display: none">SHOW WINNER</button>
-                        </div>
+		<!-- Add your HTML Here -->
+		<div>
+			<h1 class="head">Top Trumps Game</h1>
+			<h5 class="head2 bg-info text-white">game progress</h5>
+		</div>
 
-                    </div>
-                </div>
-            </div>
+		<div class="leftPanel">
+			<div class="cardBox">
+				<div class="card">
+					<h3 class="card-header">Who is the active player</h3>
+					<div class="card-body" style="font-size: 14px">show the
+						attribute which is the active player's choice.</div>
 
-            <div id="cardZone" class="rightPanel">
-                <div id="card1" class="cardBox">
-                    <div class="card">
-                        <h3 class="card-header">Card1 Header</h3>
-                        <div class="card-body" style="height: 40px">
-                            <h5 class="card-title">Card1 Title</h5>
-                        </div>
-                        <img class="imageStyle"
-							 src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg"
-							 alt="Card image">
-                        <div class="card-body">
-                            show attributes1</br>
-                            show attributes2</br>
-                            show attributes3</br>
-                            show attributes4</br>
-                            show attributes5
-                        </div>
-                    </div>
-                </div>
+					<div class="btn-group" role="group"
+						aria-label="Button group with nested dropdown">
+						<button id="selectButton" type="button"
+							class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"
+							style="display: none; font-size: 14px">
+							<strong>NEXT: </strong>CATEGORY SELECTION
+						</button>
+						<div id="selectMenu" class="dropdown-menu"
+							aria-labelledby="selectButton"
+							style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width: 100%;">
 
-                <div id="card2" class="cardBox">
-                    <div class="card">
-                        <h3 class="card-header">Card2 Header</h3>
-                        <div class="card-body" style="height: 40px">
-                            <h5 class="card-title">Card2 Title</h5>
-                        </div>
-                        <img class="imageStyle"
-                             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                             alt="Card image">
-                        <div class="card-body">
-                            show attributes1</br>
-                            show attributes2</br>
-                            show attributes3</br>
-                            show attributes4</br>
-                            show attributes5
-                        </div>
-                    </div>
-                </div>
+							<a id="selectSize" class="dropdown-item" href="#">SIZE</a> <a
+								id="selectSpeed" class="dropdown-item" href="#">SPEED</a> <a
+								id="selectRange" class="dropdown-item" href="#">RANGE</a> <a
+								id="selectFirepower" class="dropdown-item" href="#">FIREPOWER</a>
+							<a id="selectCargo" class="dropdown-item" href="#">CARGO</a>
+						</div>
 
-                <div id="card3" class="cardBox">
-                    <div class="card">
-                        <h3 class="card-header">Card3 Header</h3>
-                        <div class="card-body" style="height: 40px">
-                            <h5 class="card-title">Card3 Title</h5>
-                        </div>
-                        <img class="imageStyle"
-                             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                             alt="Card image">
-                        <div class="card-body">
-                            show attributes1</br>
-                            show attributes2</br>
-                            show attributes3</br>
-                            show attributes4</br>
-                            show attributes5
-                        </div>
-                    </div>
-                </div>
+					</div>
 
-                <div id="card4" class="cardBox">
-                    <div class="card">
-                        <h3 class="card-header">Card4 Header</h3>
-                        <div class="card-body" style="height: 40px">
-                            <h5 class="card-title">Card4 Title</h5>
-                        </div>
-                        <img class="imageStyle"
-                             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                             alt="Card image">
-                        <div class="card-body">
-                            show attributes1</br>
-                            show attributes2</br>
-                            show attributes3</br>
-                            show attributes4</br>
-                            show attributes5
-                        </div>
-                    </div>
-                </div>
 
-                <div id="card5" class="cardBox">
-                    <div class="card">
-                        <h3 class="card-header">Card5 Header</h3>
-                        <div class="card-body" style="height: 40px">
-                            <h5 class="card-title">Card5 Title</h5>
-                        </div>
-                        <img class="imageStyle"
-                             src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                             alt="Card image">
-                        <div class="card-body">
-                            show attributes1</br>
-                            show attributes2</br>
-                            show attributes3</br>
-                            show attributes4</br>
-                            show attributes5
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-    </div>
+					<div class="btn-group" role="group"
+						aria-label="Button group with nested dropdown">
 
-		
-		<script type="text/javascript">
+						<button id="selectPlayerBt" type="button"
+							class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false"
+							style="font-size: 14px">How many AI players do you want?
+
+						</button>
+
+						<div id="selectMenu" class="dropdown-menu text-muted"
+							aria-labelledby="selectPlayerBt"
+							style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width: 100%;">
+
+							<a id="2player" class="dropdown-item"
+								onclick="getPlayerNum(this.id)">1</a> <a id="3player"
+								class="dropdown-item" onclick="getPlayerNum(this.id)">2</a> <a
+								id="4player" class="dropdown-item"
+								onclick="getPlayerNum(this.id)">3</a> <a id="5player"
+								class="dropdown-item" onclick="getPlayerNum(this.id)">4</a>
+
+						</div>
+
+					</div>
+
+					<div>
+
+						<button id="showWinner" class="btn btn-info btn-block"
+							type="button" style="display: none">SHOW WINNER</button>
+
+					</div>
+
+					<div>
+
+						<button id="showWinner" class="btn btn-info btn-block"
+							type="button" style="display: none">SHOW WINNER</button>
+						<button type="button" class="btn btn-info btn-block"
+							onclick="changePicture()"
+							style="width: 60; height: 40; font-size: 12">Change</button>
+						<button type="button" class="btn btn-info btn-block"
+							onclick="createPlayers()"
+							style="width: 60; height: 40; font-size: 12">createPlayers</button>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div id="cardZone" class="rightPanel">
+			<div id="card1" class="cardBox">
+				<div class="card">
+					<h3 class="card-header" style="background-color: green">
+						<input id="number1" value=""
+							style="background-color: green; border: 0; text-align: left; color: white">
+					</h3>
+					<div class="card-body" style="height: 40px">
+						<h5 class="card-title">
+							<input type="text" id="description1" Readonly="readonly"
+								disabled="disabled" value=""
+								style="background-color: white; border: 0; text-align: left">
+						</h5>
+					</div>
+					<img class="imageStyle" id="show1" alt="Sabre" align="bottom"
+						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+					<div class="card-body">
+						<table class="cardTable">
+							<tr>
+								<td><input disabled="disabled" id="cardID1" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="speed1" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="cargo1" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="range1" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="firepower1" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="size1" value=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div id="card2" class="cardBox">
+				<div class="card">
+					<h3 class="card-header" style="background-color: green">
+						<input type="text" id="number2" Readonly="readonly"
+							disabled="disabled" value=""
+							style="background-color: green; border: 0; text-align: left; color: white">
+					</h3>
+					<div class="card-body" style="height: 40px">
+						<h5 class="card-title">
+							<input type="text" id="description2" Readonly="readonly"
+								disabled="disabled" value=""
+								style="background-color: white; border: 0; text-align: left">
+						</h5>
+					</div>
+					<img class="imageStyle" id="show2" alt="Sabre" align="bottom"
+						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+					<div class="card-body">
+						<table class="cardTable">
+							<tr>
+								<td><input disabled="disabled" id="cardID2" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="speed2" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="cargo2" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="range2" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="firepower2" value=""></td>
+							</tr>
+							<tr>
+								<td><input disabled="disabled" id="size2" value=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div id="card3" class="cardBox">
+				<div class="card">
+					<h3 class="card-header" style="background-color: green">
+						<input type="text" id="number3" Readonly="readonly"
+							disabled="disabled" value=""
+							style="background-color: green; border: 0; text-align: left; color: white">
+					</h3>
+					<div class="card-body" style="height: 40px">
+						<h5 class="card-title">
+							<input type="text" id="description3" Readonly="readonly"
+								disabled="disabled" value=""
+								style="background-color: white; border: 0; text-align: left">
+						</h5>
+					</div>
+					<img class="imageStyle" id="show3" alt="Sabre" align="bottom"
+						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+
+					<div class="card-body">
+						<table class="cardTable">
+							<tr>
+								<td><input id="cardID3" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="speed3" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="cargo3" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="range3" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="firepower3" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="size3" disabled="disabled" value=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div id="card4" class="cardBox">
+				<div class="card">
+					<h3 class="card-header" style="background-color: green">
+						<input type="text" id="number4" Readonly="readonly"
+							disabled="disabled" value=""
+							style="background-color: green; border: 0; text-align: left; color: white">
+					</h3>
+					<div class="card-body" style="height: 40px">
+						<h5 class="card-title">
+							<input type="text" id="description4" Readonly="readonly"
+								disabled="disabled" value=""
+								style="background-color: white; border: 0; text-align: left">
+						</h5>
+					</div>
+					<img class="imageStyle" id="show4" alt="Sabre" align="bottom"
+						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+					<div class="card-body">
+						<table class="cardTable">
+							<tr>
+								<td><input id="cardID4" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="speed4" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="cargo4" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="range4" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="firepower4" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="size4" disabled="disabled" value=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div id="card5" class="cardBox">
+				<div class="card">
+					<h3 class="card-header" style="background-color: green">
+						<input type="text" id="number5" Readonly="readonly"
+							disabled="disabled" value=""
+							style="background-color: green; border: 0; text-align: left; color: white">
+					</h3>
+					<div class="card-body" style="height: 40px">
+						<h5 class="card-title">
+							<input type="text" id="description5" Readonly="readonly"
+								disabled="disabled" value=""
+								style="background-color: white; border: 0; text-align: left">
+						</h5>
+					</div>
+					<img class="imageStyle" id="show5" alt="Sabre" align="bottom"
+						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+					<div class="card-body">
+						<table class="cardTable">
+							<tr>
+								<td><input id="cardID5" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="speed5" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="cargo5" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="range5" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="firepower5" disabled="disabled" value=""></td>
+							</tr>
+							<tr>
+								<td><input id="size5" disabled="disabled" value=""></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript">
 		
 			// Method that is called on page load
 			function initalize() {
@@ -226,90 +416,279 @@
 				// --------------------------------------------------------------------------
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
+				SQL();
 				
 				// For example, lets call our sample methods
 				//helloJSONList();
 				//helloWord("Student");
-
-                //hideWinnerButton();
-                //hideComponent("cardZone");
-
-
 			}
 			
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
-
-
-            function getPlayerNum(id) {
-			    var text = document.getElementById(id).innerText;
-			    var num = text.valueOf();
-                console.log(num);
-                setPlayerNum();
-                hideComponent("selectPlayerBt");
-                showComponent("selectButton");
-                for(var i=++num;i<=5;i++){
-                    hideCard(i);
-                }
-                showComponent("cardZone");
-            }
-
-            function setPlayerNum(num){
-			    var playerNum = num;
-            }
 			
+			  var num = 0;
+			
+			  function getPlayerNum(id) {
+
+			    var text = document.getElementById(id).innerText;
+
+			    num = text.valueOf();
+			    
+			    setAINum(num);
+			    
+			    num++;
+       
+				console.log(num);
+                
+
+                hideComponent("selectPlayerBt");
+
+                showComponent("selectButton");
+
+                for(var i=++num;i<=5;i++){
+
+                    hideCard(i);
+
+                }
+                
+                console.log("num is "+num--);
+                showComponent("cardZone");
+
+            }
+			  
+			
+			
+			function setAINum(num){
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/setPlayerNum?num="+num);
+				
+				if (!xhr) {
+  					alert("CORS not supported");
+				}
+				
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 				
+				};
+				
+				xhr.send();
+				
+			}
+			
+			var playerlist = new Array(4);
+			
+			var playerCards0 = new Array(7);
+			var playerCards1 = new Array(7);
+			var playerCards2 = new Array(7);
+			var playerCards3 = new Array(7);
+			var playerCards4 = new Array(7);
+			  
+			function createPlayers(){
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/createPlayers");
+				
+				if (!xhr) {
+  					alert("CORS not supported");
+				}
+				
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					
+ 					var json = JSON.parse(responseText);
+ 					
+ 					playerlist = json;
+ 					
+ 					for(var i=0; i<5;i++){
+ 						
+ 						console.log(playerlist[i]);
+
+ 					}
+ 					
+ 					playerCards0 = playerlist[0];
+ 					playerCards1 = playerlist[1];
+ 					playerCards2 = playerlist[2];
+ 					playerCards3 = playerlist[3];
+ 					playerCards4 = playerlist[4];
+ 					
+ 					return playerlist;
+		
+				};
+				
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();	
+			} 
+			
+			
+			
+			function playerCardList(N){
+				
+				if(N==0) {
+					console.log("000000");
+					return playerCards0;
+				}else if(N==1){
+					console.log("111111");
+					return playerCards1;
+				}else if(N==2){
+					console.log("2222222");
+					return playerCards2;
+				}else if(N==3){
+					console.log("3333333");
+					return playerCards3;
+				}else if(N==4){
+					console.log("4444444");
+					return playerCards4;
+				} 
+			
+			}
+			
+			 var index1 = 0;
+			 //var cardlist = new Array(39);
+			 
+			 function changePicture(){
+					
+			 	index1 = (++index1) % 8;
+			 	
+			 	console.log(index1);
+			 	
+				 // get the element 
+				
+			 	for(var j=1;j<6;j++){
+			 		
+			 		getElementAndSetValue(index1, j);
+			 		
+			 	}
+			}
+			 
+			 function getElementAndSetValue(index, number){
+				 	
+				    console.log("number; "+number);
+				    console.log("number-1: "+(number-1));
+				    var N = (number-1);
+				    picture = document.getElementById('show'+number); 
+				 	cardID = document.getElementById('cardID'+number); 
+				 	speed = document.getElementById('speed'+number);
+					cargo = document.getElementById('cargo'+number);
+				 	range = document.getElementById('range'+number);
+				 	description = document.getElementById('description'+number);
+				 	firepower = document.getElementById('firepower'+number);
+				 	size = document.getElementById('size'+number);
+				 	number = document.getElementById('number'+number);
+				 	// set value 
+				 	picture.src = playerCardList(N).currentCards[index].cardPicture;
+				    cardID.value = "CardID: "+playerCardList(N).currentCards[index].cardID;
+				 	speed.value = "Speed: "+playerCardList(N).currentCards[index].speed;
+				    cargo.value = "Cargo: "+playerCardList(N).currentCards[index].cargo;
+				    range.value = "Rango: "+playerCardList(N).currentCards[index].range;
+				    description.value = "Description: "+playerCardList(N).currentCards[index].description;
+				    firepower.value = "Firepower: "+playerCardList(N).currentCards[index].firepower;
+				    size.value = "Size: "+playerCardList(N).currentCards[index].size;
+				    number.value = "playName "+"cardNum";
+				   
+			 }
+			 
+			 
+			 
+			function SQL(){
+				
+				var list = new Array(39);
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/shuffleDeck");
+				
+				if (!xhr) {
+  					alert("CORS not supported");
+				}
+				
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					//list = responseText;
+ 					//important!!!!!
+ 					var json = JSON.parse(responseText);
+ 					cardlist = json;
+ 				   
+ 				    // default 
+ 				    //getElementAndSetValue(0,1);
+ 				    //getElementAndSetValue(0,2);
+ 				    //getElementAndSetValue(0,3);
+ 				    //getElementAndSetValue(0,4);
+ 				   // getElementAndSetValue(0,5);
+ 				   // return cardlist;
+				};
+				
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();
+			}
+			
+		
+			
+			
+			
+
+
 			function hideCard(cardID) {
+
                 var card = document.getElementById("card"+cardID);
+
                 card.style.display = "none";
+
             }
 
             function showCard(cardID) {
+
 				var card = document.getElementById("card"+cardID);
+
 				card.style.display= "block" ;
+
             }
 
-
 			function hideComponent(id) {
+
                 var c = document.getElementById(id);
+
                 c.style.display = "none";
+
             }
 
             function showComponent(id) {
+
                 var c = document.getElementById(id);
+
                 c.style.display = "block";
             }
-
-
+            
+			
+			// -----------------------------------------------------------------------
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
   				var xhr = new XMLHttpRequest();
   				if ("withCredentials" in xhr) {
-
     				// Check if the XMLHttpRequest object has a "withCredentials" property.
     				// "withCredentials" only exists on XMLHTTPRequest2 objects.
     				xhr.open(method, url, true);
 
   				} else if (typeof XDomainRequest != "undefined") {
-
     				// Otherwise, check if XDomainRequest.
     				// XDomainRequest only exists in IE, and is IE's way of making CORS requests.
     				xhr = new XDomainRequest();
     				xhr.open(method, url);
 
  				 } else {
-
     				// Otherwise, CORS is not supported by the browser.
     				xhr = null;
-
   				 }
   				 return xhr;
 			}
 		
 		</script>
+
+	<script type="text/javascript">
 		
-		<!-- Here are examples of how to call REST API Methods -->
-		<script type="text/javascript">
+		</script>
+
+
+
+	<!-- Here are examples of how to call REST API Methods -->
+	<script type="text/javascript">
 		
 			// This calls the helloJSONList REST method from TopTrumpsRESTAPI
 			function helloJSONList() {
@@ -354,9 +733,10 @@
 				// We have done everything we need to prepare the CORS request, so send it
 				xhr.send();		
 			}
-
+			
+			
 
 		</script>
-		
-		</body>
+
+</body>
 </html>
