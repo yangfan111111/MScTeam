@@ -5,7 +5,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Test_log{
-	
+	//String for store the log
+    static String log_string = "";
 	// Write a file and read a file Specify file name and path Prepare the path and file name
 	public static final String FILE_NAME = "Test_log.txt";
 	// The file is placed in the root directory of the project.
@@ -19,7 +20,16 @@ public class Test_log{
 		test_logFile.delete();
 	}
 	// write data into the file
-		public void writeFile(String content) {
+	
+		protected String writeFile(String content) {
+			
+			log_string += content;
+			
+			return log_string;
+			
+		}
+	
+		protected void writeFileToTestLog() {
 
 			try {
 				/* write in TXT
@@ -29,7 +39,7 @@ public class Test_log{
 				 *  */
 				FileWriter fWriter = new FileWriter(test_logFile, true);
 				BufferedWriter out = new BufferedWriter(fWriter);
-				out.write(content);
+				out.write(log_string);
 				/* flush(): Flushes the stream.  
 				 * If the stream has saved any characters from the various write() methods in a buffer,
 				 *  write them immediately to their intended destination.*/
@@ -46,7 +56,7 @@ public class Test_log{
 		}
 		
 		// Create file method
-		public static File creatFile(String filePath, String fileName) {
+		protected static File creatFile(String filePath, String fileName) {
 			File folder = new File(filePath);
 			// File path does not exist
 			if (!folder.exists() && !folder.isDirectory()) {
