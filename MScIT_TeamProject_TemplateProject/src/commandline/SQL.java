@@ -205,7 +205,7 @@ public class SQL {
 			System.err.println("Can not connect the severs");
 		}try {
 			Statement stmt = connection.createStatement();
-			String sql = "SELECT MAX(Game.GameID)\r\n" + "FROM Game";
+			String sql = "SELECT MAX(Round.GameID)\r\n" + "FROM Round";
 			ResultSet resultSet = stmt.executeQuery(sql);
 			while (resultSet.next()) {
 				GameID = resultSet.getInt(1);
