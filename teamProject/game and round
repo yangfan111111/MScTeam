@@ -1,0 +1,23 @@
+CREATE TABLE Game(
+	GameID integer,
+	AmountOfRound integer,
+	GameWiner varchar(64),
+	NumOfDraw integer,
+	isHuman boolean,
+	PRIMARY KEY (GameID)
+);
+
+CREATE TABLE Round(
+	GameID integer,
+	RoundID integer,
+	RoundWiner varchar(64),
+	isDraw boolean,
+	isHuman boolean,
+	PRIMARY KEY (GameID,RoundID)
+);
+
+SELECT Round. *
+FROM Round
+
+SELECT Game.* 
+FROM Game

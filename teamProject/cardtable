@@ -1,0 +1,22 @@
+CREATE TABLE CardTable(
+	CardID integer,
+	Description varchar(64) NOT NULL,
+	Size integer NOT NULL,
+	Speed integer NOT NULL,
+	Range integer NOT NULL,
+	Firepower integer NOT NULL,
+	Cargo integer NOT NULL,
+	PictureURL varchar(64) NOT NULL,
+	PRIMARY KEY (CardID)
+);
+
+CREATE TABLE CardPicture(
+	Description varchar(64) NOT NULL,
+	PictureURL varchar(64) NOT NULL,
+	PRIMARY KEY (Description)
+);
+
+SELECT cardPicture.*
+FROM cardPicture
+
+
