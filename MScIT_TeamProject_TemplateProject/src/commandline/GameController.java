@@ -2,9 +2,8 @@ package commandline;
 
 public class GameController {
 	private GameLogic theModel;
-	private GameView theView;
-	private Player winningPlayer;
-	private Player activePlayer;
+	private Player roundWinner;
+	//private Player activePlayer;
 	private Boolean gameOver = false;
 	SQL sql = new SQL();
 	private static int GameID = 0;
@@ -12,9 +11,8 @@ public class GameController {
 	private int DrawNum = 0;
 	private Test_log log = new Test_log();
 
-	public GameController(GameLogic theModel, GameView theView) {
+	public GameController(GameLogic theModel) {
 		this.theModel = theModel;
-		this.theView = theView;
 
 	}
 
@@ -48,17 +46,17 @@ public class GameController {
 		
 		while (!theModel.isGameOver()) {
 			
-			if (theModel.chooseFirstActivePlayer() == true) {
+			if (theModel.setFirstActivePlayerAndReturnTrueIfHuman() == true) {
 				// theModel.selectCategory();
 				// so at this point we have returned strings?
-				winningPlayer = theModel.compareCards(theModel.getSelectedCategory(theModel.selectCategory()));
+				roundWinner = theModel.compareCards(theModel.getSelectedCategory(theModel.selectCategory()));
 				checkIfWinOrDraw();
 				System.out.println("this should be the human");
 				playRound();
 
 			} else {
 
-				winningPlayer = theModel.compareCards(theModel.getSelectedCategory(theModel.autoCategory()));
+				roundWinner = theModel.compareCards(theModel.getSelectedCategory(theModel.autoCategory()));
 				checkIfWinOrDraw();
 				
 				
@@ -68,13 +66,13 @@ public class GameController {
 			RoundID++;
 			System.err.println("\nThe current Round : " + RoundID);
 			// theModel.displayTopCard();
-			System.out.println("this should be the ai");
+			//System.out.println("this should be the ai");
 			log.writeFile("\nThe current Round : " + RoundID);
-			sql.setRoundDataToSQL(GameID, RoundID, winningPlayer.getName(), theModel.getIsDraw(), theModel.humanIsActivePlayer);
+			sql.setRoundDataToSQL(GameID, RoundID, roundWinner.getName(), theModel.getIsDraw(), theModel.humanIsActivePlayer);
 		}
 		
 		if (theModel.isGameOver()) {
-			sql.setGameDataToSQL(GameID, RoundID, winningPlayer.getName(), DrawNum, theModel.humanIsActivePlayer);
+			sql.setGameDataToSQL(GameID, RoundID, theModel.returnWinningPlayer().getName(), DrawNum, theModel.humanIsActivePlayer);
 		}
 	}
 	// ahh currently all cards going on communal pile as everytime call method is
@@ -83,12 +81,12 @@ public class GameController {
 	public void checkIfWinOrDraw() {
 		if (theModel.getIsDraw() == true) {
 			DrawNum++;
-			activePlayer = winningPlayer;
+			//activePlayer = winningPlayer;
 			// cards go to communalPile
 
 		} else {
-			theModel.winningCard(winningPlayer);
-			theModel.transferWinnerCards(winningPlayer);
+			theModel.winningCard(roundWinner);
+			theModel.transferWinnerCards(roundWinner);
 		}
 
 	}
@@ -115,11 +113,11 @@ public class GameController {
 // maybe just have this be true and then check if boolean 
 	public void playRound() {
 		while (!theModel.isGameOver()) {
-			if (theModel.setActivePlayer(winningPlayer) == true) {
+			if (theModel.setActivePlayerAndReturnTrueIfHuman(roundWinner) == true) {
 				// theModel.selectCategory();
 				// so at this point we have returned strings?
 				theModel.displayTopCard();
-				winningPlayer = theModel.compareCards(theModel.getSelectedCategory(theModel.selectCategory()));
+				roundWinner = theModel.compareCards(theModel.getSelectedCategory(theModel.selectCategory()));
 				
 				checkIfWinOrDraw();
 				
@@ -129,20 +127,20 @@ public class GameController {
 				
 				log.writeFile("\nThe current Round : " + RoundID);
 				
-				sql.setRoundDataToSQL(GameID, RoundID, winningPlayer.getName(), theModel.getIsDraw(), theModel.humanIsActivePlayer);
+				sql.setRoundDataToSQL(GameID, RoundID, roundWinner.getName(), theModel.getIsDraw(), theModel.humanIsActivePlayer);
 			
 				//System.out.println("this should be the human having won round");
 
 			} else {
 				checkIfHumanPlayerInGame();
-				winningPlayer = theModel.compareCards(theModel.getSelectedCategory(theModel.autoCategory()));
+				roundWinner = theModel.compareCards(theModel.getSelectedCategory(theModel.autoCategory()));
 				checkIfWinOrDraw();
 				
 				RoundID++;
 				
 				System.err.println("\nThe current Round: " + RoundID);
 				log.writeFile("\nThe current Round : " + RoundID);
-				sql.setRoundDataToSQL(GameID, RoundID, winningPlayer.getName(), theModel.getIsDraw(), theModel.humanIsActivePlayer);
+				sql.setRoundDataToSQL(GameID, RoundID,roundWinner.getName(), theModel.getIsDraw(), theModel.humanIsActivePlayer);
 
 				//System.out.println("this should be the ai " + winningPlayer.getName() + "who has won the last round");
 				// return true;
