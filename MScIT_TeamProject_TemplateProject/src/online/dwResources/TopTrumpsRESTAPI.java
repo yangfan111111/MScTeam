@@ -7,7 +7,7 @@ import commandline.Player;
 import commandline.SQL;
 import commandline.Test_log;
 import online.configuration.TopTrumpsJSONConfiguration;
-
+import commandline.GameLogic;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
@@ -51,6 +51,7 @@ public class TopTrumpsRESTAPI {
 	private ArrayList<Integer> topCardCategoryNumbers = new ArrayList<Integer>();
 	private ArrayList<Integer> categoryValuesToBeCompared = new ArrayList<Integer>();
 	int jj = 0;
+	int index = 0;
 
 	/**
 	 * A Jackson Object writer. It allows us to turn Java objects into JSON strings
@@ -65,6 +66,7 @@ public class TopTrumpsRESTAPI {
 	 * 
 	 * @param conf
 	 */
+	
 	public TopTrumpsRESTAPI(TopTrumpsJSONConfiguration conf) {
 		// ----------------------------------------------------
 		// Add relevant initalization here
@@ -106,7 +108,7 @@ public class TopTrumpsRESTAPI {
 		Player aiPlayerOne = new Player("AI 1");
 		Player aiPlayerTwo = new Player("AI 2");
 		Player aiPlayerThree = new Player("AI 3");
-		Player aiPlayerFour = new Player("AI4");
+		Player aiPlayerFour = new Player("AI 4");
 
 		maximumPlayers.add(humanPlayer);
 		maximumPlayers.add(aiPlayerOne);
@@ -136,7 +138,40 @@ public class TopTrumpsRESTAPI {
 		return players;
 	}
 	
+	/*
+	 * 
+	 * getTheFirstPlayer
+	 * 
+	 * 
+	 * */
+	@GET
+	@Path("/getTheFirstPlayer")
+	public int getTheFirstPlayer() {
+
+		for (int i = 0; i < players.size(); i++) {
+			playersToShuffle.add(players.get(i));
+		}
+		Collections.shuffle(playersToShuffle);
+		this.activePlayer = playersToShuffle.get(0);
+		System.out.println("The active player is " + "'" + activePlayer.getName() + "'");
+		for(Player player: players) {
+			if (activePlayer.name == player.name) {	
+			 index = players.indexOf(player);
+			}
+		}
+		return index;
+	}
 	
+	@GET
+    @Path("/setFirstActivePlayerAndReturnTrueIfHuman")
+	public boolean returnTrueIfHuman() {
+		
+		if (index==0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 
 	/*
 	 * The addRemainderCardsToCommunalPile works out the number of cards remaining
@@ -181,7 +216,7 @@ public class TopTrumpsRESTAPI {
 	 * human player to select their category or call a method that automatically
 	 * selects a category.
 	 */
-
+    
 	public Boolean setFirstActivePlayerAndReturnTrueIfHuman() {
 		for (int i = 0; i < players.size(); i++) {
 			playersToShuffle.add(players.get(i));
@@ -211,8 +246,9 @@ public class TopTrumpsRESTAPI {
 	 * The autoSelectCategory method sets a String representing the choice of
 	 * category made by the active AI player.
 	 */
-
-	public void autoSelectCategory() {
+	@GET
+	@Path("/autoSelectCategory")
+	public String autoSelectCategory() {
 		topCardCategoryNumbers.clear();
 		int max = 0;
 		this.topCardCategoryNumbers.add(activePlayer.viewTopCard().getSize());
@@ -225,6 +261,7 @@ public class TopTrumpsRESTAPI {
 		switch (topCardCategoryNumbers.lastIndexOf(max)) {
 		case 0:
 			activeCategory = "Size";
+			
 			break;
 		case 1:
 			activeCategory = "Speed";
@@ -239,7 +276,7 @@ public class TopTrumpsRESTAPI {
 			activeCategory = "Cargo";
 			break;
 		}
-
+		return activeCategory;
 	}
 
 	/*
