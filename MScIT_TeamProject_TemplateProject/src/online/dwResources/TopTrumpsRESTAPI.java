@@ -43,6 +43,7 @@ public class TopTrumpsRESTAPI {
 	private Player dummyPlayer;
 	private Boolean isHumanPlayerOutGame = false;
 	private Boolean gameOver = false;
+	private Player loser = new Player("loser");
 	private Player roundWinner;
 	private ArrayList<Player> players = new ArrayList<Player>();
 	private ArrayList<Player> maximumPlayers = new ArrayList<Player>();
@@ -52,6 +53,7 @@ public class TopTrumpsRESTAPI {
 	private ArrayList<Integer> categoryValuesToBeCompared = new ArrayList<Integer>();
 	int jj = 0;
 	int index = 0;
+	private int roundNum = 1;
 
 	/**
 	 * A Jackson Object writer. It allows us to turn Java objects into JSON strings
@@ -87,6 +89,12 @@ public class TopTrumpsRESTAPI {
 		
 		return this.aiPlayerNum;
 	}
+	// init the loser
+	public void setLoserPlayer() {
+		
+		loser.setCurrentCards(null);
+
+	}
 
 	/*
 	 * The shuffleDeck method creates a shuffled deck of virtual cards.
@@ -98,17 +106,27 @@ public class TopTrumpsRESTAPI {
 		shuffledDeck = sql.cardList;
 		return shuffledDeck;
 	}
-
+	
+	@GET
+	@Path("/getCurrentPlayerlist")
+	public ArrayList<Player> getCurrentPlayerList () {
+		
+		for(int i =0; i<players.size();i++) {
+			System.err.println("getCurrentPlayerList--------"+players.get(i).cardsInHand.size()+players.get(i).name);
+		}
+		
+		return players;
+	}
 	/*
 	 * The createMaximumPlayerArrayList populates the maximumPlayer arraylist with
 	 * the maximum amount of players that could possibly play in a single game.
 	 */
 	public void createMaximumPlayerArrayList() {
-		Player humanPlayer = new Player("Human");
-		Player aiPlayerOne = new Player("AI 1");
-		Player aiPlayerTwo = new Player("AI 2");
-		Player aiPlayerThree = new Player("AI 3");
-		Player aiPlayerFour = new Player("AI 4");
+		Player humanPlayer = new Player("You");
+		Player aiPlayerOne = new Player("AI player 1");
+		Player aiPlayerTwo = new Player("AI player 2");
+		Player aiPlayerThree = new Player("AI player 3");
+		Player aiPlayerFour = new Player("AI player 4");
 
 		maximumPlayers.add(humanPlayer);
 		maximumPlayers.add(aiPlayerOne);
@@ -135,6 +153,7 @@ public class TopTrumpsRESTAPI {
 		}
 		humanPlayer = players.get(0);
 		distributeCards();
+		setLoserPlayer();
 		return players;
 	}
 	
@@ -163,10 +182,22 @@ public class TopTrumpsRESTAPI {
 	}
 	
 	@GET
+	@Path("/getTheActivePlayerIndex")
+	public int getTheActivePlayerIndex() {
+		
+		for(Player player: players) {
+			if (roundWinner.name == player.name) {	
+			 index = players.indexOf(player);
+			}
+		}
+		return index;
+	}
+	
+	@GET
     @Path("/setFirstActivePlayerAndReturnTrueIfHuman")
 	public boolean returnTrueIfHuman() {
 		
-		if (index==0) {
+		if (activePlayer.name == "You") {
 			return true;
 		}else {
 			return false;
@@ -188,6 +219,13 @@ public class TopTrumpsRESTAPI {
 			}
 		}
 		
+	}
+	
+	@GET
+	@Path("/getCommunalPile")
+	public int getCommunalPile() {
+		
+		return communalPile.size();
 	}
 
 	/*
@@ -222,7 +260,7 @@ public class TopTrumpsRESTAPI {
 			playersToShuffle.add(players.get(i));
 		}
 		Collections.shuffle(playersToShuffle);
-		if (playersToShuffle.get(0).getName().equals("Human")) {
+		if (playersToShuffle.get(0).getName().equals("You")) {
 			this.activePlayer = playersToShuffle.get(0);
 			System.out.println("The active player is " + "'" + activePlayer.getName() + "'");
 			this.humanIsActivePlayer = true;
@@ -237,9 +275,12 @@ public class TopTrumpsRESTAPI {
 	 * The humanCategoryChoice sets a String with the human player's chosen
 	 * category.
 	 */
-
-	public void humanCategoryChoice(String categoryChoice) throws IOException {
+	@GET
+	@Path("/getHumanSelected")
+	public void humanCategoryChoice(@QueryParam("categoryChoice") String categoryChoice) throws IOException {
+		System.err.println("humanCategoryChoice"+categoryChoice);
 		this.activeCategory = categoryChoice;
+		setCategoryValuesToBeCompared();
 	}
 
 	/*
@@ -276,6 +317,7 @@ public class TopTrumpsRESTAPI {
 			activeCategory = "Cargo";
 			break;
 		}
+		setCategoryValuesToBeCompared();
 		return activeCategory;
 	}
 
@@ -316,8 +358,10 @@ public class TopTrumpsRESTAPI {
 	 * returned player should be passed to the setActivePlayerAndReturnTrueIfHuman
 	 * method to work out the next active player.
 	 */
-
+	@GET
+	@Path("/compareCategoryValues")
 	public Player compareCategoryValues() {
+		
 		int max = Collections.max(categoryValuesToBeCompared);
 		int indexOfWinningPlayer = 0;
 		int instancesOfMaxNumber = 0;
@@ -326,16 +370,27 @@ public class TopTrumpsRESTAPI {
 				instancesOfMaxNumber++;
 			}
 		}
+		System.err.println("instancesOfMaxNumber"+instancesOfMaxNumber);
 		if (instancesOfMaxNumber > 1) {
+			//isDraw = true;
 			transferCardsToCommunalPile();
+			roundNum++;
+			getCurrentPlayerList();
 			return activePlayer;
 		} else if (instancesOfMaxNumber == 1) {
 			isDraw = false;
 			indexOfWinningPlayer = categoryValuesToBeCompared.indexOf(max);
 			roundWinner = players.get(indexOfWinningPlayer);
+			roundNum++;
+			transferWinnerCards();
+			getCurrentPlayerList();
+			activePlayer = roundWinner;
 			return roundWinner;
+		}else {
+			roundNum++;
+			getCurrentPlayerList();
+			return dummyPlayer;
 		}
-		return dummyPlayer;
 
 		/*
 		 * Note: dummyPlayer should never get returned as one of the above conditions
@@ -343,7 +398,12 @@ public class TopTrumpsRESTAPI {
 		 */
 
 	}
-
+	
+	@GET
+	@Path("/getCurrentRoundNum")
+	public int getCurrentRoundNum() {
+		return roundNum;
+	}
 	/*
 	 * The setActivePlayerAndReturnTrueIfHuman method takes in a Player instance and
 	 * using that information sets the active player. It also returns whether or not
@@ -353,7 +413,7 @@ public class TopTrumpsRESTAPI {
 
 	public Boolean setActivePlayerAndReturnTrueIfHuman(Player roundWinnerOrActivePlayer) {
 		if (roundWinnerOrActivePlayer.getName() == activePlayer.getName()
-				&& roundWinnerOrActivePlayer.getName().equals("Human")) {
+				&& roundWinnerOrActivePlayer.getName().equals("You")) {
 			this.humanIsActivePlayer = true;
 		} else if (roundWinnerOrActivePlayer.getName() == activePlayer.getName()) {
 			this.humanIsActivePlayer = false;
@@ -407,12 +467,13 @@ public class TopTrumpsRESTAPI {
 		// checkIfPlayersOutTheGame();
 		// for some reason I called the above method twice; think it is just a mistake and
 		// should be deleted, but if it starts to go buggy maybe it's this?
+		
 		for (int i = 0; i < players.size(); i++) {
 			communalPile.add(players.get(i).loseCard());
 		}
 		checkIfPlayersOutTheGame();
 		setIsDraw(true);
-
+		System.err.println("transferCardsToCommunalPile"+isDraw);
 	}
 
 	/*
@@ -429,6 +490,7 @@ public class TopTrumpsRESTAPI {
 					activePlayer = players.get(i + 1);
 				}
 				players.remove(players.get(i));
+				
 				i--;
 				isHumanPlayerOutGame = true;
 			} else if (players.get(i).getCurrentCards().size() == 0) {
@@ -438,6 +500,7 @@ public class TopTrumpsRESTAPI {
 					activePlayer = players.get(0);
 				}
 				players.remove(players.get(i));
+				
 				i--;
 			}
 		}
@@ -467,7 +530,9 @@ public class TopTrumpsRESTAPI {
 		isDraw = isDrawEquals;
 
 	}
-
+	//-----------------------------------
+	@GET
+	@Path("/isDraw")
 	public Boolean isDraw() {
 
 		return isDraw;
