@@ -16,10 +16,10 @@ public class GameLogic {
 	protected Player activePlayer;
 	protected String activeCategory;
 	private Player humanPlayer = new Player("Human");
-	private Player aiPlayer1 = new Player("AI 1");
-	private Player aiPlayer2 = new Player("AI 2");
-	private Player aiPlayer3 = new Player("AI 3");
-	private Player aiPlayer4 = new Player("AI 4");
+	private Player aiPlayer1 = new Player("AI Player 1");
+	private Player aiPlayer2 = new Player("AI Player 2");
+	private Player aiPlayer3 = new Player("AI Player 3");
+	private Player aiPlayer4 = new Player("AI Player 4");
 	private Boolean isDraw = false;
 	private Boolean humanPlayerOutGame = false;
 	private Boolean gameOver = false;
@@ -102,9 +102,9 @@ public class GameLogic {
 		System.out.println("> " + "Cargo : " + humanPlayer.viewTopCard().getCargo());
 		int cardsInDeck = humanPlayer.countCurrentCards();
 		// is this def minus 1?
-		System.out.println("There are " + cardsInDeck + " cards in your deck");
+		System.out.println("Number of cards in your deck: " + cardsInDeck);
 		log.writeFile("The topcard is" + humanPlayer.viewTopCard().getCardID() + "\n");
-		log.writeFile("There are " + cardsInDeck + " cards in your deck" + "\n");
+		log.writeFile("There are " + cardsInDeck + " cards in your deck");
 	}
 
 	/*
@@ -159,24 +159,22 @@ public class GameLogic {
 	// AI AUTOMATICALLY SELECTS HIGHEST ATTRIBUTE;
 
 	public String autoCategory() {
+		System.out.println("It is " + activePlayer.getName() + "'s turn to choose the category.");
 
-		for (int i = 0; i < players.size(); i++) {
-			System.out.println("Current players " + players.get(i).getName());
-			log.writeFile("Current players " + players.get(i).getName() + "\n");
-		}
-
+//		for (int i = 0; i < players.size(); i++) {
+//			System.out.println("Current players " + players.get(i).getName());
+//			log.writeFile("Current players " + players.get(i).getName() + "\n");
+//		}
 		topCards.clear();
-
 		int max = 0;
 		this.topCards.add(activePlayer.viewTopCard().getSize());
 		this.topCards.add(activePlayer.viewTopCard().getSpeed());
 		this.topCards.add(activePlayer.viewTopCard().getRange());
 		this.topCards.add(activePlayer.viewTopCard().getFirepower());
 		this.topCards.add(activePlayer.viewTopCard().getCargo());
-
-		for (int i = 0; i < topCards.size(); i++) {
-			System.out.println("Card value " + i + " is: " + topCards.get(i));
-		}
+//		for (int i = 0; i < topCards.size(); i++) {
+//			System.out.println("Card value " + i + " is: " + topCards.get(i));
+//		}
 
 		max = Collections.max(topCards);
 
@@ -203,7 +201,7 @@ public class GameLogic {
 			break;
 		}
 		// System.out.println(max + " -->ac");
-		System.out.println("Top category is: " + activeCategory);
+		//System.out.println("Top category is: " + activeCategory);
 
 		return activeCategory;
 
@@ -261,52 +259,58 @@ public class GameLogic {
 	// and return an array.
 
 	public ArrayList<Integer> getSelectedCategory(String category) {
-		for (int i = 0; i < players.size(); i++) {
-			System.out.println("Current players " + players.get(i).getName());
-			System.out.println("this player should have this many cards " + players.get(i).countCurrentCards());
-			System.out.println("top card " + players.get(i).viewTopCard());
-			// log.writeFile("Current players " + players.get(i).getName()+"\n");
-			log.writeFile("this player should have this many cards " + players.get(i).countCurrentCards() + "\n");
-			log.writeFile("top card " + players.get(i).viewTopCard() + "\n");
-		}
-
+	showCurrentPlayers();
 		ArrayList<Integer> categoryValuesToBeCompared = new ArrayList<Integer>();
 		this.cardsInPlay = categoryValuesToBeCompared;
 		if (category.equals("Size")) {
 			for (int i = 0; i < players.size(); i++) {
 				categoryValuesToBeCompared.add(players.get(i).viewTopCard().getSize());
-				// System.out.println(" X5x5 ");
 			}
 		} else if (category.equals("Speed")) {
 			for (int i = 0; i < players.size(); i++) {
 				categoryValuesToBeCompared.add(players.get(i).viewTopCard().getSpeed());
-				// System.out.println(" X1 " );
 			}
 		} else if (category.equals("Range")) {
 			for (int i = 0; i < players.size(); i++) {
 				categoryValuesToBeCompared.add(players.get(i).viewTopCard().getRange());
-				// System.out.println(" X2 " );
 			}
 		} else if (category.equals("Firepower")) {
 			for (int i = 0; i < players.size(); i++) {
 				categoryValuesToBeCompared.add(players.get(i).viewTopCard().getFirepower());
-				// System.out.println(" X3 " );
 			}
 		} else if (category.equals("Cargo")) {
 			for (int i = 0; i < players.size(); i++) {
 				categoryValuesToBeCompared.add(players.get(i).viewTopCard().getCargo());
-				// System.out.println(" X4 " );
 			}
 		}
-		System.out.println(activeCategory + " values being compared  --- >  " + cardsInPlay);
+		//System.out.println(activeCategory + " values being compared  --- >  " + cardsInPlay);
 		return categoryValuesToBeCompared;
+	}
+	
+	public void showCurrentPlayers() {
+	
+		System.out.print("Current players: ");
+		for (int i = 0; i < players.size(); i++) {
+//			System.out.println("this player should have this many cards " + players.get(i).countCurrentCards());
+//			System.out.println("top card " + players.get(i).viewTopCard());
+			// log.writeFile("Current players " + players.get(i).getName()+"\n");
+			log.writeFile("this player should have this many cards " + players.get(i).countCurrentCards() + "\n");
+			log.writeFile("top card " + players.get(i).viewTopCard() + "\n");
+			if (players.get(i) ==players.get(players.size()-1)) {
+				System.out.print("and " + players.get(i).getName() + ".\n");
+			} else {
+				System.out.print(players.get(i).getName() + ", ");
+				
+			}
+		}
+		
 	}
 
 	// 7) player with highest value =wins the round . RETURNS THE winner Player
 	// Object.
 	public Player compareCards(ArrayList<Integer> cardsInPlay) {
 		int max = Collections.max(cardsInPlay);
-		System.out.println("highest number is " + max);
+		//System.out.println("highest number is " + max);
 		int highestNum = 0;
 		int instancesOfMaxNumber = 0;
 		for (int i = 0; i < cardsInPlay.size(); i++) {
@@ -315,9 +319,9 @@ public class GameLogic {
 			}
 		}
 		if (instancesOfMaxNumber > 1) {
+			System.out.println("The round was a draw and " + activePlayer.getName()
+			+ " stays on.");
 			transferCardsToCommunalPile();
-			System.out.println("There round was a draw and " + activePlayer.getName()
-					+ " stays on. This sometimes appears after game ended, which is expected.");
 			log.writeFile("There round was a draw and " + activePlayer.getName()
 					+ " stays on. This sometimes appears after game ended, which is expected." + "\n");
 			return activePlayer;
@@ -325,7 +329,7 @@ public class GameLogic {
 			isDraw = false;
 			highestNum = cardsInPlay.indexOf(max);
 			System.out
-					.println("Winning card belongs to: " + players.get(highestNum).getName() + " - Won this round ! ");
+					.println("Winning card belongs to: " + players.get(highestNum).getName() + "! ");
 			log.writeFile(
 					"Winning card belongs to: " + players.get(highestNum).getName() + " - Won this round ! " + "\n");
 			players.get(highestNum).viewTopCard().toString();
@@ -340,54 +344,71 @@ public class GameLogic {
 		System.out.println("The winning card was" + "'" + winningPlayer.viewTopCard().getDescription() + "'");
 		log.writeFile("The winning card was" + "'" + winningPlayer.viewTopCard().getDescription() + "'" + "\n");
 		if (activeCategory.equals("Size")) {
-			System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize() + " <---- ");
-			System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed());
-			System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange());
-			System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower());
-			System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo());
+			equalsSizeView(winningPlayer);
 		} else if (activeCategory.equals("Speed")) {
-			System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize());
-			System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed() + " <---- ");
-			System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange());
-			System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower());
-			System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo());
+			equalsSpeedView(winningPlayer);
 		} else if (activeCategory.equals("Range")) {
-			System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize());
-			System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed());
-			System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange() + " <---- ");
-			System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower());
-			System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo());
+			equalsRangeView(winningPlayer);
 		} else if (activeCategory.equals("Firepower")) {
-			System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize());
-			System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed());
-			System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange());
-			System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower() + " <---- ");
-			System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo());
+			equalsFirepowerView(winningPlayer);
 		} else if (activeCategory.equals("Cargo")) {
-			System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize());
-			System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed());
-			System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange());
-			System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower());
-			System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo() + " <---- ");
+			equalsCargoView(winningPlayer);
 		}
 		log.writeFile("the activeCategory is" + activeCategory + "\n");
-
 	}
+	
+	public void equalsSizeView(Player winningPlayer) {
+		System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize() + " <---- ");
+		System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed());
+		System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange());
+		System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower());
+		System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo());
+	}
+	
+	public void equalsSpeedView(Player winningPlayer) {
+		System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize());
+		System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed() + " <---- ");
+		System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange());
+		System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower());
+		System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo());
+	}
+	
+	public void equalsRangeView(Player winningPlayer) {
+		System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize());
+		System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed());
+		System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange() + " <---- ");
+		System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower());
+		System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo());
+	}
+	
+	public void equalsFirepowerView(Player winningPlayer) {
+		System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize());
+		System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed());
+		System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange());
+		System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower() + " <---- ");
+		System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo());
+	}
+	
+	public void equalsCargoView(Player winningPlayer) {
+		System.out.println("> " + "Size : " + winningPlayer.viewTopCard().getSize());
+		System.out.println("> " + "Speed : " + winningPlayer.viewTopCard().getSpeed());
+		System.out.println("> " + "Range : " + winningPlayer.viewTopCard().getRange());
+		System.out.println("> " + "Firepower : " + winningPlayer.viewTopCard().getFirepower());
+		System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo() + " <---- ");
+	}
+	
 
 //	8)all card played in the round go to winner. (TEMP ARRAY LIST?)
 	public void transferWinnerCards(Player winningPlayer) {
 		ArrayList<CardModel> lostCards = new ArrayList<CardModel>();
 		for (int i = 0; i < players.size(); i++) {
 			lostCards.add(players.get(i).loseCard());
-			System.out.println(lostCards.size());
+		//	System.out.println(lostCards.size());
 		}
-
 		for (int i = 0; i < lostCards.size(); i++) {
 			winningPlayer.addToCurrentCards(lostCards.get(i));
 		}
-
 		checkIfPlayersOutTheGame();
-
 		for (int i = 0; i < communalPile.size(); i++) {
 			winningPlayer.addToCurrentCards(communalPile.get(i));
 		}
@@ -396,7 +417,7 @@ public class GameLogic {
 
 	public void checkIfGameHasBeenWon() {
 		if (players.size() == 1) {
-			System.out.println("The winner is " + players.get(0).getName() + "!");
+		//	System.out.println("The winner is " + players.get(0).getName() + "!");
 			log.writeFile("The winner is " + players.get(0).getName() + "!");
 			gameOver = true;
 		}
@@ -430,11 +451,11 @@ public class GameLogic {
 				i--;
 				humanPlayerOutGame = true;
 				System.out.println(
-						"Human, you are out the game! You are a failure at top trumps and you are a failure at life!!");
+						"You are out the game! You are a failure at top trumps and you are a failure at life!!");
 
 			} else if (players.get(i).getCurrentCards().size() == 0) {
-				System.out.println("This should test each player. " + players.get(i).getName() + " has this many cards "
-						+ players.get(i).countCurrentCards());
+				//System.out.println("This should test each player. " + players.get(i).getName() + " has this many cards "
+			//			+ players.get(i).countCurrentCards());
 				System.out.println(players.get(i).getName() + " is out the game!");
 				if (players.get(i) == activePlayer && i < players.size() - 1) {
 					activePlayer = players.get(i + 1);
@@ -445,57 +466,31 @@ public class GameLogic {
 				i--;
 			}
 		}
-
 		checkIfGameHasBeenWon();
-
 	}
 //		9) round winner=active player. keep track of round winner.
 
 	public Boolean setActivePlayerAndReturnTrueIfHuman(Player winningPlayer) {
-//		System.out.println("This should be player who last selected category " + activePlayer.getName());
-//		System.out.println("this should be the winner of the last round " + winningPlayer.getName());
-//		System.out.println(players.size());
 		if (winningPlayer.getName() == activePlayer.getName() && winningPlayer.getName().equals("Human")) {
 			this.humanIsActivePlayer = true;
-			// System.out.println("This should be the winner of the last round after test "
-			// + activePlayer.getName());
 		} else if (winningPlayer.getName() == activePlayer.getName()) {
 			this.humanIsActivePlayer = false;
-			// System.out.println("This should be the ai winner of the last round after test
-			// " + activePlayer.getName());
-
 		} else if (activePlayer.getName() == players.get(players.size() - 1).getName()) {
-
 			if (humanPlayerOutGame == true) {
 				activePlayer = players.get(0);
-				// System.out.println("This should be an AI player at start of array as human
-				// player has lost "
-				// + activePlayer.getName());
 			} else {
 				humanIsActivePlayer = true;
-				// System.out.println(
-				// "This should be the human player if AI 4/player at last index selected
-				// category last round "
-				// + activePlayer.getName());
 			}
-
 		} else if (winningPlayer.getName() != activePlayer.getName()) {
 			for (int i = 0; i < players.size(); i++) {
 				if (activePlayer.getName() == players.get(i).getName() && i < players.size() - 1) {
 					activePlayer = players.get(i + 1);
-					// System.out.println(
-					// "This should be the next player after whoever selected category last round
-					// unless last winner was AI 4/player at last index "
-					// + activePlayer.getName());
 					humanIsActivePlayer = false;
 					break;
 				}
 			}
-
 		}
 		return humanIsActivePlayer;
-		// return activePlayer;
-
 	}
 
 	// 10) if the round is a draw , all cards placed in the communal pile. keep
@@ -504,16 +499,11 @@ public class GameLogic {
 	// not sure why check if players out the game called twice check again???
 
 	public void transferCardsToCommunalPile() {
-		// numberOfDraws ++;
 		checkIfPlayersOutTheGame();
-		// CommunalPile communalPile = new CommunalPile();
 		for (int i = 0; i < players.size(); i++) {
 			communalPile.add(players.get(i).loseCard());
-			// call method here to check if players have lost all their cards and to remove
-			// them
-
 		}
-		System.out.println("The Communal Pile has this many cards " + communalPile.size());
+		System.out.println("The Communal Pile has this many cards: " + communalPile.size() + ".");
 		checkIfPlayersOutTheGame();
 		setIsDraw(true);
 

@@ -15,9 +15,9 @@ public class GameController {
 	}
 
 	public void setUpGame() {
-		System.out.println("Game Start\nRound 1\nRound 1: Players have drawn their cards.");
+		System.out.println("\nGame Start\nRound 1\nRound 1: Players have drawn their cards.");
 		GameID = sql.getTheCurrentGameID() + 1;
-		System.err.println("gameID: " + GameID);
+		//System.err.println("gameID: " + GameID);
 		theModel.shuffleDeck();
 		theModel.createPlayerArray();
 	}
@@ -45,9 +45,10 @@ public class GameController {
 
 	public void playRound() {
 		while (!theModel.isGameOver()) {
-			System.out.println("Round " + (roundID+1) + "\nRound " + (roundID+1) + ": Players have drawn their cards.");
+			System.out.println("\nRound " + (roundID+1) + "\nRound " + (roundID+1) + ": Players have drawn their cards.");
 			if (theModel.setActivePlayerAndReturnTrueIfHuman(roundWinner) == true) {
 				humanIsActivePlayer();
+				//break;
 			} else {
 				computerIsActivePlayer();
 			}
@@ -93,7 +94,7 @@ public class GameController {
 
 	public void gameIsOver() {
 		if (theModel.isGameOver() == true) {
-			System.out.println("Game End");
+			System.out.println("\nGame End\n");
 			System.out.println("Overall winner was " + theModel.returnWinningPlayer().getName());
 			//System.out.println(sql.getGameStatistics());
 			System.out.println(sql.getAllPlayersScores());
