@@ -23,7 +23,7 @@ public class TopTrumpsCLIApplication {
 
 	public static void main(String[] args) {
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
-		//if (args[0].equalsIgnoreCase("true")) writeGameLogsToFile=true; // Command line selection
+	//	if (args[0].equalsIgnoreCase("true")) writeGameLogsToFile=true; // Command line selection
 		SQL sql = new SQL();
 		// State
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
@@ -37,19 +37,24 @@ public class TopTrumpsCLIApplication {
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Do you want to see past results or play a game?\r\n" + 
 					"   1: Print Game Statistics\r\n" + 
-					"   2: Play game\r\n" + 
+					"   2: Play Game\r\n" + 
+					"   3: Quit Game\r\n" + 
 					"Enter the number for your selection:");
 			int userChoice = scanner.nextInt();
 			if(userChoice ==2) {
 				newGame();
 			} else if (userChoice ==1) {
 				System.out.println(sql.getGameStatistics());
-			} else {
-				System.out.println("Please enter either 1 or 2!");
+			} else if (userChoice ==3){
+				userWantsToQuit=true;
+			}
+				else {
+				System.out.println("Please enter either 1, 2, or 3!");
 			}
 		}
 
 	}
+	
 	public static void newGame() {
 		GameLogic gameLogic = new GameLogic();
 		GameController newGame = new GameController(gameLogic);
@@ -57,8 +62,5 @@ public class TopTrumpsCLIApplication {
 		newGame.playGame();
 		newGame.gameIsOver();
 	}
-	
-
-
 
 }

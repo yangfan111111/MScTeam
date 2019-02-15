@@ -243,7 +243,7 @@ class TopTrumpsCLIApplicationTest {
 
 		g.createPlayerArray();
 
-		g.selectCategory();
+		g.manuallySelectCategory();
 
 		
 
@@ -303,7 +303,7 @@ class TopTrumpsCLIApplicationTest {
 
 		g.activePlayer=g.aiPlayer2;
 
-		g.compareCards(g.getSelectedCategory(g.autoCategory()));
+		g.compareCards(g.createArrayOfCategoryValuesToBeCompared(g.autoSelectCategory()));
 
 		Assert.assertTrue(g.activeCategory=="Range");
 
@@ -333,7 +333,7 @@ class TopTrumpsCLIApplicationTest {
 
 		g.createPlayerArray();
 
-		ArrayList<Integer> input = g.getSelectedCategory("Size");
+		ArrayList<Integer> input = g.createArrayOfCategoryValuesToBeCompared("Size");
 
 		
 
@@ -393,7 +393,7 @@ class TopTrumpsCLIApplicationTest {
 
 		g.createPlayerArray();
 
-		Player p = g.compareCards(g.getSelectedCategory("Speed"));
+		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
 
 		Assert.assertTrue(p.getName().equals("Human"));
 
@@ -423,7 +423,7 @@ class TopTrumpsCLIApplicationTest {
 
 		g.createPlayerArray();
 
-		Player p = g.compareCards(g.getSelectedCategory("Range"));
+		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Range"));
 
 		Assert.assertTrue(p.equals(g.aiPlayer2));
 
@@ -454,7 +454,7 @@ class TopTrumpsCLIApplicationTest {
 		g.createPlayerArray();
 		g.activePlayer=g.humanPlayer;
 		// Select category : "FIREPOWER" and the round outcome should be a draw.
-		g.compareCards(g.getSelectedCategory("Firepower"));
+		g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Firepower"));
 				
 
 		Assert.assertNotNull(g.communalPile);
@@ -517,7 +517,7 @@ class TopTrumpsCLIApplicationTest {
 
 		expectedArray.add(g.aiPlayer4.getCurrentCards().get(0));
 
-		Player p = g.compareCards(g.getSelectedCategory("Speed"));
+		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
 
 		g.transferWinnerCards(p);
 

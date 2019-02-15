@@ -29,13 +29,13 @@ public class SQL {
 		try {
 			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2359448y",
 					"2359448y");
-			System.out.println("Opened database successfully");
+		//	System.out.println("Opened database successfully");
 		} catch (Exception e) {
-			System.err.println("Can not connect the severs");
+			System.err.println("Can not connect the servers");
 		}
 
 		if (connection != null) {
-			System.out.println("connect you database....");
+		//	System.out.println("connect to database....");
 			try {
 				Statement stmt = connection.createStatement();
 
@@ -60,7 +60,7 @@ public class SQL {
 				System.exit(0);
 			}
 		}
-		System.out.println("Operation done successfully");
+		//System.out.println("Operation done successfully");
 	}
 
 	// set the result about the game information to database
@@ -74,7 +74,7 @@ public class SQL {
 		try {
 			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2359448y",
 					"2359448y");
-			System.out.println("Opened database successfully");
+			//System.out.println("Opened database successfully");
 		} catch (Exception e) {
 			System.err.println("Can not connect the severs");
 		}
@@ -82,7 +82,7 @@ public class SQL {
 			Statement stmt = connection.createStatement();
 			String sql = "INSERT INTO Game VALUES" + "(" + GameID + "," + AmountOfRound + "," + "'" + GameWiner + "'"
 					+ "," + NumOfDraw + "," + "'" + isHuman + "'" + ");";
-			System.out.println(sql);
+			//System.out.println(sql);
 			stmt.executeUpdate(sql);
 			stmt.close();
 			connection.close();
@@ -104,7 +104,7 @@ public class SQL {
 		try {
 			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2359448y",
 					"2359448y");
-			System.out.println("Opened database successfully");
+			//System.out.println("Opened database successfully");
 		} catch (Exception e) {
 			System.err.println("Can not connect the severs");
 		}
@@ -112,7 +112,7 @@ public class SQL {
 			Statement stmt = connection.createStatement();
 			String sql = "INSERT INTO Round VALUES" + "(" + GameID + "," + RoundID + "," + "'" + RoundWiner + "'" + ","
 					+ "'" + isDraw + "'" + "," + "'" + isHuman + "'" + ");";
-			System.out.println(sql);
+		//	System.out.println(sql);
 			stmt.executeUpdate(sql);
 			stmt.close();
 			connection.close();
@@ -136,13 +136,13 @@ public class SQL {
 		try {
 			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2359448y",
 					"2359448y");
-			System.out.println("Opened database successfully");
+		//	System.out.println("Opened database successfully");
 		} catch (Exception e) {
-			System.err.println("Can not connect the severs");
+			System.err.println("Can not connect the servers");
 		}
 
 		if (connection != null) {
-			System.out.println("connect you database....");
+			//System.out.println("connect to database....");
 			try {
 				Statement stmt = connection.createStatement();
 				ResultSet resultNumberOfGames = stmt.executeQuery("SELECT MAX(Game.GameID)\r\n" + "FROM Game\r\n");
@@ -200,7 +200,7 @@ public class SQL {
 		try {
 			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2359448y",
 					"2359448y");
-			System.out.println("Opened database successfully");
+			//System.out.println("Opened database successfully");
 		} catch (Exception e) {
 			System.err.println("Can not connect the severs");
 		}try {
@@ -232,18 +232,18 @@ public class SQL {
 		try {
 			connection = DriverManager.getConnection("jdbc:postgresql://yacata.dcs.gla.ac.uk:5432/", "m_18_2359448y",
 					"2359448y");
-			System.out.println("Opened database successfully");
+		//	System.out.println("Opened database successfully");
 		} catch (Exception e) {
 			System.err.println("Can not connect the severs");
 		}
 
 		if (connection != null) {
-			System.out.println("connect you database....");
+//			System.out.println("connect to database....");
 			
 			try {
 				Statement stmt = connection.createStatement();
 				ResultSet resultHumanWons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
-															 +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'Human'\r\n"
+															 +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'You'\r\n"
 															 +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
 															 +"AND Round.isDraw = false\r\n");
 				while (resultHumanWons.next()) {
@@ -252,7 +252,7 @@ public class SQL {
 				}
 				
 				ResultSet resultAI1Wons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
-						 								   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI 1'\r\n"
+						 								   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI Player 1'\r\n"
 						 								   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
 						 								   +"AND Round.isDraw = false\r\n");
 				while (resultAI1Wons.next()) {
@@ -261,7 +261,7 @@ public class SQL {
 				}
 				
 				ResultSet resultAI2Wons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
-														   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI 2'\r\n"
+														   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI Player 2'\r\n"
 														   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
 														   +"AND Round.isDraw = false\r\n");
 				while (resultAI2Wons.next()) {
@@ -270,7 +270,7 @@ public class SQL {
 				}
 				
 				ResultSet resultAI3Wons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
-														   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI 3'\r\n"
+														   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI Player 3'\r\n"
 														   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
 														   +"AND Round.isDraw = false\r\n");
 				while (resultAI3Wons.next()) {
@@ -279,12 +279,12 @@ public class SQL {
 				}
 				
 				ResultSet resultAI4Wons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
-															   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI 4'\r\n"
+															   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI Player 4'\r\n"
 															   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
 															   +"AND Round.isDraw = false\r\n");
 				while (resultAI4Wons.next()) {
 					int AI4Wons = resultAI4Wons.getInt(1);
-					scoresStatistics += "   AI 4 Player: "+AI4Wons+", ";
+					scoresStatistics += "   AI 4 Player: "+AI4Wons+"\n";
 				}
 				
 				resultAI4Wons.close();
