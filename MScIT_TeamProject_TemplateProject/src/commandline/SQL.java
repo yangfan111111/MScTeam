@@ -244,7 +244,8 @@ public class SQL {
 				Statement stmt = connection.createStatement();
 				ResultSet resultHumanWons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
 															 +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'Human'\r\n"
-															 +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n");
+															 +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
+															 +"AND Round.isDraw = false\r\n");
 				while (resultHumanWons.next()) {
 					int numberOfGames = resultHumanWons.getInt(1);
 					scoresStatistics += "   Human player: "+numberOfGames+"\n";
@@ -252,7 +253,8 @@ public class SQL {
 				
 				ResultSet resultAI1Wons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
 						 								   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI 1'\r\n"
-						 								   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n");
+						 								   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
+						 								   +"AND Round.isDraw = false\r\n");
 				while (resultAI1Wons.next()) {
 					int numberOfAI1Wins = resultAI1Wons.getInt(1);
 					scoresStatistics += "   AI 1 Player: "+numberOfAI1Wins+"\n";
@@ -260,7 +262,8 @@ public class SQL {
 				
 				ResultSet resultAI2Wons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
 														   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI 2'\r\n"
-														   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n");
+														   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
+														   +"AND Round.isDraw = false\r\n");
 				while (resultAI2Wons.next()) {
 					int numberOfAI2Wins = resultAI2Wons.getInt(1);
 					scoresStatistics += "   AI 2 Player: "+numberOfAI2Wins+"\n";
@@ -268,7 +271,8 @@ public class SQL {
 				
 				ResultSet resultAI3Wons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
 														   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI 3'\r\n"
-														   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n");
+														   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
+														   +"AND Round.isDraw = false\r\n");
 				while (resultAI3Wons.next()) {
 					int AI3Wons = resultAI3Wons.getInt(1);
 					scoresStatistics += "   AI 3 Player: "+AI3Wons+"\n";
@@ -276,7 +280,8 @@ public class SQL {
 				
 				ResultSet resultAI4Wons = stmt.executeQuery("SELECT COUNT(Round.RoundWiner)\r\n"
 															   +"FROM Round\r\n"+"WHERE Round.RoundWiner = 'AI 4'\r\n"
-															   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n");
+															   +"AND Round.GameID = (SELECT MAX(Round.GameID) FROM Round)\r\n"
+															   +"AND Round.isDraw = false\r\n");
 				while (resultAI4Wons.next()) {
 					int AI4Wons = resultAI4Wons.getInt(1);
 					scoresStatistics += "   AI 4 Player: "+AI4Wons+", ";
