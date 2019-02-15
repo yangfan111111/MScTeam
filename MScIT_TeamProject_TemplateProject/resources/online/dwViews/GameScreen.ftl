@@ -3,6 +3,9 @@
 <html>
 
 <head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 <!-- Web page title -->
 <style type="text/css">
 #content {
@@ -46,7 +49,7 @@ html body {
 
 .rightPanel {
 	overflow: hidden;
-	display: none;
+	display:none;
 }
 
 .imageStyle {
@@ -114,14 +117,15 @@ html body {
 		<!-- Add your HTML Here -->
 		<div>
 			<h1 class="head">Top Trumps Game</h1>
-			<h5 class="head2 bg-info text-white">game progress</h5>
+			<h5 id="gameProgress" class="head2 bg-info text-white">Game Progress</h5>
 		</div>
+		
 
 		<div class="leftPanel">
 			<div class="cardBox">
 				<div class="card">
-					<h3 class="card-header">Who is the active player</h3>
-					<div class="card-body" style="font-size: 14px">show the
+					<h3 id="showActivePlayer" class="card-header">Welcome</h3>
+					<div id="infoPanel" class="card-body" style="font-size: 14px">show the
 						attribute which is the active player's choice.</div>
 
 					<div class="btn-group" role="group"
@@ -132,15 +136,16 @@ html body {
 							style="display: none; font-size: 14px">
 							<strong>NEXT: </strong>CATEGORY SELECTION
 						</button>
-						<div id="selectMenu" class="dropdown-menu"
+						<div id="selectMenu" class="dropdown-menu" onclick="getThePlayerIndex()"
 							aria-labelledby="selectButton"
 							style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width: 100%;">
 
-							<a id="selectSize" class="dropdown-item" href="#">SIZE</a> <a
-								id="selectSpeed" class="dropdown-item" href="#">SPEED</a> <a
-								id="selectRange" class="dropdown-item" href="#">RANGE</a> <a
-								id="selectFirepower" class="dropdown-item" href="#">FIREPOWER</a>
-							<a id="selectCargo" class="dropdown-item" href="#">CARGO</a>
+							<a id="selectSpeed" class="dropdown-item" href="#" onclick="getHumanSelected(this.id)">Speed</a> 
+							<a id="selectCargo" class="dropdown-item" href="#" onclick="getHumanSelected(this.id)">Cargo</a>
+							<a id="selectRange" class="dropdown-item" href="#" onclick="getHumanSelected(this.id)">Range</a> 
+							<a id="selectFirepower" class="dropdown-item" href="#" onclick="getHumanSelected(this.id)">Firepower</a>
+							<a id="selectSize" class="dropdown-item" href="#" onclick="getHumanSelected(this.id)">Size</a> 
+							
 						</div>
 
 					</div>
@@ -172,23 +177,21 @@ html body {
 
 					</div>
 
+				
 					<div>
+						<button id="start" class="btn btn-info btn-block" onclick="getFirstPlayerIndex()"
+							type="button" style="display: none; font-size: 14">START GAME</button>
 
-						<button id="showWinner" class="btn btn-info btn-block"
-							type="button" style="display: none">SHOW WINNER</button>
-
-					</div>
-
-					<div>
-
-						<button id="showWinner" class="btn btn-info btn-block"
-							type="button" style="display: none">SHOW WINNER</button>
-						<button type="button" class="btn btn-info btn-block"
-							onclick="changePicture()"
-							style="width: 60; height: 40; font-size: 12">Change</button>
-						<button type="button" class="btn btn-info btn-block"
+						<button id="showWinner" class="btn btn-info btn-block" onclick="compareCategory()"
+							type="button" style="display: none; font-size: 14">SHOW WINNER</button>
+						<button id="confirmButton" type="button" class="btn btn-info btn-block"
 							onclick="createPlayers()"
-							style="width: 60; height: 40; font-size: 12">createPlayers</button>
+							style="width: 60; height: 40; font-size: 14">CreatePlayers</button>
+						<button id="AISelect" class="btn btn-info btn-block" onclick="autoSelectCategory()"
+							type="button" style="display: none; font-size: 14"><strong>NEXT AI: </strong>CATEGORY SELECTION</button>
+						<button id="nextRound" type="button" class="btn btn-info btn-block"
+							onclick="changePicture()"
+							style="width: 60; height: 40; display: none; font-size: 14">Next Round</button>
 					</div>
 
 				</div>
@@ -201,7 +204,7 @@ html body {
 		<div id="cardZone" class="rightPanel">
 			<div id="card1" class="cardBox">
 				<div class="card">
-					<h3 class="card-header" style="background-color: green">
+					<h3 id="head1" class="card-header" style="background-color: green">
 						<input id="number1" value=""
 							style="background-color: green; border: 0; text-align: left; color: white">
 					</h3>
@@ -213,7 +216,7 @@ html body {
 						</h5>
 					</div>
 					<img class="imageStyle" id="show1" alt="Sabre" align="bottom"
-						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+						>
 					<div class="card-body">
 						<table class="cardTable">
 							<tr>
@@ -241,7 +244,7 @@ html body {
 
 			<div id="card2" class="cardBox">
 				<div class="card">
-					<h3 class="card-header" style="background-color: green">
+					<h3 id="head2" class="card-header" style="background-color: green">
 						<input type="text" id="number2" Readonly="readonly"
 							disabled="disabled" value=""
 							style="background-color: green; border: 0; text-align: left; color: white">
@@ -254,7 +257,7 @@ html body {
 						</h5>
 					</div>
 					<img class="imageStyle" id="show2" alt="Sabre" align="bottom"
-						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+						src="">
 					<div class="card-body">
 						<table class="cardTable">
 							<tr>
@@ -282,7 +285,7 @@ html body {
 
 			<div id="card3" class="cardBox">
 				<div class="card">
-					<h3 class="card-header" style="background-color: green">
+					<h3 id="head3" class="card-header" style="background-color: green">
 						<input type="text" id="number3" Readonly="readonly"
 							disabled="disabled" value=""
 							style="background-color: green; border: 0; text-align: left; color: white">
@@ -295,7 +298,7 @@ html body {
 						</h5>
 					</div>
 					<img class="imageStyle" id="show3" alt="Sabre" align="bottom"
-						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+						src="">
 
 					<div class="card-body">
 						<table class="cardTable">
@@ -324,7 +327,7 @@ html body {
 
 			<div id="card4" class="cardBox">
 				<div class="card">
-					<h3 class="card-header" style="background-color: green">
+					<h3 id="head4" class="card-header" style="background-color: green">
 						<input type="text" id="number4" Readonly="readonly"
 							disabled="disabled" value=""
 							style="background-color: green; border: 0; text-align: left; color: white">
@@ -337,7 +340,7 @@ html body {
 						</h5>
 					</div>
 					<img class="imageStyle" id="show4" alt="Sabre" align="bottom"
-						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+						src="">
 					<div class="card-body">
 						<table class="cardTable">
 							<tr>
@@ -365,7 +368,7 @@ html body {
 
 			<div id="card5" class="cardBox">
 				<div class="card">
-					<h3 class="card-header" style="background-color: green">
+					<h3 id="head5" class="card-header" style="background-color: green">
 						<input type="text" id="number5" Readonly="readonly"
 							disabled="disabled" value=""
 							style="background-color: green; border: 0; text-align: left; color: white">
@@ -378,7 +381,7 @@ html body {
 						</h5>
 					</div>
 					<img class="imageStyle" id="show5" alt="Sabre" align="bottom"
-						src="http://dcs.gla.ac.uk/~richardm/TopTrumps/Sabre.jpg">
+						src="">
 					<div class="card-body">
 						<table class="cardTable">
 							<tr>
@@ -405,7 +408,6 @@ html body {
 			</div>
 		</div>
 
-
 	</div>
 
 	<script type="text/javascript">
@@ -417,153 +419,423 @@ html body {
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
 				SQL();
-				
-				// For example, lets call our sample methods
-				//helloJSONList();
-				//helloWord("Student");
+			
 			}
 			
 			// -----------------------------------------
 			// Add your other Javascript methods Here
 			// -----------------------------------------
 			
-			  var num = 0;
+			//--------------------------------------------
+			// parameter (Global Variables)
+			  var num = 0; // num of AI player 
+			  var playerlist = new Array(4); // generated playerlist from back end 
+			  var PlayerCard = new Array(4); // rebuild the list 
+			  var index1 = -1; // the index1 show order of player handcard 
+			  var finalNum = 0; // the all player num 
+			  var activePlayerIndex = 6; // activePlayerIndex 
+			  var PlayerIndexList = new Array(); 
+			  var lastTimeId = 1;
+			  var ishuman = false;
+			  var AISelected;
+			  var activePlayer;
+			  var isDraw = false;
+			  var roundNum = 1;
+			  var communalpileNum = 0;
+			 
+			//-------------------------------------
 			
+			
+			// get the number of player from selection 
 			  function getPlayerNum(id) {
-
 			    var text = document.getElementById(id).innerText;
-
-			    num = text.valueOf();
-			    
-			    setAINum(num);
-			    
-			    num++;
-       
-				console.log(num);
-                
-
-                hideComponent("selectPlayerBt");
-
-                showComponent("selectButton");
-
-                for(var i=++num;i<=5;i++){
-
+			    num = text.valueOf();			    
+			    setAINum(num);			    
+			    finalNum = (++num);
+				console.log("finalNum"+finalNum);             
+                for(var i=(finalNum+1);i<=5;i++){
                     hideCard(i);
-
-                }
-                
+                }               
                 console.log("num is "+num--);
-                showComponent("cardZone");
-
             }
 			  
 			
-			
+			// send the AI player num to back end 
 			function setAINum(num){
-				
 				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/setPlayerNum?num="+num);
-				
 				if (!xhr) {
   					alert("CORS not supported");
 				}
-				
 				xhr.onload = function(e) {
  					var responseText = xhr.response; // the text of the response
- 				
 				};
-				
 				xhr.send();
-				
 			}
 			
-			var playerlist = new Array(4);
-			
-			var playerCards0 = new Array(7);
-			var playerCards1 = new Array(7);
-			var playerCards2 = new Array(7);
-			var playerCards3 = new Array(7);
-			var playerCards4 = new Array(7);
-			  
-			function createPlayers(){
-				
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/createPlayers");
-				
+		
+			// createPlayers
+			function createPlayers(){				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/createPlayers");				
 				if (!xhr) {
   					alert("CORS not supported");
 				}
 				
 				xhr.onload = function(e) {
- 					var responseText = xhr.response; // the text of the response
- 					
- 					var json = JSON.parse(responseText);
- 					
- 					playerlist = json;
- 					
- 					for(var i=0; i<5;i++){
+ 					var responseText = xhr.response; // the text of the response 					
+ 					var json = JSON.parse(responseText); 					
+ 					playerlist = json;					
+ 					for(var i=0; i<playerlist.length;i++){						
+ 						console.log(playerlist[i]);						
  						
- 						console.log(playerlist[i]);
-
  					}
+ 					//getRoundNum();
+ 					//showProgress();
  					
- 					playerCards0 = playerlist[0];
- 					playerCards1 = playerlist[1];
- 					playerCards2 = playerlist[2];
- 					playerCards3 = playerlist[3];
- 					playerCards4 = playerlist[4];
- 					
- 					return playerlist;
-		
+ 	                hideComponent("selectPlayerBt");
+ 	                hideComponent("confirmButton");
+ 	                showComponent("start");
+ 					return playerlist;		
 				};
-				
 				// We have done everything we need to prepare the CORS request, so send it
 				xhr.send();	
+				
 			} 
 			
-			
-			
-			function playerCardList(N){
+			//-----------------------------------------------getRoundNum
+			function getRoundNum() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getCurrentRoundNum");				
+				if (!xhr) {
+  					alert("CORS not supported");
+				}
 				
-				if(N==0) {
-					console.log("000000");
-					return playerCards0;
-				}else if(N==1){
-					console.log("111111");
-					return playerCards1;
-				}else if(N==2){
-					console.log("2222222");
-					return playerCards2;
-				}else if(N==3){
-					console.log("3333333");
-					return playerCards3;
-				}else if(N==4){
-					console.log("4444444");
-					return playerCards4;
-				} 
-			
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response 					
+ 					var json = JSON.parse(responseText); 					
+ 					roundNum = json;
+				};
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();	
 			}
 			
-			 var index1 = 0;
-			 //var cardlist = new Array(39);
-			 
-			 function changePicture(){
-					
-			 	index1 = (++index1) % 8;
+			function getThePlayerIndex() {
+				console.log("activePlayerIndex: "+activePlayerIndex);
+			 	console.log("activePlayerIndex: "+activePlayerIndex);
+			 	console.log("activePlayerIndex: "+activePlayerIndex);
+				
+            }
+			
+			//--------------------------------------------
+			function changeColor(id) {
+				id = (id+1);
+				head = document.getElementById('head'+id); 
+				number = document.getElementById('number'+id); 
+				head.style.backgroundColor = "firebrick";
+				number.style.backgroundColor = "firebrick";
+				lastTimeId = id;
+			}
+			
+			function backColor(id) {
+	
+				head = document.getElementById('head'+id); 
+				number = document.getElementById('number'+id); 
+				head.style.backgroundColor = "green";
+				number.style.backgroundColor = "green";
+			}
+			
+			function showActivePlayer(id){
+				message = document.getElementById('showActivePlayer');
+				message.innerHTML = "The active player is "+playerlist[id].name;
+			}
+			
+			function showActiveSelected() {
+				message = document.getElementById('infoPanel');
+				message.innerHTML = "They selected "+ AISelected;
+			}
+			
+			function showRoundWinner(){
+				message = document.getElementById('gameProgress');
+				message.innerHTML = "round "+roundNum+": "+activePlayer.name + " won this round!";
+			}
+			
+			function showIsDraw(){
+				message = document.getElementById('gameProgress');
+				message.innerHTML = "round "+roundNum+":This round was a Draw. Communal Pile now has " + communalpileNum + " cards";
+			}
+			
+			function showProgress(){
+				message = document.getElementById('gameProgress');
+				message.innerHTML = "round "+roundNum+":Players have drawn their cards";
+			}
+			
+			function waitingMessage(){
+				message = document.getElementById('infoPanel');
+				message.innerHTML = "Waiting for selection";
+			}
+			//------------------------------------------------------------------------------
+			// identify the first player is human?
+			function identifyThePlayer() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/setFirstActivePlayerAndReturnTrueIfHuman");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					//list = responseText;
+ 					//important!!!!!
+ 					var json = JSON.parse(responseText);
+ 					ishuman = json;	
+ 					if(ishuman){
+ 						showComponent("selectButton");
+ 						hideComponent('AISelect');
+ 						// get the human selection 
+ 						
+ 						
+ 					}else{
+ 						
+ 						showComponent('AISelect');
+ 						hideComponent("selectButton");
+ 					}
+				};
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();
+			}
+			//----------------------------------------------------------------------------------
+			
+			//------------------------------------------------------------------------------get human selected 
+			 function getHumanSelected(id) {
+				
+				 var text = document.getElementById(id).innerText;
+				 
+				 var categoryChoice = text.valueOf();
+				 
+				 console.log(categoryChoice);
+				 
+				 sendHumanSelected(categoryChoice);
+				 for (var i=2; i<6; i++){
+				 		showComponent("card"+i);
+				 	}
+
+			} 
+			
+			function sendHumanSelected(categoryChoice) {
+				
+				 var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getHumanSelected?categoryChoice="+categoryChoice);
+				 console.log("11111111:"+categoryChoice);
+					if (!xhr) {
+	  					alert("CORS not supported");
+					}
+					xhr.onload = function(e) {
+	 					var responseText = xhr.response; // the text of the response
+					};
+					hideComponent("selectButton");
+					showComponent("showWinner");
+					xhr.send();
+
+			}
+			
+		     //-----------------test of next round 	 
+			 function changePicture(){		 
+	
+			 	index1 = 0;
 			 	
-			 	console.log(index1);
+			 	console.log("index1:"+index1);
 			 	
 				 // get the element 
+				getCurrentPlayerList();
 				
-			 	for(var j=1;j<6;j++){
+			 	for(var j=1;j<(playerlist.length+1);j++){
 			 		
 			 		getElementAndSetValue(index1, j);
-			 		
+			 		console.log("j: "+j);
 			 	}
+			 	showComponent("cardZone");
+			 	for (var i=2; i<6; i++){
+			 		hideComponent("card"+i);
+			 	}
+				console.log("current active: "+activePlayerIndex);
+ 				backColor(lastTimeId);
+ 				changeColor(activePlayerIndex);
+ 				showActivePlayer(activePlayerIndex);
+ 				identifyThePlayer();
+ 			    showProgress();
+ 			    hideComponent("nextRound");
+
 			}
-			 
+			
+			function getFirstPlayerIndex() {
+				for(var j=1;j<(finalNum+1);j++){
+					getElementAndSetValue(0, j);
+			 		console.log("j: "+j);
+			 	}
+				
+			 	showComponent("cardZone");
+			 	for (var i=2; i<6; i++){
+			 		hideComponent("card"+i);
+			 	}
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getTheFirstPlayer");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					var json = JSON.parse(responseText);  
+ 					activePlayerIndex = json;
+ 					console.log("first active: "+activePlayerIndex);
+ 					changeColor(activePlayerIndex);
+ 					showActivePlayer(activePlayerIndex);
+ 					identifyThePlayer();
+ 					showProgress();
+				}
+				hideComponent("start")
+				xhr.send();
+			}
+			
+			
+			function getCurrentPlayerIndex(){
+			 	var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getTheActivePlayerIndex");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					var json = JSON.parse(responseText);  
+ 					activePlayerIndex = json;
+ 					console.log("after compare:current active: "+activePlayerIndex);
+ 					return activePlayerIndex;
+				};
+				xhr.send();
+			}
+			
+			//-------------------------------------compare the Category value 
+			function compareCategory() {
+				console.log("compareCategory");
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/compareCategoryValues");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					var json = JSON.parse(responseText);
+ 					activePlayer = json;
+ 					console.log("-----active player:" + activePlayer.name);
+ 					checkisDraw();
+ 					getRoundNum();
+ 					showProgress();
+ 					getCurrentPlayerList();
+ 					getCurrentPlayerIndex();
+ 					waitingMessage();
+ 					//console.log("-----------after compare:current active: "+activePlayerIndex);
+ 					//console.log("isDraw111111:"+isDraw);
+ 			
+				};
+				// We have done everything we need to prepare the CORS request, so send it
+				hideComponent("showWinner");
+				showComponent("nextRound");
+				
+				xhr.send();
+			
+			}
+			//---------------------------------------------------------------if draw get how many card in communalpile
+			function getNumOfCommunalpile() {
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getCommunalPile");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					var json = JSON.parse(responseText);
+ 					communalpileNum = json;
+ 					console.log("inner----communalpileNum"+communalpileNum);
+ 					return communalpileNum;
+				};
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();
+			
+			}
+			
+			
+			//-----------------------------------------------if draw 
+			function checkisDraw() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/isDraw");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					var json = JSON.parse(responseText);
+ 					isDraw = json;
+ 					console.log("checkisDraw():"+isDraw);
+ 					if (isDraw == true){
+ 						// show draw 
+ 						getNumOfCommunalpile();
+ 						console.log("communalpileNum"+communalpileNum);
+ 						showIsDraw();
+ 						console.log("draw");
+ 							
+ 					}else{
+ 						// show winner 
+ 						showRoundWinner();
+ 						console.log("winner");
+ 					}
+				};
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();
+			}
+			
+			//----------------------------------------------------------------get the current player list
+			function getCurrentPlayerList() {
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getCurrentPlayerlist");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+					var responseText = xhr.response; // the text of the response 					
+ 					var json = JSON.parse(responseText); 					
+ 					playerlist = json;					
+ 					for(var i=0; i<playerlist.length;i++){						
+ 						console.log(playerlist[i]);						
+ 						
+ 					}
+				};
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();	
+
+			}
+			
+			
+			//------------------------------------autoSelectCategory
+			 function autoSelectCategory(){
+					var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/autoSelectCategory");	
+					if (!xhr) {
+	  					alert("CORS not supported");
+					}	
+					xhr.onload = function(e) {
+	 					var responseText = xhr.response; // the text of the response
+	 					  
+	 					AISelected = responseText;
+	 					console.log(AISelected);
+	 					showActiveSelected();
+	 					
+					};
+					// We have done everything we need to prepare the CORS request, so send it
+					hideComponent("AISelect");
+					showComponent("showWinner");
+					for (var i=2; i<6; i++){
+				 		showComponent("card"+i);
+				 	}
+					xhr.send();
+				 
+			 }  
+		    
+		     //------------------------------------------------
+		     // set the card data 
 			 function getElementAndSetValue(index, number){
-				 	
 				    console.log("number; "+number);
 				    console.log("number-1: "+(number-1));
+				    console.log("index: "+index);
 				    var N = (number-1);
 				    picture = document.getElementById('show'+number); 
 				 	cardID = document.getElementById('cardID'+number); 
@@ -575,88 +847,101 @@ html body {
 				 	size = document.getElementById('size'+number);
 				 	number = document.getElementById('number'+number);
 				 	// set value 
-				 	picture.src = playerCardList(N).currentCards[index].cardPicture;
-				    cardID.value = "CardID: "+playerCardList(N).currentCards[index].cardID;
-				 	speed.value = "Speed: "+playerCardList(N).currentCards[index].speed;
-				    cargo.value = "Cargo: "+playerCardList(N).currentCards[index].cargo;
-				    range.value = "Rango: "+playerCardList(N).currentCards[index].range;
-				    description.value = "Description: "+playerCardList(N).currentCards[index].description;
-				    firepower.value = "Firepower: "+playerCardList(N).currentCards[index].firepower;
-				    size.value = "Size: "+playerCardList(N).currentCards[index].size;
-				    number.value = "playName "+"cardNum";
-				   
+				    picture.src = playerlist[N].currentCards[index].cardPicture;
+				    cardID.value = "CardID: "+playerlist[N].currentCards[index].cardID;
+				 	speed.value = "Speed: "+playerlist[N].currentCards[index].speed;
+				    cargo.value = "Cargo: "+playerlist[N].currentCards[index].cargo;
+				    range.value = "Range: "+playerlist[N].currentCards[index].range;
+				    description.value = ""+playerlist[N].currentCards[index].description;
+				    firepower.value = "Firepower: "+playerlist[N].currentCards[index].firepower;
+				    size.value = "Size: "+playerlist[N].currentCards[index].size;
+				    number.value = playerlist[N].name +" [ "+ playerlist[N].currentCards.length +" ]";  
 			 }
 			 
 			 
-			 
-			function SQL(){
-				
+			// sql 
+			function SQL(){			
 				var list = new Array(39);
-				
-				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/shuffleDeck");
-				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/shuffleDeck");	
 				if (!xhr) {
   					alert("CORS not supported");
-				}
-				
+				}	
 				xhr.onload = function(e) {
  					var responseText = xhr.response; // the text of the response
  					//list = responseText;
  					//important!!!!!
  					var json = JSON.parse(responseText);
- 					cardlist = json;
- 				   
- 				    // default 
- 				    //getElementAndSetValue(0,1);
- 				    //getElementAndSetValue(0,2);
- 				    //getElementAndSetValue(0,3);
- 				    //getElementAndSetValue(0,4);
- 				   // getElementAndSetValue(0,5);
- 				   // return cardlist;
+ 					cardlist = json;				  
 				};
-				
 				// We have done everything we need to prepare the CORS request, so send it
 				xhr.send();
 			}
 			
-		
 			
-			
-			
-
-
+		//----------------------------------------------------- hide show 
 			function hideCard(cardID) {
-
                 var card = document.getElementById("card"+cardID);
-
                 card.style.display = "none";
-
             }
-
+		
             function showCard(cardID) {
-
 				var card = document.getElementById("card"+cardID);
-
 				card.style.display= "block" ;
-
             }
 
 			function hideComponent(id) {
-
                 var c = document.getElementById(id);
-
                 c.style.display = "none";
-
             }
 
             function showComponent(id) {
-
                 var c = document.getElementById(id);
-
                 c.style.display = "block";
             }
-            
-			
+         //--------------------------------------------------------   
+		
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
 			// -----------------------------------------------------------------------
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {
