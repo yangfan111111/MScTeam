@@ -2,12 +2,16 @@ package online.dwResources;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+
+
 import commandline.CardModel;
 import commandline.Player;
 import commandline.SQL;
 import commandline.Test_log;
 import online.configuration.TopTrumpsJSONConfiguration;
 import commandline.GameLogic;
+
+import javax.validation.constraints.Null;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
@@ -45,8 +49,10 @@ public class TopTrumpsRESTAPI {
 	private Boolean gameOver = false;
 	private Player loser = new Player("loser");
 	private Player roundWinner;
-	private ArrayList<Player> players = new ArrayList<Player>();
-	private ArrayList<Player> maximumPlayers = new ArrayList<Player>();
+//	private ArrayList<Player> players = new ArrayList<Player>();
+//	private ArrayList<Player> maximumPlayers = new ArrayList<Player>();
+	private ArrayList<Player> players;
+	private ArrayList<Player> maximumPlayers;
 	private ArrayList<CardModel> communalPile = new ArrayList<CardModel>();
 	private ArrayList<Player> playersToShuffle = new ArrayList<Player>();
 	private ArrayList<Integer> topCardCategoryNumbers = new ArrayList<Integer>();
@@ -73,11 +79,28 @@ public class TopTrumpsRESTAPI {
 		// ----------------------------------------------------
 		// Add relevant initalization here
 		// ----------------------------------------------------
+		System.err.println("restart!!!!!!!!!!!!!!");
 	}
 
 	// ----------------------------------------------------
 	// Add relevant API methods here
 	// ----------------------------------------------------
+	
+	@GET
+	@Path("/initAttribute")
+	public void initAttribute() {
+		
+		sql = new SQL();
+		log = new Test_log();
+		shuffledDeck = new ArrayList<CardModel>();
+		players = new ArrayList<Player>();
+		maximumPlayers = new ArrayList<Player>();
+		communalPile = new ArrayList<CardModel>();
+		playersToShuffle = new ArrayList<Player>();
+		topCardCategoryNumbers = new ArrayList<Integer>();
+		categoryValuesToBeCompared = new ArrayList<Integer>();
+	
+	}
 	
 	@GET
 	@Path("/setPlayerNum")
@@ -122,6 +145,8 @@ public class TopTrumpsRESTAPI {
 	 * the maximum amount of players that could possibly play in a single game.
 	 */
 	public void createMaximumPlayerArrayList() {
+		maximumPlayers = new ArrayList<Player>();
+		
 		Player humanPlayer = new Player("You");
 		Player aiPlayerOne = new Player("AI player 1");
 		Player aiPlayerTwo = new Player("AI player 2");
@@ -144,16 +169,27 @@ public class TopTrumpsRESTAPI {
 	@GET
 	@Path("/createPlayers")
 	public ArrayList<Player> createPlayers() throws IOException {
+	
 		int oneHumanPlayer = 1;
+
+		players = new ArrayList<Player>();
+		maximumPlayers = new ArrayList<Player>();
+		//shuffledDeck = shuffleDeck();
 		cardsPerPlayer = shuffledDeck.size() / (aiPlayerNum+oneHumanPlayer);
 		System.err.println("cardsPerPlayer"+cardsPerPlayer);
 		createMaximumPlayerArrayList();
 		for (int i = 0; i < aiPlayerNum + oneHumanPlayer; i++) {
 			players.add(maximumPlayers.get(i));
+			
 		}
 		humanPlayer = players.get(0);
+		jj=0;
+		roundNum=0;
+		communalPile = new ArrayList<CardModel>();
+		
 		distributeCards();
-		setLoserPlayer();
+		System.err.println(players.get(1).getCurrentCards());
+		//setLoserPlayer();
 		return players;
 	}
 	
@@ -186,7 +222,8 @@ public class TopTrumpsRESTAPI {
 	public int getTheActivePlayerIndex() {
 		
 		for(Player player: players) {
-			if (roundWinner.name == player.name) {	
+			
+			if (roundWinner.name == player.name || activePlayer.name == player.name) {	
 			 index = players.indexOf(player);
 			}
 		}
@@ -238,7 +275,6 @@ public class TopTrumpsRESTAPI {
 		addRemainderCardsToCommunalPile();
 		
 		for (int i = 0; i < players.size(); i++) {
-			
 			for ( ; jj < cardsPerPlayer*(i+1); jj++) {
 				players.get(i).addToCurrentCards(shuffledDeck.get(jj));
 			}
@@ -538,11 +574,14 @@ public class TopTrumpsRESTAPI {
 		return isDraw;
 
 	}
-
+	@GET
+	@Path("/isGameOver")
 	public Boolean isGameOver() {
 		return gameOver;
 	}
-
+	
+	@GET
+	@Path("/isHumanPlayerOutGame")
 	public Boolean isHumanPlayerOutGame() {
 
 		return isHumanPlayerOutGame;
