@@ -2,8 +2,6 @@ package online.dwResources;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-
-
 import commandline.CardModel;
 import commandline.Player;
 import commandline.SQL;
@@ -60,6 +58,9 @@ public class TopTrumpsRESTAPI {
 	int jj = 0;
 	int index = 0;
 	private int roundNum = 1;
+	private int gameID = sql.getTheCurrentGameID()+1;
+	private int drawNum = 0;
+	
 
 	/**
 	 * A Jackson Object writer. It allows us to turn Java objects into JSON strings
@@ -85,22 +86,7 @@ public class TopTrumpsRESTAPI {
 	// ----------------------------------------------------
 	// Add relevant API methods here
 	// ----------------------------------------------------
-	
-	@GET
-	@Path("/initAttribute")
-	public void initAttribute() {
-		
-		sql = new SQL();
-		log = new Test_log();
-		shuffledDeck = new ArrayList<CardModel>();
-		players = new ArrayList<Player>();
-		maximumPlayers = new ArrayList<Player>();
-		communalPile = new ArrayList<CardModel>();
-		playersToShuffle = new ArrayList<Player>();
-		topCardCategoryNumbers = new ArrayList<Integer>();
-		categoryValuesToBeCompared = new ArrayList<Integer>();
-	
-	}
+
 	
 	@GET
 	@Path("/setPlayerNum")
@@ -210,7 +196,7 @@ public class TopTrumpsRESTAPI {
 		this.activePlayer = playersToShuffle.get(0);
 		System.out.println("The active player is " + "'" + activePlayer.getName() + "'");
 		for(Player player: players) {
-			if (activePlayer.name == player.name) {	
+			if (activePlayer.name.equals(player.name)) {	
 			 index = players.indexOf(player);
 			}
 		}
@@ -223,7 +209,7 @@ public class TopTrumpsRESTAPI {
 		
 		for(Player player: players) {
 			
-			if (roundWinner.name == player.name || activePlayer.name == player.name) {	
+			if (roundWinner.name.equals(player.name) || activePlayer.name.equals(player.name)) {	
 			 index = players.indexOf(player);
 			}
 		}
@@ -234,7 +220,7 @@ public class TopTrumpsRESTAPI {
     @Path("/setFirstActivePlayerAndReturnTrueIfHuman")
 	public boolean returnTrueIfHuman() {
 		
-		if (activePlayer.name == "You") {
+		if (activePlayer.name.equals("You")) {
 			return true;
 		}else {
 			return false;
@@ -410,8 +396,10 @@ public class TopTrumpsRESTAPI {
 		if (instancesOfMaxNumber > 1) {
 			//isDraw = true;
 			transferCardsToCommunalPile();
+			drawNum++;
 			roundNum++;
 			getCurrentPlayerList();
+			sql.setRoundDataToSQL(gameID, roundNum, activePlayer.name, isDraw, humanIsActivePlayer);
 			return activePlayer;
 		} else if (instancesOfMaxNumber == 1) {
 			isDraw = false;
@@ -421,12 +409,15 @@ public class TopTrumpsRESTAPI {
 			transferWinnerCards();
 			getCurrentPlayerList();
 			activePlayer = roundWinner;
+			sql.setRoundDataToSQL(gameID, roundNum, roundWinner.name, isDraw, humanIsActivePlayer);
 			return roundWinner;
 		}else {
 			roundNum++;
 			getCurrentPlayerList();
 			return dummyPlayer;
 		}
+		
+		
 
 		/*
 		 * Note: dummyPlayer should never get returned as one of the above conditions
@@ -448,20 +439,20 @@ public class TopTrumpsRESTAPI {
 	 */
 
 	public Boolean setActivePlayerAndReturnTrueIfHuman(Player roundWinnerOrActivePlayer) {
-		if (roundWinnerOrActivePlayer.getName() == activePlayer.getName()
+		if (roundWinnerOrActivePlayer.getName().equals(activePlayer.getName())
 				&& roundWinnerOrActivePlayer.getName().equals("You")) {
 			this.humanIsActivePlayer = true;
-		} else if (roundWinnerOrActivePlayer.getName() == activePlayer.getName()) {
+		} else if (roundWinnerOrActivePlayer.getName().equals(activePlayer.getName())) {
 			this.humanIsActivePlayer = false;
-		} else if (activePlayer.getName() == players.get(players.size() - 1).getName()) {
+		} else if (activePlayer.getName().equals(players.get(players.size() - 1).getName())) {
 			if (isHumanPlayerOutGame == true) {
 				activePlayer = players.get(0);
 			} else {
 				humanIsActivePlayer = true;
 			}
-		} else if (roundWinnerOrActivePlayer.getName() != activePlayer.getName()) {
+		} else if (!roundWinnerOrActivePlayer.getName().equals(activePlayer.getName())) {
 			for (int i = 0; i < players.size(); i++) {
-				if (activePlayer.getName() == players.get(i).getName() && i < players.size() - 1) {
+				if (activePlayer.getName().equals(players.get(i).getName()) && i < players.size() - 1) {
 					activePlayer = players.get(i + 1);
 					humanIsActivePlayer = false;
 					break;
@@ -550,6 +541,14 @@ public class TopTrumpsRESTAPI {
 
 	public void checkIfGameHasBeenWon() {
 		if (players.size() == 1) {
+			int num = 0;
+			System.err.println("*******************************************"+num++);
+			if (players.get(0).name.equals("You")) {
+				sql.setGameDataToSQL(gameID, roundNum, players.get(0).name, drawNum, true);
+			}else {
+				sql.setGameDataToSQL(gameID, roundNum, players.get(0).name, drawNum, false);
+			}
+			
 			gameOver = true;
 		}
 	}
@@ -577,6 +576,7 @@ public class TopTrumpsRESTAPI {
 	@GET
 	@Path("/isGameOver")
 	public Boolean isGameOver() {
+		
 		return gameOver;
 	}
 	
@@ -585,6 +585,20 @@ public class TopTrumpsRESTAPI {
 	public Boolean isHumanPlayerOutGame() {
 
 		return isHumanPlayerOutGame;
+	}
+	
+	@GET
+	@Path("/getGameStatis")
+	public String getGameStatis() {
+		System.err.println(sql.getGameStatistics());
+		return sql.getGameStatistics();
+	}
+	
+	@GET
+	@Path("/getAllPlayersScores")
+	public String getAllPlayersScores() {
+		
+		return "The Winner is: "+players.get(0).name +"\n"+ sql.getAllPlayersScores();
 	}
 
 }
