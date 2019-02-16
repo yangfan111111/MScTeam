@@ -447,19 +447,7 @@ html body {
 			  var HumanPlayerOutGame = false;
 			  var gameOver = false;
 			 
-			//-------------------------------------
-			  function init() {
-				
-				  var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/initAttribute");
-					if (!xhr) {
-	  					alert("CORS not supported");
-					}
-					xhr.onload = function(e) {
-	 					var responseText = xhr.response; // the text of the response
-					};
-					xhr.send();
-				
-			}
+
 			
 			// get the number of player from selection 
 			  function getPlayerNum(id) {
@@ -683,6 +671,23 @@ html body {
  			    
 
 			}
+		     
+		    function getAllPlayersScores() {
+		    	
+		    	var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/getAllPlayersScores");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					message = document.getElementById('infoPanel');
+ 					message.innerText = responseText;
+ 					
+				};
+				//getRoundNum();
+				xhr.send();
+		    	
+		    }
 			
 			function getFirstPlayerIndex() {
 				for(var j=1;j<(finalNum+1);j++){
@@ -753,16 +758,8 @@ html body {
  					//console.log("isDraw111111:"+isDraw);
  					hideComponent("showWinner");
  					isGameOver();
- 					if(gameOver){
- 						showComponent("over");
- 						message = document.getElementById('infoPanel');
- 						message.innerHTML = "THE GAME IS OVER";
- 						number = document.getElementById('number'+1);
- 						number.value = playerlist[N].name +" [ "+ 40 +" ]";  
- 					}else{
- 						
- 						showComponent("nextRound");
- 					}
+ 					console.log("isgameover11111"+gameOver);
+ 					
  			
 				};
 				// We have done everything we need to prepare the CORS request, so send it
@@ -886,6 +883,15 @@ html body {
 					var responseText = xhr.response; // the text of the response 					
  					var json = JSON.parse(responseText); 					
  					gameOver = json;
+ 					if(gameOver){
+ 						showComponent("over");
+ 						message = document.getElementById('showActivePlayer');
+ 						message.innerHTML = "THE GAME IS OVER";
+ 						getAllPlayersScores();
+ 					}else{
+ 						
+ 						showComponent("nextRound");
+ 					}
  					return gameOver;
  					
 				};
