@@ -125,7 +125,7 @@ html body {
 			<div class="cardBox">
 				<div class="card">
 					<h3 id="showActivePlayer" class="card-header">Welcome</h3>
-					<div id="infoPanel" class="card-body" style="font-size: 14px">show the
+					<div id="infoPanel" class="card-body" style="font-size: 16px">show the
 						attribute which is the active player's choice.</div>
 
 					<div class="btn-group" role="group"
@@ -138,7 +138,7 @@ html body {
 						</button>
 						<div id="selectMenu" class="dropdown-menu" onclick="getThePlayerIndex()"
 							aria-labelledby="selectButton"
-							style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width: 100%;">
+							style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width: 100%; font-size: 14px">
 
 							<a id="selectSpeed" class="dropdown-item" href="#" onclick="getHumanSelected(this.id)">Speed</a> 
 							<a id="selectCargo" class="dropdown-item" href="#" onclick="getHumanSelected(this.id)">Cargo</a>
@@ -147,7 +147,6 @@ html body {
 							<a id="selectSize" class="dropdown-item" href="#" onclick="getHumanSelected(this.id)">Size</a> 
 							
 						</div>
-
 					</div>
 
 
@@ -164,7 +163,7 @@ html body {
 
 						<div id="selectMenu" class="dropdown-menu text-muted"
 							aria-labelledby="selectPlayerBt"
-							style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width: 100%;">
+							style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px); min-width: 100%;font-size: 14px">
 
 							<a id="2player" class="dropdown-item"
 								onclick="getPlayerNum(this.id)">1</a> <a id="3player"
@@ -179,19 +178,20 @@ html body {
 
 				
 					<div>
+					   <button id="over" class="btn btn-info btn-block" onclick="javascript:window.location.href='http://localhost:7777/toptrumps/'"
+							type="button" style="display: none; font-size: 14px">RETURN TO THE SELECT SCREEN</button>
 						<button id="start" class="btn btn-info btn-block" onclick="getFirstPlayerIndex()"
-							type="button" style="display: none; font-size: 14">START GAME</button>
-
+							type="button" style="display: none; font-size: 14px">START GAME</button>
 						<button id="showWinner" class="btn btn-info btn-block" onclick="compareCategory()"
-							type="button" style="display: none; font-size: 14">SHOW WINNER</button>
+							type="button" style="display: none; font-size: 14px">SHOW WINNER</button>
 						<button id="confirmButton" type="button" class="btn btn-info btn-block"
 							onclick="createPlayers()"
-							style="width: 60; height: 40; font-size: 14">CreatePlayers</button>
+							style="width: 60; height: 40; font-size: 14px">CreatePlayers</button>
 						<button id="AISelect" class="btn btn-info btn-block" onclick="autoSelectCategory()"
-							type="button" style="display: none; font-size: 14"><strong>NEXT AI: </strong>CATEGORY SELECTION</button>
+							type="button" style="display: none; font-size: 14px"><strong>NEXT AI: </strong>CATEGORY SELECTION</button>
 						<button id="nextRound" type="button" class="btn btn-info btn-block"
 							onclick="changePicture()"
-							style="width: 60; height: 40; display: none; font-size: 14">Next Round</button>
+							style="width: 60; height: 40; display: none; font-size: 14px">Next Round</button>
 					</div>
 
 				</div>
@@ -205,7 +205,7 @@ html body {
 			<div id="card1" class="cardBox">
 				<div class="card">
 					<h3 id="head1" class="card-header" style="background-color: green">
-						<input id="number1" value=""
+						<input disabled="disabled" id="number1" value=""
 							style="background-color: green; border: 0; text-align: left; color: white">
 					</h3>
 					<div class="card-body" style="height: 40px">
@@ -419,6 +419,8 @@ html body {
 				// You can call other methods you want to run when the page first loads here
 				// --------------------------------------------------------------------------
 				SQL();
+				
+				// 
 			
 			}
 			
@@ -431,9 +433,9 @@ html body {
 			  var num = 0; // num of AI player 
 			  var playerlist = new Array(4); // generated playerlist from back end 
 			  var PlayerCard = new Array(4); // rebuild the list 
-			  var index1 = -1; // the index1 show order of player handcard 
+			  var index1 = 0; // the index1 show order of player handcard 
 			  var finalNum = 0; // the all player num 
-			  var activePlayerIndex = 6; // activePlayerIndex 
+			  var activePlayerIndex = 0; // activePlayerIndex 
 			  var PlayerIndexList = new Array(); 
 			  var lastTimeId = 1;
 			  var ishuman = false;
@@ -441,10 +443,23 @@ html body {
 			  var activePlayer;
 			  var isDraw = false;
 			  var roundNum = 1;
-			  var communalpileNum = 0;
+			  var communalpileNum;
+			  var HumanPlayerOutGame = false;
+			  var gameOver = false;
 			 
 			//-------------------------------------
-			
+			  function init() {
+				
+				  var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/initAttribute");
+					if (!xhr) {
+	  					alert("CORS not supported");
+					}
+					xhr.onload = function(e) {
+	 					var responseText = xhr.response; // the text of the response
+					};
+					xhr.send();
+				
+			}
 			
 			// get the number of player from selection 
 			  function getPlayerNum(id) {
@@ -474,15 +489,17 @@ html body {
 			
 		
 			// createPlayers
-			function createPlayers(){				
+			function createPlayers(){			
 				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/createPlayers");				
 				if (!xhr) {
   					alert("CORS not supported");
 				}
 				
 				xhr.onload = function(e) {
+					
  					var responseText = xhr.response; // the text of the response 					
- 					var json = JSON.parse(responseText); 					
+ 					var json = JSON.parse(responseText); 	
+ 					
  					playerlist = json;					
  					for(var i=0; i<playerlist.length;i++){						
  						console.log(playerlist[i]);						
@@ -554,22 +571,25 @@ html body {
 			
 			function showRoundWinner(){
 				message = document.getElementById('gameProgress');
-				message.innerHTML = "round "+roundNum+": "+activePlayer.name + " won this round!";
+				message.innerHTML = "Round "+(roundNum-1)+":  "+activePlayer.name + " won this round!";
 			}
 			
 			function showIsDraw(){
+				//getNumOfCommunalpile();
 				message = document.getElementById('gameProgress');
-				message.innerHTML = "round "+roundNum+":This round was a Draw. Communal Pile now has " + communalpileNum + " cards";
+				console.log("showIsDraw"+communalpileNum)
+				message.innerHTML = "Round "+roundNum+": This round was a Draw. Communal Pile now has " + communalpileNum + " cards";
 			}
 			
 			function showProgress(){
+				//getRoundNum();
 				message = document.getElementById('gameProgress');
-				message.innerHTML = "round "+roundNum+":Players have drawn their cards";
+				message.innerHTML = "Round "+roundNum+": Players have drawn their cards";
 			}
 			
 			function waitingMessage(){
 				message = document.getElementById('infoPanel');
-				message.innerHTML = "Waiting for selection";
+				message.innerHTML = "Waiting for selecting";
 			}
 			//------------------------------------------------------------------------------
 			// identify the first player is human?
@@ -596,7 +616,7 @@ html body {
  						hideComponent("selectButton");
  					}
 				};
-				// We have done everything we need to prepare the CORS request, so send it
+				//getRoundNum();
 				xhr.send();
 			}
 			//----------------------------------------------------------------------------------
@@ -609,9 +629,9 @@ html body {
 				 var categoryChoice = text.valueOf();
 				 
 				 console.log(categoryChoice);
-				 
+				 //getRoundNum();
 				 sendHumanSelected(categoryChoice);
-				 for (var i=2; i<6; i++){
+				 for (var i=2; i<(playerlist.length+1); i++){
 				 		showComponent("card"+i);
 				 	}
 
@@ -649,9 +669,10 @@ html body {
 			 		console.log("j: "+j);
 			 	}
 			 	showComponent("cardZone");
-			 	for (var i=2; i<6; i++){
-			 		hideComponent("card"+i);
-			 	}
+			 	
+			 	isHumanPlayerOutGame();
+			 	
+			 	getCurrentPlayerIndex();
 				console.log("current active: "+activePlayerIndex);
  				backColor(lastTimeId);
  				changeColor(activePlayerIndex);
@@ -659,6 +680,7 @@ html body {
  				identifyThePlayer();
  			    showProgress();
  			    hideComponent("nextRound");
+ 			    
 
 			}
 			
@@ -703,6 +725,7 @@ html body {
  					console.log("after compare:current active: "+activePlayerIndex);
  					return activePlayerIndex;
 				};
+				//getRoundNum();
 				xhr.send();
 			}
 			
@@ -719,19 +742,30 @@ html body {
  					var json = JSON.parse(responseText);
  					activePlayer = json;
  					console.log("-----active player:" + activePlayer.name);
- 					checkisDraw();
+ 					//checkisDraw();
+ 					getCurrentPlayerIndex();
+ 					getNumOfCommunalpile();
  					getRoundNum();
  					showProgress();
  					getCurrentPlayerList();
- 					getCurrentPlayerIndex();
  					waitingMessage();
- 					//console.log("-----------after compare:current active: "+activePlayerIndex);
+ 					console.log("-----------after compare:current active: "+activePlayerIndex);
  					//console.log("isDraw111111:"+isDraw);
+ 					hideComponent("showWinner");
+ 					isGameOver();
+ 					if(gameOver){
+ 						showComponent("over");
+ 						message = document.getElementById('infoPanel');
+ 						message.innerHTML = "THE GAME IS OVER";
+ 						number = document.getElementById('number'+1);
+ 						number.value = playerlist[N].name +" [ "+ 40 +" ]";  
+ 					}else{
+ 						
+ 						showComponent("nextRound");
+ 					}
  			
 				};
 				// We have done everything we need to prepare the CORS request, so send it
-				hideComponent("showWinner");
-				showComponent("nextRound");
 				
 				xhr.send();
 			
@@ -746,6 +780,7 @@ html body {
 				xhr.onload = function(e) {
  					var responseText = xhr.response; // the text of the response
  					var json = JSON.parse(responseText);
+ 					checkisDraw();
  					communalpileNum = json;
  					console.log("inner----communalpileNum"+communalpileNum);
  					return communalpileNum;
@@ -755,6 +790,42 @@ html body {
 			
 			}
 			
+			//---------------------------------------------------------- identify which player out the game 
+			function hideCardIfplayerOutGame() {
+				//var hidePlayerNum =  (finalNum-playerlist.length);
+				for(var i = finalNum;i>playerlist.length;i--){
+					hideCard(i);
+				}
+			}
+			
+			//----------------------------------------------------------isHumanPlayerOutGame
+			function isHumanPlayerOutGame() {
+				
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/isHumanPlayerOutGame");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+ 					var responseText = xhr.response; // the text of the response
+ 					var json = JSON.parse(responseText);
+ 					HumanPlayerOutGame = json;
+ 					
+ 					if(HumanPlayerOutGame){
+ 						for (var i=1; i<(finalNum+1); i++){
+ 							hideCard(i);
+ 						}
+ 				 	}else{
+ 				 		for (var i=2; i<(finalNum+1); i++){
+ 							hideCard(i);
+ 						}
+ 				 	}
+ 				 	
+ 					return HumanPlayerOutGame;
+				};
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();
+
+			}
 			
 			//-----------------------------------------------if draw 
 			function checkisDraw() {
@@ -769,9 +840,9 @@ html body {
  					console.log("checkisDraw():"+isDraw);
  					if (isDraw == true){
  						// show draw 
- 						getNumOfCommunalpile();
- 						console.log("communalpileNum"+communalpileNum);
+ 						//getNumOfCommunalpile();
  						showIsDraw();
+ 						console.log("communalpileNum"+communalpileNum);
  						console.log("draw");
  							
  					}else{
@@ -805,6 +876,23 @@ html body {
 
 			}
 			
+			//---------------------------------------------- isGameOver 
+			function isGameOver() {
+				var xhr = createCORSRequest('GET', "http://localhost:7777/toptrumps/isGameOver");	
+				if (!xhr) {
+  					alert("CORS not supported");
+				}	
+				xhr.onload = function(e) {
+					var responseText = xhr.response; // the text of the response 					
+ 					var json = JSON.parse(responseText); 					
+ 					gameOver = json;
+ 					return gameOver;
+ 					
+				};
+				// We have done everything we need to prepare the CORS request, so send it
+				xhr.send();	
+			}
+			
 			
 			//------------------------------------autoSelectCategory
 			 function autoSelectCategory(){
@@ -818,14 +906,16 @@ html body {
 	 					AISelected = responseText;
 	 					console.log(AISelected);
 	 					showActiveSelected();
+	 					//getRoundNum();
 	 					
 					};
 					// We have done everything we need to prepare the CORS request, so send it
 					hideComponent("AISelect");
 					showComponent("showWinner");
-					for (var i=2; i<6; i++){
-				 		showComponent("card"+i);
+					for (var i=1; i<(finalNum+1); i++){
+				 		showCard(i);
 				 	}
+					hideCardIfplayerOutGame();
 					xhr.send();
 				 
 			 }  
@@ -858,7 +948,6 @@ html body {
 				    number.value = playerlist[N].name +" [ "+ playerlist[N].currentCards.length +" ]";  
 			 }
 			 
-			 
 			// sql 
 			function SQL(){			
 				var list = new Array(39);
@@ -876,8 +965,7 @@ html body {
 				// We have done everything we need to prepare the CORS request, so send it
 				xhr.send();
 			}
-			
-			
+
 		//----------------------------------------------------- hide show 
 			function hideCard(cardID) {
                 var card = document.getElementById("card"+cardID);
