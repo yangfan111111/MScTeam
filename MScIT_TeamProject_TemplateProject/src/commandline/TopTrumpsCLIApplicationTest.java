@@ -523,6 +523,16 @@ class TopTrumpsCLIApplicationTest {
 		Assert.assertTrue(g.humanPlayer.countCurrentCards()==12);
 
 	}
+	/**
+	 * This test is to check if the transferWinnerCards() method is functioning correctly.
+	 * When calling this method it should transfer all of the top cards in play to the winning player
+	 * 
+	 * In this scenario the Human Player selects the "Speed" category therefore the human will win the round.
+	 * If there are cards in the communal pile they should be transferred to the winning Player
+	 * 
+	 * assertTrue evaluates to true which confirms when transferWinnerCards() method
+	 * 
+	 */
 
 	@Test
 
@@ -539,28 +549,96 @@ class TopTrumpsCLIApplicationTest {
 		
 
 	}
-
-	/*Methods that still need testing
-
-	 * drawRound(Player)
-
-	 * iLoseNextActivePlayer(ArrayList<Player>)
-
+	
+	/**
+	 * This test is to check if the showCurrentPlayers() method is functioning correctly.
+	 * When calling this method it should transfer all of the top cards in play to the winning player
 	 * 
-
-	 * ISelectCategoryAgain(ArrayList<Player>)
-
-	 * isGameOver()
-
-	 * setActivePlayer(Player)
-
-	 * checkIfPlayersOutTheGame()
-
-	 * checkIfGameHasBeenWon()
-
+	 * In this scenario the Human Player selects the "Speed" category therefore the human will win the round.
+	 * If there are cards in the communal pile they should be transferred to the winning Player
 	 * 
-
+	 * assertTrue evaluates to true which confirms when transferWinnerCards() method
+	 * 
 	 */
+	
+	@Test 
+	public void testCheckIfPlayersAreOutOfGame() {
+		SQL sql = new SQL();
+		GameLogic g = new GameLogic();
+		g.shuffledDeck=sql.cardList;
+		g.createPlayerArray();
+		g.setFirstActivePlayerAndReturnTrueIfHuman();
+		
+		g.checkIfPlayersOutTheGame();
+		
+		assertTrue(g.humanPlayerOutGame==true);
+		
+	}
+	
+	
+/*	
+ * 	public void checkIfPlayersOutTheGame() {
+		for (int i = 0; i < players.size(); i++) {
+			if (players.get(i).getCurrentCards().size() == 0 && players.get(i) == humanPlayer) {
+				if (players.get(i) == activePlayer && i < players.size() - 1) {
+					activePlayer = players.get(i + 1);
+				} else if (players.get(i) == activePlayer && i == players.size() - 1) {
+					activePlayer = players.get(i + 1);
+				}
+				players.remove(players.get(i));
+				i--;
+				humanPlayerOutGame = true;
+				System.out.println(
+						"\nYou are out the game! You are a failure at Top Trumps, just as you are a failure at life!");
+			} else if (players.get(i).getCurrentCards().size() == 0) {
+				System.out.println("\n" + players.get(i).getName() + " is out the game!");
+				if (players.get(i) == activePlayer && i < players.size() - 1) {
+					activePlayer = players.get(i + 1);
+				} else if (players.get(i) == activePlayer && i == players.size() - 1) {
+					activePlayer = players.get(0);
+				}
+				players.remove(players.get(i));
+				i--;
+			}
+		}
+		checkIfGameHasBeenWon();
+	}
+
+	public Boolean setActivePlayerAndReturnTrueIfHuman(Player winningPlayer) {
+		if (winningPlayer.getName() == activePlayer.getName() && winningPlayer.getName().equals("You")) {
+			this.humanIsActivePlayer = true;
+		} else if (winningPlayer.getName() == activePlayer.getName()) {
+			this.humanIsActivePlayer = false;
+		} else if (activePlayer.getName() == players.get(players.size() - 1).getName()) {
+			if (humanPlayerOutGame == true) {
+				activePlayer = players.get(0);
+			} else {
+				humanIsActivePlayer = true;
+			}
+		} else if (winningPlayer.getName() != activePlayer.getName()) {
+			for (int i = 0; i < players.size(); i++) {
+				if (activePlayer.getName() == players.get(i).getName() && i < players.size() - 1) {
+					activePlayer = players.get(i + 1);
+					humanIsActivePlayer = false;
+					break;
+				}
+			}
+		}
+		return humanIsActivePlayer;
+	}
+
+	
+	public void checkIfGameHasBeenWon() {
+		if (players.size() == 1) {
+			log.writeFile("The winner is " + players.get(0).getName() + "!");
+			gameOver = true;
+		}
+	}*/
+
+	
+
+
+	
 
 	
 
@@ -569,3 +647,4 @@ class TopTrumpsCLIApplicationTest {
 
 
 	}
+	
