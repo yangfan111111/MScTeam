@@ -21,7 +21,7 @@ public class GameLogic {
 	private Boolean isDraw = false;
 	private Boolean humanPlayerOutGame = false;
 	private Boolean gameOver = false;
-	private int value;
+	private String value;
 	private Test_log log = new Test_log();
 	// Cards in play for each Round
 	ArrayList<Integer> topCards = new ArrayList<Integer>();
@@ -34,7 +34,7 @@ public class GameLogic {
 	// variable to store all cards in temp arraylist if there is a draw .
 	private ArrayList<CardModel> communalPile = new ArrayList<CardModel>();
 
-	/*
+	/**
 	 * The shuffleDeck method creates a shuffled deck of virtual cards.
 	 */
 	public void shuffleDeck() {
@@ -46,7 +46,7 @@ public class GameLogic {
 		}
 	}
 
-	/*
+	/**
 	 * The createPlayerArray method creates an array of player objects.
 	 */
 
@@ -59,7 +59,7 @@ public class GameLogic {
 		distributeCards();
 	}
 
-	/*
+	/**
 	 * The distributeCards method takes the shuffled deck and distributes it evenly
 	 * amongst the players.
 	 */
@@ -87,7 +87,7 @@ public class GameLogic {
 		logInitialCardInformation();
 	}
 
-	/*
+	/**
 	 * The logInitialCardInformation method logs the initial cards each player has
 	 * to the test log file.
 	 */
@@ -100,7 +100,7 @@ public class GameLogic {
 		log.writeFile("aiPlayer4 drawn cards" + aiPlayer4.getCurrentCards() + "\n");
 	}
 
-	/*
+	/**
 	 * The displayTopCard method displays the top card in the human player's virtual
 	 * deck, as well as displaying the number of cards in the virtual deck. It also
 	 * logs this information to the test log file.
@@ -119,7 +119,7 @@ public class GameLogic {
 		log.writeFile("There are " + cardsInDeck + " cards in your deck");
 	}
 
-	/*
+	/**
 	 * The setFirstPlayerAndReturnTrueIfHuman method randomly selects the first
 	 * player. It returns a boolean value true if the first player is the human
 	 * player. This information is needed to know whether the game should allow the
@@ -143,7 +143,7 @@ public class GameLogic {
 		return humanIsActivePlayer;
 	}
 
-	/*
+	/**
 	 * The autoSelectCategory method is called when it is an AI player's turn to
 	 * choose a category. It analyses the AI player's top card and automatically
 	 * selects category with the highest value.
@@ -186,7 +186,7 @@ public class GameLogic {
 		this.topCards.add(activePlayer.viewTopCard().getCargo());
 	}
 
-	/*
+	/**
 	 * The manuallySelectCategory method is called when it is the human player's
 	 * turn to select a category. It accepts an input from the human player and
 	 * returns the selected category.
@@ -195,40 +195,40 @@ public class GameLogic {
 	public String manuallySelectCategory() {
 		activePlayer = humanPlayer;
 		humanPlayerChoice();
-		Scanner s = new Scanner(System.in);
-		this.value = s.nextInt();
-		if (value == 1) {
-			System.out.println("You have selected Size.");
-			log.writeFile("You have selected Size." + "\n");
-			activeCategory = "Size";
-		} else if (value == 2) {
-			System.out.println("You have selected Speed.");
-			log.writeFile("You have selected Speed." + "\n");
-			activeCategory = "Speed";
+				Scanner s = new Scanner(System.in);
+				this.value = s.nextLine();
+				if (value.equals("1")) {
+					System.out.println("You have selected Size.");
+					log.writeFile("You have selected Size." + "\n");
+					activeCategory = "Size";
+				} else if (value.equals("2")) {
+					System.out.println("You have selected Speed.");
+					log.writeFile("You have selected Speed." + "\n");
+					activeCategory = "Speed";
 
-		} else if (value == 3) {
-			System.out.println("You have selected Range.");
-			log.writeFile("You have selected Range." + "\n");
-			activeCategory = "Range";
+				} else if (value.equals("3")) {
+					System.out.println("You have selected Range.");
+					log.writeFile("You have selected Range." + "\n");
+					activeCategory = "Range";
 
-		} else if (value == 4) {
-			System.out.println("You have selected Firepower.");
-			log.writeFile("You have selected Firepower." + "\n");
-			activeCategory = "Firepower";
+				} else if (value.equals("4")) {
+					System.out.println("You have selected Firepower.");
+					log.writeFile("You have selected Firepower." + "\n");
+					activeCategory = "Firepower";
 
-		} else if (value == 5) {
-			System.out.println("You have selected Cargo.");
-			log.writeFile("You have selected Cargo." + "\n");
-			activeCategory = "Cargo";
-		} else {
-			System.out.println("Error! Please choose a number from 1-5.");
-			log.writeFile("You have selected an incorrect value." + "\n");
-			manuallySelectCategory();
-		}
-		return activeCategory;
+				} else if (value.equals("5")) {
+					System.out.println("You have selected Cargo.");
+					log.writeFile("You have selected Cargo." + "\n");
+					activeCategory = "Cargo";
+				} else {
+					System.out.println("Error! Please choose a number from 1-5.");
+					log.writeFile("You have selected an incorrect value." + "\n");
+					manuallySelectCategory();
+				}
+				return activeCategory;
 	}
 
-	/*
+	/**
 	 * The humanPlayerChoice method is simply the view the human player will see
 	 * when it is their turn to choose.
 	 */
@@ -244,7 +244,7 @@ public class GameLogic {
 		System.out.println("Enter the number for your attribute: ");
 	}
 
-	/*
+	/**
 	 * The createArrayOfCategoryValuesToBeCompared method passes in the category
 	 * selected by the active player and creates an array of all the chosen category
 	 * values from all the other players' cards.
@@ -277,7 +277,7 @@ public class GameLogic {
 		return categoryValuesToBeCompared;
 	}
 
-	/*
+	/**
 	 * The compareCards method compares all the category values in the passed in
 	 * array. If the round is a draw, all the cards in play will be passed to the
 	 * communal pile and the method will return the current active player. If the
@@ -305,7 +305,7 @@ public class GameLogic {
 			System.out.println("Winning card belongs to: " + players.get(highestNum).getName() + "! ");
 			log.writeFile(
 					"Winning card belongs to: " + players.get(highestNum).getName() + " - Won this round ! " + "\n");
-			//players.get(highestNum).viewTopCard().toString();
+			// players.get(highestNum).viewTopCard().toString();
 			return players.get(highestNum);
 		}
 		return dummyPlayer;
@@ -409,7 +409,7 @@ public class GameLogic {
 				i--;
 				humanPlayerOutGame = true;
 				System.out.println(
-						"\nYou are out the game! You are a failure at Top Trumps, just as you are a failure at life!");
+						"\nYou are out the game! Better luck next time!");
 			} else if (players.get(i).getCurrentCards().size() == 0) {
 				System.out.println("\n" + players.get(i).getName() + " is out the game!");
 				if (players.get(i) == activePlayer && i < players.size() - 1) {
