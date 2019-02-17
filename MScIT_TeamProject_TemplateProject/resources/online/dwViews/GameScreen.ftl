@@ -452,6 +452,7 @@ html body {
 			  var communalpileNum;
 			  var HumanPlayerOutGame = false;
 			  var gameOver = false;
+			  var categoryChoice;
 			 
 
 			
@@ -485,6 +486,8 @@ html body {
 				};
 				xhr.send();
 			}
+			
+	
 			
 		
 			// createPlayers
@@ -572,7 +575,12 @@ html body {
 			
 			function showActiveSelected() {
 				message = document.getElementById('infoPanel');
-				message.innerHTML = "They selected "+ AISelected;
+				message.innerHTML = "Active Player selected "+ AISelected;
+			}
+			
+			function showHumanSelected() {
+				message = document.getElementById('infoPanel');
+				message.innerHTML = "You selected "+ categoryChoice;
 			}
 			
 			function showRoundWinner(){
@@ -638,11 +646,12 @@ html body {
 				
 				 var text = document.getElementById(id).innerText;
 				 
-				 var categoryChoice = text.valueOf();
+				 categoryChoice = text.valueOf();
 				 
 				 console.log(categoryChoice);
 				 //getRoundNum();
 				 sendHumanSelected(categoryChoice);
+				 
 				 for (var i=2; i<(playerlist.length+1); i++){
 				 		showComponent("card"+i);
 				 	}
@@ -660,7 +669,7 @@ html body {
 	 					var responseText = xhr.response; // the text of the response
 					};
 					showWinnerWhenHumanSelect();
-					showActiveSelected();
+					showHumanSelected();
 					xhr.send();
 
 			}
