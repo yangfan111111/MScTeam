@@ -129,9 +129,9 @@ html body {
 
 		<div class="leftPanel">
 			<div class="cardBox">
-				<div class="card">
+				<div class="card" style="width:270px">
 					<h3 id="showActivePlayer" class="card-header">Welcome</h3>
-					<div id="infoPanel" class="card-body" style="font-size: 16px">show the
+					<div id="infoPanel" class="card-body" style="font-size: 16px">Show the
 						attribute which is the active player's choice.</div>
 
 					<div class="btn-group" role="group"
@@ -461,6 +461,8 @@ html body {
 			    num = text.valueOf();	
 			    message = document.getElementById('selectPlayerBt');
 				message.innerHTML = num;
+				info = document.getElementById('infoPanel');
+				info.innerHTML = "You have selected "+ num + " AI players!";
 			    setAINum(num);			    
 			    finalNum = (++num);
 				console.log("finalNum"+finalNum);   
@@ -594,7 +596,7 @@ html body {
 			
 			function waitingMessage(){
 				message = document.getElementById('infoPanel');
-				message.innerHTML = "Waiting for selecting";
+				message.innerHTML = "Waiting for selection";
 			}
 			//------------------------------------------------------------------------------
 			// identify the first player is human?
@@ -658,6 +660,7 @@ html body {
 	 					var responseText = xhr.response; // the text of the response
 					};
 					showWinnerWhenHumanSelect();
+					showActiveSelected();
 					xhr.send();
 
 			}
@@ -735,6 +738,8 @@ html body {
  					identifyThePlayer();
  					showProgress();
 				}
+				message = document.getElementById('infoPanel');
+				waitingMessage();
 				hideComponent("start")
 				xhr.send();
 			}
