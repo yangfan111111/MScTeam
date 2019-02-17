@@ -16,6 +16,7 @@
 
 html body {
 	background: #e5e5e5;
+	background-image:url(http://www.tokkoro.com/picsup/2842452-star-wars-battlefront-star-wars-video-games-x-wing-hoth___game-wallpapers.jpg);
 }
 
 .head {
@@ -26,7 +27,11 @@ html body {
 	border: 1px solid #ebeee7;
 	box-shadow: 0 0 #333;
 	padding: 15px;
+	text-align: center;
 	margin: 0px;
+	filter:alpha(Opacity=70);
+    -moz-opacity:0.7;
+    opacity:0.7;
 }
 
 .head2 {
@@ -67,6 +72,7 @@ html body {
 	text-align: left;
 	font-size: 14px;
 }
+
 </style>
 <title>Top Trumps</title>
 

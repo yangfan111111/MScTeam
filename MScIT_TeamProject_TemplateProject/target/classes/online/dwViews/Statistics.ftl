@@ -26,6 +26,7 @@
     <style>
         html body {
             background: #e5e5e5;
+            background-image:url(http://www.tokkoro.com/picsup/2842452-star-wars-battlefront-star-wars-video-games-x-wing-hoth___game-wallpapers.jpg);
         }
         .head{
             margin-top: 5px;
@@ -33,6 +34,7 @@
             background-color: #999;
             color: #fff;
             font-size:50px;
+            text-align: center;
             border: 1px solid #ebeee7;
             box-shadow: 0 0 #333;
             padding: 15px;
@@ -49,6 +51,11 @@
 			display: flex;
             align-items:center;
 			justify-content:center;
+        }
+        .container{
+        	filter:alpha(Opacity=70);
+        	-moz-opacity:0.7;
+        	opacity:0.7;
         }
     </style>
     

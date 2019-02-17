@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
     <style>
         html body {
-            background: #e5e5e5;
+           background: #e5e5e5;
+           background-image:url(http://www.tokkoro.com/picsup/2842452-star-wars-battlefront-star-wars-video-games-x-wing-hoth___game-wallpapers.jpg);
         }
         .head{
             margin-top: 5px;
@@ -32,6 +33,7 @@
             background-color: #999;
             color: #fff;
             font-size:50px;
+            text-align: center;
             border: 1px solid #ebeee7;
             box-shadow: 0 0 #333;
             padding: 15px;
@@ -49,14 +51,20 @@
 			justify-content:center;
             cursor: pointer;
         }
+        .container{
+        	filter:alpha(Opacity=70);
+        	-moz-opacity:0.7;
+        	opacity:0.7;
+        }
 
     </style>
 </head>
 
 <body onload="initalize()">
+<img alt="" src="" style="width:100%;heigth:100%">
 <!-- Call the initalize method when the page loads -->
 
-<div class="container">
+<div class="container" >
 
     <!-- Add your HTML Here -->
     <div>
@@ -66,6 +74,7 @@
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">New Game</div>
+               
                 <div class="panel-body new-game" >
                     Start a New Top Trumps Game
                 </div>

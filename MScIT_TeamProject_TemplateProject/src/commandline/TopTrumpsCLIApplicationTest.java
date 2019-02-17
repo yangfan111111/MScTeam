@@ -469,42 +469,6 @@ class TopTrumpsCLIApplicationTest {
 
 	}
 	
-	/**
-	 * This test is to check if the compareCards() method functions in a Draw Scenario.
-	 * 
-	 * When calling this method it should transfer all the players top card into the communal pile.
-	 * In this scenario the Player Object "humanPlayer" selects the "Firepower" category therefore the round will Draw.
-	 * In This scenario all the players should have 7 cards in their hand.
-	 * 
-	 * assertTrue evaluates to true which indicates that if the round is a draw their top card in transferred to the communal pile.
-	 */
-
-
-	@Test
-	public void testCommunalPileCardsInDrawScenario() {
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-		
-		ArrayList<CardModel> expectedArray = new ArrayList<CardModel>();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
-		g.activePlayer=g.humanPlayer;
-		expectedArray.add(g.humanPlayer.getCurrentCards().get(0));
-		expectedArray.add(g.aiPlayer1.getCurrentCards().get(0));
-		expectedArray.add(g.aiPlayer2.getCurrentCards().get(0));
-		expectedArray.add(g.aiPlayer3.getCurrentCards().get(0));
-		expectedArray.add(g.aiPlayer4.getCurrentCards().get(0));
-		
-		// Select category : "FIREPOWER" and the round outcome should be a draw.
-		g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Firepower"));
-		
-		assertEquals(expectedArray,g.communalPile);
-
-	}
-	
 
 	/**
 	 * This test is to check if the transferCardsToCommunalPile() method is functioning correctly.
@@ -611,8 +575,7 @@ class TopTrumpsCLIApplicationTest {
 	 * In this scenario the Player Object humanPlayer selects the "Speed" category therefore the human will win the round.
 	 * If there are cards in the communal pile they should be transferred to the winning Player
 	 * 
-	 * In this test assertTrue checks if the communal pile is empty.
-	 * This test is successful as assertTrue evaluates to true which demonstrates when transferWinnerCards() method is called cards in the communal pile are 
+	 * assertTrue evaluates to true which confirms when transferWinnerCards() method
 	 * 
 	 */
 
@@ -633,77 +596,15 @@ class TopTrumpsCLIApplicationTest {
 	}
 	
 	/**
-	 * This test is to check if the transferWinnerCards() method is functioning correctly.
-	 * When calling this method it should return the Player who has the highest value for that category.
-	 * 
-	 * In this scenario the previous round was a draw therefore the communal pile contains 5 cards.
-	 * Player Object  "humanPlayer" selects the "Speed" category and wins the round.
-	 * The human player is returned from the method as the winning player.
-	 * The human player should receive all the cards in play for the round AND the cards in the communal pile.
-	 * 
-	 * In this test assertEquals checks to see if the human players getCurrentCards() output is equal to the expected ArrayList
-	 * This test is successful as assertEquals evaluates to true which demonstrates that the cards
-	 */
-	
-	@Test
-	public void testPreviousRoundDrawHumanWinsTransferBothCardsInPlayAndCardsInCommunalPile() {
-		ArrayList<CardModel> expectedArray = new ArrayList<CardModel>();
-		
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
-		
-		expectedArray.addAll(g.humanPlayer.getCurrentCards());
-				
-		
-		
-		g.communalPile.add(g.humanPlayer.cardsInHand.get(1));
-		g.communalPile.add(g.aiPlayer1.cardsInHand.get(1));
-		g.communalPile.add(g.aiPlayer2.cardsInHand.get(1));
-		g.communalPile.add(g.aiPlayer3.cardsInHand.get(1));
-		
-		
-				
-		g.humanPlayer.cardsInHand.remove(1);
-		g.aiPlayer1.cardsInHand.remove(1);;
-		g.aiPlayer2.cardsInHand.remove(1);
-		g.aiPlayer3.cardsInHand.remove(1);
-		g.aiPlayer4.cardsInHand.remove(1);
-		
-		expectedArray.add(g.humanPlayer.getCurrentCards().get(0));
-		expectedArray.add(g.aiPlayer1.getCurrentCards().get(0));
-		expectedArray.add(g.aiPlayer2.getCurrentCards().get(0));
-		expectedArray.add(g.aiPlayer3.getCurrentCards().get(0));
-		expectedArray.add(g.aiPlayer4.getCurrentCards().get(0));
-		expectedArray.addAll(g.communalPile);
-
-		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
-		g.transferWinnerCards(p);
-		expectedArray.remove(0);
-		expectedArray.remove(0);
-		
-		
-		
-		assertEquals(expectedArray,g.humanPlayer.getCurrentCards());
-		
-		
-		
-		
-
-	}
-	
-	/**
 	 * This test is to check if the checkIfPlayersOutTheGame() method is functioning correctly.
 	 * When calling this method it should check if the Player object "humanPlayer" has any cards stored in their deck .
 	 * 
-	 * In this scenario the Human Player has no cards left in their deck so the checkIfPlayersOutTheGame() should remove the player from the players ArrayList and set humanPlayerOutGame as true. 
-	 * In this test assertFalse checks if the Players ArrayList in the GameLogic class contains the Player object "humanPlayer".
-	 * Additionally assertTrue checks if the output of the method returns a true boolean.
-	 * This test is successful which demonstrates that the method is working as intended.
+	 * In this scenario the Human Player has no cards left in their deck so the checkIfPlayersOutTheGame() should remove the player from the players ArrayList . 
+	 * 
+	 * selects the "Speed" category therefore the human will win the round.
+	 * If there are cards in the communal pile they should be transferred to the winning Player
+	 * 
+	 * assertTrue evaluates to true which confirms when transferWinnerCards() method
 	 * 
 	 */
 	
@@ -716,16 +617,15 @@ class TopTrumpsCLIApplicationTest {
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 		
 		
-		g.humanPlayer.removeAllCard();
+		g.humanPlayer.removeAllCardsInHand();
 		g.checkIfPlayersOutTheGame();
-		assertFalse(g.players.contains(g.humanPlayer));
 		assertTrue(g.humanPlayerOutGame==true);
-		
+		assertFalse(g.players.contains(g.humanPlayer));
 		
 	}
 	
 	/**
-	 * This test is to check if the checkIfPlayersOutTheGame() method is functioning correctly.
+	 * This test is to check if the checkIfGameHasBeenWon() method is functioning correctly.
 	 * In this scenario only the Player Object "humanPlayer" is left in the game.
 	 * When calling this method it should return the gameOver boolean, in the GameLogic class, as true.
 	 * The test shows this is the case as assertTrue evaluates to true which confirms the method is functioning correctly.
@@ -741,18 +641,17 @@ class TopTrumpsCLIApplicationTest {
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 		
 		
-		g.aiPlayer1.removeAllCard();
-		g.aiPlayer2.removeAllCard();
-		g.aiPlayer3.removeAllCard();
-		g.aiPlayer4.removeAllCard();
+		g.aiPlayer1.removeAllCardsInHand();
+		g.aiPlayer2.removeAllCardsInHand();
+		g.aiPlayer3.removeAllCardsInHand();
+		g.aiPlayer4.removeAllCardsInHand();
 		g.checkIfPlayersOutTheGame();
-		
+		g.checkIfGameHasBeenWon();
 		assertTrue(g.gameOver==true);
 		
 		
 	}
 	
-		
 	/**
 	 * This test is to check if the checkIfGameHasBeenWon() method is functioning correctly.
 	 * In this scenario three Player Objects are still in the game.
@@ -767,82 +666,103 @@ class TopTrumpsCLIApplicationTest {
 		g.createPlayerArray();
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 				
-		g.aiPlayer1.removeAllCard();
-		g.aiPlayer2.removeAllCard();
+		g.aiPlayer1.removeAllCardsInHand();
+		g.aiPlayer2.removeAllCardsInHand();
 				
 		g.checkIfPlayersOutTheGame();
 		assertTrue(g.gameOver==false);
 		
 		
 	}
+
 	
 	
 	
-	/**
-	 * This test is to check if the setActivePlayerAndReturnTrueIfHuman() method is functioning correctly.
-	 * In this scenario the Player Object "humanPlayer" selects the "Speed" category and loses the round.
-	 * Player object "aiPlayer2" is the winner of this round and is stored as Player object "p"
-	 * 
-	 * p is passed to the setActivePlayerAndReturnTrueIfHuman() method and should set the next player in the players ArrayList as the active player.
-	 * The test shows this is the case as assertTrue evaluates to true which confirms the method is functioning correctly.
-	 */
 	
-	@Test
-	public void testNextActivePlayerWhenActivePlayerLosesARound() {
-		SQL sql = new SQL();
-		GameLogic g = new GameLogic();
-		g.shuffledDeck=sql.cardList;
-		g.createPlayerArray();
-		g.activePlayer=g.humanPlayer;
-		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Size"));
-		g.setActivePlayerAndReturnTrueIfHuman(p);
-		assertEquals(g.aiPlayer1,g.activePlayer);		
+/*	
+ * 	public void checkIfPlayersOutTheGame() {
+		for (int i = 0; i < players.size(); i++) {
+			if (players.get(i).getCurrentCards().size() == 0 && players.get(i) == humanPlayer) {
+				if (players.get(i) == activePlayer && i < players.size() - 1) {
+					activePlayer = players.get(i + 1);
+				} else if (players.get(i) == activePlayer && i == players.size() - 1) {
+					activePlayer = players.get(i + 1);
+				}
+				players.remove(players.get(i));
+				i--;
+				humanPlayerOutGame = true;
+				System.out.println(
+						"\nYou are out the game! You are a failure at Top Trumps, just as you are a failure at life!");
+			} else if (players.get(i).getCurrentCards().size() == 0) {
+				System.out.println("\n" + players.get(i).getName() + " is out the game!");
+				if (players.get(i) == activePlayer && i < players.size() - 1) {
+					activePlayer = players.get(i + 1);
+				} else if (players.get(i) == activePlayer && i == players.size() - 1) {
+					activePlayer = players.get(0);
+				}
+				players.remove(players.get(i));
+				i--;
+			}
+		}
+		checkIfGameHasBeenWon();
 	}
+
+	public Boolean setActivePlayerAndReturnTrueIfHuman(Player winningPlayer) {
+		if (winningPlayer.getName() == activePlayer.getName() && winningPlayer.getName().equals("You")) {
+			this.humanIsActivePlayer = true;
+		} else if (winningPlayer.getName() == activePlayer.getName()) {
+			this.humanIsActivePlayer = false;
+		} else if (activePlayer.getName() == players.get(players.size() - 1).getName()) {
+			if (humanPlayerOutGame == true) {
+				activePlayer = players.get(0);
+			} else {
+				humanIsActivePlayer = true;
+			}
+		} else if (winningPlayer.getName() != activePlayer.getName()) {
+			for (int i = 0; i < players.size(); i++) {
+				if (activePlayer.getName() == players.get(i).getName() && i < players.size() - 1) {
+					activePlayer = players.get(i + 1);
+					humanIsActivePlayer = false;
+					break;
+				}
+			}
+		}
+		return humanIsActivePlayer;
+	}
+
 	
-	/**
-	 * This test is to check if the setActivePlayerAndReturnTrueIfHuman() method is functioning correctly.
-	 * In this scenario the Player Object "humanPlayer" wins the round which is stored as Player object "p".
-	 * p is passed to the setActivePlayerAndReturnTrueIfHuman() method and should set the humanIsActivePlayer to true.
-	 * 
-	 * The test shows this is the case as assertTrue evaluates to true which confirms the method is functioning correctly.
-	 */
 	
-	@Test
-	public void testIsHumanActivePlayerWhenWinningARound() {
+	
+	/*@Test
+	public void testNextActivePlayerWhenActivePlayerLosesRound() {
 		SQL sql = new SQL();
 		GameLogic g = new GameLogic();
 		g.shuffledDeck=sql.cardList;
 		g.createPlayerArray();
-		g.activePlayer=g.humanPlayer;
-		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
-		g.setActivePlayerAndReturnTrueIfHuman(p);
-		assertTrue(g.humanIsActivePlayer==true);
+		g.setFirstActivePlayerAndReturnTrueIfHuman();
 		
-	}
+		g.activePlayer=g.humanPlayer;
+		g.aiPlayer1.removeAllCard();
+		g.aiPlayer4.removeAllCard();
+		g.checkIfPlayersOutTheGame();
+		
+	}*/
 	
-	/**
-	 * This test is to check if the setActivePlayerAndReturnTrueIfHuman() method is functioning correctly.
-	 * In this scenario the Player Object "humanPlayer" selects the "Speed" category and loses the round.
-	 * Player object "aiPlayer2" is the winner of this round and is stored as Player object "p"
+	/*
+	 * Methods to Test Online version
 	 * 
-	 * p is passed to the setActivePlayerAndReturnTrueIfHuman() method and should set the next player in the players ArrayList as the active player therefore
-	 * the humanIsActivePlayer should be set to false.
-	 * The test shows this is the case as assertTrue evaluates to true which confirms the method is functioning correctly.
+	 * 
 	 */
 	
+
+
 	
-	@Test
-	public void testIsHumanActivePlayerWhenHumanLosesARound() {
-		SQL sql = new SQL();
-		GameLogic g = new GameLogic();
-		g.shuffledDeck=sql.cardList;
-		g.createPlayerArray();
-		g.activePlayer=g.humanPlayer;
-		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Size"));
-		g.setActivePlayerAndReturnTrueIfHuman(p);
-		assertTrue(g.humanIsActivePlayer==false);		
-	}
+
 	
+
+	
+
+
 
 	}
 	
