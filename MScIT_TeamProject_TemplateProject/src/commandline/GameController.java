@@ -156,7 +156,6 @@ public class GameController {
 			System.out.println("\nGame End\n");
 			System.out.println("Overall winner was: " + theModel.getGameWinner().getName() + "!\n");
 			System.out.println(sql.getAllPlayersScores());
-			log.writeFileToTestLog();
 			sql.setGameDataToSQL(gameID, roundID, theModel.getGameWinner().getName(), drawNum,
 					theModel.humanIsActivePlayer);
 		}

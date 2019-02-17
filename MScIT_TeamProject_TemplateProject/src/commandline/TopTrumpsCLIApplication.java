@@ -32,6 +32,7 @@ public class TopTrumpsCLIApplication {
 			// Add your game logic here based on the requirements
 
 			// ----------------------------------------------------
+			@SuppressWarnings("resource")
 			Scanner scanner = new Scanner(System.in);
 			System.out.println("Do you want to see past results or play a game?\r\n" + 
 					"   1: Print Game Statistics\r\n" + 
@@ -59,7 +60,6 @@ public class TopTrumpsCLIApplication {
 				System.out.println("Please enter either 1, 2, or 3!");
 			}
 			
-			scanner.close();
 		}
 
 	}

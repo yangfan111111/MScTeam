@@ -162,7 +162,7 @@ class TopTrumpsCLIApplicationTest {
 
 	 * This test is to check  if the setFirstActivePlayerAndReturnTrueIfHuman() method returns the correct boolean.
 
-	 * If the Player Object "humanPlayer" is assigned the first active player it should return humanIsActivePlayer as true, if not it should return false.
+	 * If the Player Object "humanPlayer" is assigned as the active player it should return humanIsActivePlayer as true, if not it should return false.
 
 	 * This test is successful which demonstrates that setFirstActivePlayerAndReturnTrueIfHuman() method is functioning correctly.
 
@@ -217,12 +217,6 @@ class TopTrumpsCLIApplicationTest {
 		 * It tests whether the output is the same as the the activeCategory  string in the GameLogic class.
 
 		 * The assertEquals test evaluates to true which demonstrates the method is working Correctly.
-
-		 * 
-
-		 * 
-
-		 * 
 
 		 */
 
