@@ -523,7 +523,7 @@ class TopTrumpsCLIApplicationTest {
 
 		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
 		
-		g.transferWinnerCards(p);
+		g.transferCardsToRoundWinner(p);
 		
 		for (int i =1 ; i<g.players.size();i++) {
 			Assert.assertTrue(g.players.get(i).countCurrentCards()==7);
@@ -563,7 +563,7 @@ class TopTrumpsCLIApplicationTest {
 		expectedArray.add(g.aiPlayer4.getCurrentCards().get(0));
 		
 		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
-		g.transferWinnerCards(p);
+		g.transferCardsToRoundWinner(p);
 		Assert.assertEquals(expectedArray, g.humanPlayer.getCurrentCards());
 		Assert.assertTrue(g.humanPlayer.countCurrentCards()==12);
 
@@ -589,7 +589,7 @@ class TopTrumpsCLIApplicationTest {
 		g.createPlayerArray();
 			
 		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
-		g.transferWinnerCards(p);
+		g.transferCardsToRoundWinner(p);
 		Assert.assertTrue(g.communalPile.isEmpty());
 		
 

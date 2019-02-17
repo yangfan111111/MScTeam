@@ -1,11 +1,15 @@
 package commandline;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GameLogic {
-	protected SQL sql = new SQL();
-	protected Player dummyPlayer;
+	private SQL sql = new SQL();
+	private Player dummyPlayer;
 	protected boolean humanIsActivePlayer;
 	protected Player activePlayer;
 	protected String activeCategory;
@@ -19,15 +23,11 @@ public class GameLogic {
 	protected Boolean gameOver = false;
 	protected String value;
 	protected Test_log log = new Test_log();
-	// Cards in play for each Round
 	protected ArrayList<Integer> topCards = new ArrayList<Integer>();
-	// variable to store an array of player objects
 	protected ArrayList<Player> playersToShuffle = new ArrayList<Player>();
 	protected ArrayList<Player> players = new ArrayList<Player>();
 	protected ArrayList<CardModel> shuffledDeck = new ArrayList<CardModel>();
-	// variable to store top card for each player per round
 	protected ArrayList<Integer> cardsInPlay = new ArrayList<Integer>();
-	// variable to store all cards in temp arraylist if there is a draw .
 	protected ArrayList<CardModel> communalPile = new ArrayList<CardModel>();
 
 	/**
@@ -191,38 +191,37 @@ public class GameLogic {
 	public String manuallySelectCategory() {
 		activePlayer = humanPlayer;
 		humanPlayerChoice();
-				Scanner s = new Scanner(System.in);
-				this.value = s.nextLine();
-				if (value.equals("1")) {
-					System.out.println("You have selected Size.");
-					log.writeFile("You have selected Size." + "\n");
-					activeCategory = "Size";
-				} else if (value.equals("2")) {
-					System.out.println("You have selected Speed.");
-					log.writeFile("You have selected Speed." + "\n");
-					activeCategory = "Speed";
+		Scanner s = new Scanner(System.in);
+		this.value = s.nextLine();
+		if (value.equals("1")) {
+			System.out.println("You have selected Size.");
+			log.writeFile("You have selected Size." + "\n");
+			activeCategory = "Size";
+		} else if (value.equals("2")) {
+			System.out.println("You have selected Speed.");
+			log.writeFile("You have selected Speed." + "\n");
+			activeCategory = "Speed";
 
-				} else if (value.equals("3")) {
-					System.out.println("You have selected Range.");
-					log.writeFile("You have selected Range." + "\n");
-					activeCategory = "Range";
+		} else if (value.equals("3")) {
+			System.out.println("You have selected Range.");
+			log.writeFile("You have selected Range." + "\n");
+			activeCategory = "Range";
 
-				} else if (value.equals("4")) {
-					System.out.println("You have selected Firepower.");
-					log.writeFile("You have selected Firepower." + "\n");
-					activeCategory = "Firepower";
+		} else if (value.equals("4")) {
+			System.out.println("You have selected Firepower.");
+			log.writeFile("You have selected Firepower." + "\n");
+			activeCategory = "Firepower";
 
-				} else if (value.equals("5")) {
-					System.out.println("You have selected Cargo.");
-					log.writeFile("You have selected Cargo." + "\n");
-					activeCategory = "Cargo";
-				} else {
-					System.out.println("Error! Please choose a number from 1-5.");
-					log.writeFile("You have selected an incorrect value." + "\n");
-					manuallySelectCategory();
-				}
-				s.close();
-				return activeCategory;
+		} else if (value.equals("5")) {
+			System.out.println("You have selected Cargo.");
+			log.writeFile("You have selected Cargo." + "\n");
+			activeCategory = "Cargo";
+		} else {
+			System.out.println("Error! Please choose a number from 1-5.");
+			log.writeFile("You have selected an incorrect value." + "\n");
+			manuallySelectCategory();
+		}
+		return activeCategory;
 	}
 
 	/**
@@ -302,13 +301,19 @@ public class GameLogic {
 			System.out.println("Winning card belongs to: " + players.get(highestNum).getName() + "! ");
 			log.writeFile(
 					"Winning card belongs to: " + players.get(highestNum).getName() + " - Won this round ! " + "\n");
-			// players.get(highestNum).viewTopCard().toString();
 			return players.get(highestNum);
 		}
 		return dummyPlayer;
 	}
 
-	public void winningCard(Player winningPlayer) {
+	/**
+	 * The displayWinningCard method displays the winning card to the user. The
+	 * method will call one of the subsequent nested methods to show the correct
+	 * view. These view methods are separate just for readability.
+	 * 
+	 */
+
+	public void displayWinningCard(Player winningPlayer) {
 		System.out.println("The winning card was" + "'" + winningPlayer.viewTopCard().getDescription() + "'");
 		log.writeFile("The winning card was" + "'" + winningPlayer.viewTopCard().getDescription() + "'" + "\n");
 		if (activeCategory.equals("Size")) {
@@ -365,7 +370,14 @@ public class GameLogic {
 		System.out.println("> " + "Cargo : " + winningPlayer.viewTopCard().getCargo() + " <---- ");
 	}
 
-	public void transferWinnerCards(Player winningPlayer) {
+	/**
+	 * The transferCardsToRoundWinner method transfers the cards in play to the
+	 * round winner, including any cards in the communal pile from a draw in
+	 * previous rounds.
+	 * 
+	 */
+
+	public void transferCardsToRoundWinner(Player winningPlayer) {
 		ArrayList<CardModel> lostCards = new ArrayList<CardModel>();
 		for (int i = 0; i < players.size(); i++) {
 			lostCards.add(players.get(i).loseCard());
@@ -379,6 +391,11 @@ public class GameLogic {
 		}
 		communalPile.clear();
 	}
+
+	/**
+	 * The showCurrentPlayers method shows the user the players currently in the
+	 * game.
+	 */
 
 	public void showCurrentPlayers() {
 		System.out.print("Current players: ");
@@ -394,6 +411,11 @@ public class GameLogic {
 		}
 	}
 
+	/**
+	 * The checkIfPlayersOutTheGame method checks if players still have cards. If
+	 * they have no cards left, they will be removed from the game.
+	 */
+
 	public void checkIfPlayersOutTheGame() {
 		for (int i = 0; i < players.size(); i++) {
 			if (players.get(i).getCurrentCards().size() == 0 && players.get(i) == humanPlayer) {
@@ -405,8 +427,7 @@ public class GameLogic {
 				players.remove(players.get(i));
 				i--;
 				humanPlayerOutGame = true;
-				System.out.println(
-						"\nYou are out the game! Better luck next time!");
+				System.out.println("\nYou are out the game! Better luck next time!");
 			} else if (players.get(i).getCurrentCards().size() == 0) {
 				System.out.println("\n" + players.get(i).getName() + " is out the game!");
 				if (players.get(i) == activePlayer && i < players.size() - 1) {
@@ -420,6 +441,20 @@ public class GameLogic {
 		}
 		checkIfGameHasBeenWon();
 	}
+
+	/*
+	 * The setFirstActivePlayerAndReturnTrueIfHuman method shuffles an array of
+	 * players and sets the active player to whichever player is at the 0 position.
+	 * It also returns a boolean depending on whether or not the active player is
+	 * human. This is useful information as we need to know later whether to allow a
+	 * human player to select their category or call a method that automatically
+	 * selects a category.
+	 * 
+	 * Note: this game logic is under the assumption that the game is played in a
+	 * round robin style. That is, the players are in a virtual circle and when one
+	 * player loses a round it is then the turn of the player next to them,
+	 * regardless of who won the round.
+	 */
 
 	public Boolean setActivePlayerAndReturnTrueIfHuman(Player winningPlayer) {
 		if (winningPlayer.getName() == activePlayer.getName() && winningPlayer.getName().equals("You")) {
@@ -444,6 +479,12 @@ public class GameLogic {
 		return humanIsActivePlayer;
 	}
 
+	/**
+	 * The transferardsToCommunalPile transfers the cards in play to the communal
+	 * pile. This happens in the even of a draw. Therefore the setIsDraw method is
+	 * called, which sets the isDraw Boolean to true.
+	 */
+
 	public void transferCardsToCommunalPile() {
 		checkIfPlayersOutTheGame();
 		for (int i = 0; i < players.size(); i++) {
@@ -465,6 +506,11 @@ public class GameLogic {
 
 	}
 
+	/**
+	 * The checkIfGameHasBeenWon method very simply checks if only one player is
+	 * left in the game and then sets the gameOver boolean to true.
+	 */
+
 	public void checkIfGameHasBeenWon() {
 		if (players.size() == 1) {
 			log.writeFile("The winner is " + players.get(0).getName() + "!");
@@ -472,7 +518,7 @@ public class GameLogic {
 		}
 	}
 
-	public Player returnWinningPlayer() {
+	public Player getGameWinner() {
 
 		return players.get(0);
 
