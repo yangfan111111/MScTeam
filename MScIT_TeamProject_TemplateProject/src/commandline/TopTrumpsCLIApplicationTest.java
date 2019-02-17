@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import org.junit.Assert;
 
 import org.junit.BeforeClass;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
@@ -35,8 +35,16 @@ class TopTrumpsCLIApplicationTest {
 	protected GameLogic g;
 
 	
-
 	
+	
+	@BeforeEach
+	public void setUp() {
+		sql = new SQL();
+		g = new GameLogic();
+		g.shuffledDeck=sql.cardList;
+		g.createPlayerArray();
+			
+	}
 
 	/**
 
@@ -52,71 +60,28 @@ class TopTrumpsCLIApplicationTest {
 
 
 
+	
 	@Test
-
-
-
 	public void testToEnsurePlayersHaveRecievedTheirCards() {
 
-
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffleDeck();
-
-
-
-		g.createPlayerArray();
-
-
-
+		g.players.clear();
+		g.humanPlayer.getCurrentCards().clear();
+		g.aiPlayer1.getCurrentCards().clear();
+		g.aiPlayer2.getCurrentCards().clear();
+		g.aiPlayer3.getCurrentCards().clear();
+		g.aiPlayer4.getCurrentCards().clear();
 		
-
-
-
+		g.shuffleDeck();
+		g.createPlayerArray();
 		ArrayList<CardModel> human = new ArrayList<CardModel>();
-
-
-
 		ArrayList<CardModel> ai1 = new ArrayList<CardModel>();
-
-
-
 		ArrayList<CardModel> ai2 = new ArrayList<CardModel>();
-
-
-
 		ArrayList<CardModel> ai3 = new ArrayList<CardModel>();
-
-
-
 		ArrayList<CardModel> ai4 = new ArrayList<CardModel>();
 
-
-
 		for (int i = 0; i < g.shuffledDeck.size(); i++) {
-
-
-
-			
-
-
-
 			switch (i % 5) {
-
-
-
-
-
-
-
-			case 0:
+				case 0:
 
 
 
@@ -125,72 +90,18 @@ class TopTrumpsCLIApplicationTest {
 
 
 				break;
-
-
-
-
-
-
-
 			case 1:
-
-
-
 				ai1.add(g.shuffledDeck.get(i));
-
-
-
 				break;
-
-
-
-
-
-
-
 			case 2:
-
-
-
 				ai2.add(g.shuffledDeck.get(i));
-
-
-
 				break;
-
-
-
-
-
-
-
 			case 3:
-
-
-
 				ai3.add(g.shuffledDeck.get(i));
-
-
-
 				break;
-
-
-
-
-
-
-
 			case 4:
-
-
-
 				ai4.add(g.shuffledDeck.get(i));
-
-
-
 				break;
-
-
 
 			}
 
@@ -198,32 +109,11 @@ class TopTrumpsCLIApplicationTest {
 
 		}
 
-
-
 		assertEquals(human,g.humanPlayer.getCurrentCards());
-
-
-
 		assertEquals(ai1,g.aiPlayer1.getCurrentCards());
-
-
-
 		assertEquals(ai2,g.aiPlayer2.getCurrentCards());
-
-
-
 		assertEquals(ai3,g.aiPlayer3.getCurrentCards());
-
-
-
 		assertEquals(ai4,g.aiPlayer4.getCurrentCards());
-
-
-
-
-
-
-
 	};
 
 
@@ -250,27 +140,9 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testAmountOfCardsInPlayersHandsAfterDistribution() {
 
-
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-
+		
 
 		for (Player p : g.players) {
-
-
 
 		assertTrue(p.countCurrentCards()==8);
 
@@ -305,24 +177,6 @@ class TopTrumpsCLIApplicationTest {
 
 
 	public void testfirstHumanActivePlayer() {
-
-
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-
 
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 
@@ -380,50 +234,10 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testHumanInputForSelectingACategory() {
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
-
+	
 		String testString = g.manuallySelectCategory();
 
 		assertEquals(testString,g.activeCategory);
-
-		
-
-		/*if (g.activeCategory=="Speed") {
-
-			assertTrue(g.activeCategory=="Speed");
-
-
-
-		} else if (g.activeCategory=="Size") {
-
-			assertTrue(g.activeCategory=="Size");
-
-
-
-		} else if (g.activeCategory=="Range") {
-
-			assertTrue(g.activeCategory=="Range");
-
-
-
-		} else if (g.activeCategory=="Firepower") {
-
-			assertTrue(g.activeCategory=="Firepower");
-
-
-
-		} else if (g.activeCategory=="Cargo") {
-
-			assertTrue(g.activeCategory=="Cargo");
-
-		} */
-
 				
 
 	}
@@ -452,15 +266,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testfirstActivePlayer() {
 
-
-
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
 
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 
@@ -501,30 +306,9 @@ class TopTrumpsCLIApplicationTest {
 	public void testToConfirmAIChoosesCategoryWithHighestValueOnTopCard() {
 
 
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-
-
 		g.activePlayer=g.aiPlayer2;
 
-
-
 		g.compareCards(g.createArrayOfCategoryValuesToBeCompared(g.autoSelectCategory()));
-
-
 
 		Assert.assertTrue(g.activeCategory=="Range");
 
@@ -567,23 +351,6 @@ class TopTrumpsCLIApplicationTest {
 	public void testToCheckIfTheRoundComparesTheCorrectValues() {
 
 
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-
-
 		ArrayList<Integer> input = g.createArrayOfCategoryValuesToBeCompared("Range");
 
 
@@ -600,31 +367,7 @@ class TopTrumpsCLIApplicationTest {
 
 		Assert.assertArrayEquals(user,range);
 
-
-
-
-
-		/*int size[]= {9,5,2,4,3};
-
-
-
-		int speed[]={9,5,2,4,3};
-
-
-
-		int range[]= {2,4,10,7,2};
-
-
-
-		int firepower[] = {3,3,4,3,4};
-
-
-
-		int cargo[]={0,2,6,4,0};*/
-
-
-
-		
+	
 
 
 
@@ -674,24 +417,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testToConfirmHumanHasWonTheRound() {
 
-
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-
-
 		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
 
 
@@ -734,24 +459,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testToConfirmAIPlayerHasWonRound() {
 
-
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-
-
 		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Range"));
 
 
@@ -792,24 +499,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testToConfirmCommunalPileIsEmptyIfAPlayerHasWonTheRound() {
 
-
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-
-
 		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
 
 
@@ -846,19 +535,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testActivePlayerInDrawScenario() {
 
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
 
 		g.activePlayer=g.humanPlayer;
 
@@ -900,19 +576,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testCountCardsInDrawScenario() {
 
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
 
 		g.activePlayer=g.humanPlayer;
 
@@ -966,23 +629,7 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testCommunalPileCardsInDrawScenario() {
 
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-		
-
 		ArrayList<CardModel> expectedArray = new ArrayList<CardModel>();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
 
 		g.activePlayer=g.humanPlayer;
 
@@ -995,10 +642,6 @@ class TopTrumpsCLIApplicationTest {
 		expectedArray.add(g.aiPlayer3.getCurrentCards().get(0));
 
 		expectedArray.add(g.aiPlayer4.getCurrentCards().get(0));
-
-		
-
-		// Select category : "FIREPOWER" and the round outcome should be a draw.
 
 		g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Firepower"));
 
@@ -1052,14 +695,8 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testCommunalPileInDrawScenario() {
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
-
+		
+		
 		g.activePlayer=g.humanPlayer;
 
 		// Select category : "FIREPOWER" and the round outcome should be a draw.
@@ -1098,24 +735,7 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testCountLosersCardsInWinScenario(){
 
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-
-
-
-
+	
 		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
 
 		
@@ -1170,13 +790,8 @@ class TopTrumpsCLIApplicationTest {
 
 
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
+		
+		
 
 		ArrayList<CardModel> expectedArray = new ArrayList<CardModel>();
 
@@ -1240,17 +855,7 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testCommunalPileEmptyAfterWinnerHasBeenTransferredCards() {
 
-
-
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
-
-			
+				
 
 		Player p = g.compareCards(g.createArrayOfCategoryValuesToBeCompared("Speed"));
 
@@ -1297,32 +902,8 @@ class TopTrumpsCLIApplicationTest {
 	public void testPreviousRoundDrawHumanWinsTransferBothCardsInPlayAndCardsInCommunalPile() {
 
 		ArrayList<CardModel> expectedArray = new ArrayList<CardModel>();
-
-		
-
-		SQL sql = new SQL();
-
-
-
-		GameLogic g = new GameLogic();
-
-
-
-		g.shuffledDeck=sql.cardList;
-
-
-
-		g.createPlayerArray();
-
-		
-
 		expectedArray.addAll(g.humanPlayer.getCurrentCards());
 
-				
-
-		
-
-		
 
 		g.communalPile.add(g.humanPlayer.cardsInHand.get(1));
 
@@ -1332,11 +913,7 @@ class TopTrumpsCLIApplicationTest {
 
 		g.communalPile.add(g.aiPlayer3.cardsInHand.get(1));
 
-		
-
-		
-
-				
+						
 
 		g.humanPlayer.cardsInHand.remove(1);
 
@@ -1372,23 +949,7 @@ class TopTrumpsCLIApplicationTest {
 
 		expectedArray.remove(0);
 
-		
-
-		
-
-		
-
 		assertEquals(expectedArray,g.humanPlayer.getCurrentCards());
-
-		
-
-		
-
-		
-
-		
-
-
 
 	}
 
@@ -1420,13 +981,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testIfHumanPlayerIsOutOfGame() {
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
 
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 
@@ -1470,13 +1024,7 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testIsGameOverWhenOnePlayerIsInTheGame() {
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
+		
 
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 
@@ -1524,14 +1072,7 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testIsGameOverWhenMoreThenOnePlayerIsInTheGame() {
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
-
+		
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 
 				
@@ -1580,13 +1121,7 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testNextActivePlayerWhenActivePlayerLosesARound() {
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
+		
 
 		g.activePlayer=g.humanPlayer;
 
@@ -1620,13 +1155,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testIsHumanActivePlayerWhenWinningARound() {
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
 
 		g.activePlayer=g.humanPlayer;
 
@@ -1668,13 +1196,6 @@ class TopTrumpsCLIApplicationTest {
 
 	public void testIsHumanActivePlayerWhenHumanLosesARound() {
 
-		SQL sql = new SQL();
-
-		GameLogic g = new GameLogic();
-
-		g.shuffledDeck=sql.cardList;
-
-		g.createPlayerArray();
 
 		g.activePlayer=g.humanPlayer;
 
