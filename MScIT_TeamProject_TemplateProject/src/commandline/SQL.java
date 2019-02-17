@@ -167,7 +167,7 @@ public class SQL {
 				}
 				ResultSet resultlongestGame = stmt.executeQuery("SELECT Game.GameID\r\n"+"FROM Game\r\n"+"WHERE Game.amountOfRound=(SELECT MAX(Game.amountOfRound) FROM Game)\r\n");
 				while (resultlongestGame.next()) {
-					int longestGame = resultlongestGame.getInt(1);
+					//int longestGame = resultlongestGame.getInt(1);
 					//gameStatistics += "   Longest GameID is: "+longestGame+", ";
 				}
 				ResultSet resultlongestRound = stmt.executeQuery("SELECT MAX(Game.amountOfRound)\r\n"+"FROM Game\r\n");
@@ -284,7 +284,7 @@ public class SQL {
 															   +"AND Round.isDraw = false\r\n");
 				while (resultAI4Wons.next()) {
 					int AI4Wons = resultAI4Wons.getInt(1);
-					scoresStatistics += "   AI 4 Player: "+AI4Wons+", ";
+					scoresStatistics += "   AI 4 Player: "+AI4Wons;
 				}
 				
 				resultAI4Wons.close();

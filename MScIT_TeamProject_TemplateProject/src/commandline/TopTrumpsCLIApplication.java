@@ -1,8 +1,6 @@
 package commandline;
 
 
-
-import java.util.Collections;
 import java.util.Scanner;
 
 
@@ -13,7 +11,7 @@ import java.util.Scanner;
 
 public class TopTrumpsCLIApplication {
 
-
+	private static Test_log log = new Test_log();
 
 	/**
 	 * This main method is called by TopTrumps.java when the user specifies that they want to run in
@@ -23,7 +21,7 @@ public class TopTrumpsCLIApplication {
 
 	public static void main(String[] args) {
 		boolean writeGameLogsToFile = false; // Should we write game logs to file?
-	//	if (args[0].equalsIgnoreCase("true")) writeGameLogsToFile=true; // Command line selection
+		if (args[0].equalsIgnoreCase("true")) writeGameLogsToFile=true; // Command line selection
 		SQL sql = new SQL();
 		// State
 		boolean userWantsToQuit = false; // flag to check whether the user wants to quit the application
@@ -43,14 +41,25 @@ public class TopTrumpsCLIApplication {
 			int userChoice = scanner.nextInt();
 			if(userChoice ==2) {
 				newGame();
+				if(writeGameLogsToFile) {
+					log.writeFileToTestLog();
+				}
 			} else if (userChoice ==1) {
 				System.out.println(sql.getGameStatistics());
+				if(writeGameLogsToFile) {
+					log.writeFileToTestLog();
+				}
 			} else if (userChoice ==3){
 				userWantsToQuit=true;
+				if(writeGameLogsToFile) {
+					log.writeFileToTestLog();
+				}
 			}
 				else {
 				System.out.println("Please enter either 1, 2, or 3!");
 			}
+			
+			scanner.close();
 		}
 
 	}

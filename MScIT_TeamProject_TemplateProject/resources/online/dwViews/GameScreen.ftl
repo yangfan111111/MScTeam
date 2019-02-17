@@ -186,12 +186,12 @@ html body {
 							type="button" style="display: none; font-size: 14px">SHOW WINNER</button>
 						<button id="confirmButton" type="button" class="btn btn-info btn-block"
 							onclick="createPlayers()"
-							style="width: 60; height: 40; font-size: 14px">CreatePlayers</button>
+							style="width: 60; height: 40; font-size: 14px">CREATE PLAYERS</button>
 						<button id="AISelect" class="btn btn-info btn-block" onclick="autoSelectCategory()"
 							type="button" style="display: none; font-size: 14px"><strong>NEXT AI: </strong>CATEGORY SELECTION</button>
 						<button id="nextRound" type="button" class="btn btn-info btn-block"
 							onclick="changePicture()"
-							style="width: 60; height: 40; display: none; font-size: 14px">Next Round</button>
+							style="width: 60; height: 40; display: none; font-size: 14px">NEXT ROUND</button>
 					</div>
 
 				</div>
@@ -452,10 +452,13 @@ html body {
 			// get the number of player from selection 
 			  function getPlayerNum(id) {
 			    var text = document.getElementById(id).innerText;
-			    num = text.valueOf();			    
+			    num = text.valueOf();	
+			    message = document.getElementById('selectPlayerBt');
+				message.innerHTML = num;
 			    setAINum(num);			    
 			    finalNum = (++num);
-				console.log("finalNum"+finalNum);             
+				console.log("finalNum"+finalNum);   
+				
                 for(var i=(finalNum+1);i<=5;i++){
                     hideCard(i);
                 }               
@@ -484,22 +487,28 @@ html body {
 				}
 				
 				xhr.onload = function(e) {
-					
+					playerlist = new Array(4); 
  					var responseText = xhr.response; // the text of the response 					
  					var json = JSON.parse(responseText); 	
+ 					playerlist = json;			
  					
- 					playerlist = json;					
- 					for(var i=0; i<playerlist.length;i++){						
- 						console.log(playerlist[i]);						
- 						
+ 					if(playerlist.length>0){
+ 						for(var i=0; i<playerlist.length;i++){						
+ 	 						console.log(playerlist[i]);						
+ 	 						
+ 	 					}
+ 	 					//getRoundNum();
+ 	 					//showProgress();
+
+ 	 	                hideComponent("selectPlayerBt");
+ 	 	                hideComponent("confirmButton");
+ 	 	                showComponent("start");
+ 	 					return playerlist;	
+ 					}else{
+ 						alert("Please select how many players you would like to play with ! ! ")
  					}
- 					//getRoundNum();
- 					//showProgress();
  					
- 	                hideComponent("selectPlayerBt");
- 	                hideComponent("confirmButton");
- 	                showComponent("start");
- 					return playerlist;		
+ 						
 				};
 				// We have done everything we need to prepare the CORS request, so send it
 				xhr.send();	
@@ -517,6 +526,7 @@ html body {
  					var responseText = xhr.response; // the text of the response 					
  					var json = JSON.parse(responseText); 					
  					roundNum = json;
+ 					return roundNum;
 				};
 				// We have done everything we need to prepare the CORS request, so send it
 				xhr.send();	
@@ -559,20 +569,21 @@ html body {
 			
 			function showRoundWinner(){
 				message = document.getElementById('gameProgress');
-				message.innerHTML = "Round "+(roundNum-1)+":  "+activePlayer.name + " won this round!";
+				message.innerHTML = "[Game Progress] Round "+(roundNum-1)+":  "+activePlayer.name + " won this round!";
 			}
 			
 			function showIsDraw(){
 				//getNumOfCommunalpile();
 				message = document.getElementById('gameProgress');
 				console.log("showIsDraw"+communalpileNum)
-				message.innerHTML = "Round "+roundNum+": This round was a Draw. Communal Pile now has " + communalpileNum + " cards";
+				message.innerHTML = "[Game Progress] Round "+roundNum+": This round was a Draw. Communal Pile now has " + communalpileNum + " cards";
 			}
 			
 			function showProgress(){
 				//getRoundNum();
 				message = document.getElementById('gameProgress');
-				message.innerHTML = "Round "+roundNum+": Players have drawn their cards";
+				message.innerHTML = "[Game Progress] Round "+roundNum+": Players have drawn their cards";
+				hideComponent("showWinner");
 			}
 			
 			function waitingMessage(){
@@ -593,22 +604,27 @@ html body {
  					var json = JSON.parse(responseText);
  					ishuman = json;	
  					if(ishuman){
- 						showComponent("selectButton");
- 						hideComponent('AISelect');
+ 						whenHumanSelect();
  						// get the human selection 
  						
  						
  					}else{
- 						
- 						showComponent('AISelect');
- 						hideComponent("selectButton");
+ 						whenAISelect();	
  					}
 				};
 				//getRoundNum();
 				xhr.send();
 			}
 			//----------------------------------------------------------------------------------
+			function whenHumanSelect(){
+				showComponent("selectButton");
+				hideComponent('AISelect');
+			}
 			
+			function whenAISelect(){
+				showComponent('AISelect');
+				hideComponent("selectButton");
+			}
 			//------------------------------------------------------------------------------get human selected 
 			 function getHumanSelected(id) {
 				
@@ -635,10 +651,14 @@ html body {
 					xhr.onload = function(e) {
 	 					var responseText = xhr.response; // the text of the response
 					};
-					hideComponent("selectButton");
-					showComponent("showWinner");
+					showWinnerWhenHumanSelect();
 					xhr.send();
 
+			}
+			
+			function showWinnerWhenHumanSelect(){
+				hideComponent("selectButton");
+				showComponent("showWinner");
 			}
 			
 		     //-----------------test of next round 	 
@@ -647,19 +667,15 @@ html body {
 			 	index1 = 0;
 			 	
 			 	console.log("index1:"+index1);
-			 	
 				 // get the element 
 				getCurrentPlayerList();
-				
 			 	for(var j=1;j<(playerlist.length+1);j++){
 			 		
 			 		getElementAndSetValue(index1, j);
 			 		console.log("j: "+j);
 			 	}
 			 	showComponent("cardZone");
-			 	
 			 	isHumanPlayerOutGame();
-			 	
 			 	getCurrentPlayerIndex();
 				console.log("current active: "+activePlayerIndex);
  				backColor(lastTimeId);
@@ -750,13 +766,14 @@ html body {
  					//checkisDraw();
  					getCurrentPlayerIndex();
  					getNumOfCommunalpile();
- 					getRoundNum();
+ 					//getRoundNum();
  					showProgress();
+ 					getRoundNum();
  					getCurrentPlayerList();
  					waitingMessage();
  					console.log("-----------after compare:current active: "+activePlayerIndex);
  					//console.log("isDraw111111:"+isDraw);
- 					hideComponent("showWinner");
+ 					//hideComponent("showWinner");
  					isGameOver();
  					console.log("isgameover11111"+gameOver);
  					
@@ -910,21 +927,24 @@ html body {
 	 					var responseText = xhr.response; // the text of the response
 	 					  
 	 					AISelected = responseText;
-	 					console.log(AISelected);
+	 					//console.log(AISelected);
 	 					showActiveSelected();
 	 					//getRoundNum();
 	 					
 					};
 					// We have done everything we need to prepare the CORS request, so send it
-					hideComponent("AISelect");
-					showComponent("showWinner");
+					showWinnerWhenAISelect();
 					for (var i=1; i<(finalNum+1); i++){
 				 		showCard(i);
 				 	}
 					hideCardIfplayerOutGame();
 					xhr.send();
-				 
 			 }  
+			
+			function showWinnerWhenAISelect(){
+				hideComponent("AISelect");
+				showComponent("showWinner");
+			}
 		    
 		     //------------------------------------------------
 		     // set the card data 
@@ -994,48 +1014,7 @@ html body {
             }
          //--------------------------------------------------------   
 		
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
+
 			// -----------------------------------------------------------------------
 			// This is a reusable method for creating a CORS request. Do not edit this.
 			function createCORSRequest(method, url) {

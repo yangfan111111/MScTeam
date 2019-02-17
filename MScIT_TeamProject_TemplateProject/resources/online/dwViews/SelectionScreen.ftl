@@ -66,7 +66,7 @@
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">New Game</div>
-                <div class="panel-body new-game">
+                <div class="panel-body new-game" >
                     Start a New Top Trumps Game
                 </div>
             </div>

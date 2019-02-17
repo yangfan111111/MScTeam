@@ -40,4 +40,9 @@ public class Player {
 		cardsInHand.remove(0);
 		return lostCard;
 	}
+	public ArrayList<CardModel> removeAllCardsInHand() {
+		this.cardsInHand.removeAll(cardsInHand);
+		return cardsInHand;
+		
+	}
 }

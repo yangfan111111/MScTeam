@@ -1,38 +1,34 @@
 package commandline;
-
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GameLogic {
-	private SQL sql = new SQL();
-	private Player dummyPlayer;
+	protected SQL sql = new SQL();
+	protected Player dummyPlayer;
 	protected boolean humanIsActivePlayer;
 	protected Player activePlayer;
 	protected String activeCategory;
-	private Player humanPlayer = new Player("You");
-	private Player aiPlayer1 = new Player("AI Player 1");
-	private Player aiPlayer2 = new Player("AI Player 2");
-	private Player aiPlayer3 = new Player("AI Player 3");
-	private Player aiPlayer4 = new Player("AI Player 4");
-	private Boolean isDraw = false;
-	private Boolean humanPlayerOutGame = false;
-	private Boolean gameOver = false;
-	private String value;
-	private Test_log log = new Test_log();
+	protected Player humanPlayer = new Player("You");
+	protected Player aiPlayer1 = new Player("AI player 1");
+	protected Player aiPlayer2 = new Player("AI player 2");
+	protected Player aiPlayer3 = new Player("AI player 3");
+	protected Player aiPlayer4 = new Player("AI player 4");
+	protected Boolean isDraw = false;
+	protected Boolean humanPlayerOutGame = false;
+	protected Boolean gameOver = false;
+	protected String value;
+	protected Test_log log = new Test_log();
 	// Cards in play for each Round
-	ArrayList<Integer> topCards = new ArrayList<Integer>();
+	protected ArrayList<Integer> topCards = new ArrayList<Integer>();
 	// variable to store an array of player objects
-	public ArrayList<Player> playersToShuffle = new ArrayList<Player>();
-	public ArrayList<Player> players = new ArrayList<Player>();
-	private ArrayList<CardModel> shuffledDeck = new ArrayList<CardModel>();
+	protected ArrayList<Player> playersToShuffle = new ArrayList<Player>();
+	protected ArrayList<Player> players = new ArrayList<Player>();
+	protected ArrayList<CardModel> shuffledDeck = new ArrayList<CardModel>();
 	// variable to store top card for each player per round
 	protected ArrayList<Integer> cardsInPlay = new ArrayList<Integer>();
 	// variable to store all cards in temp arraylist if there is a draw .
-	private ArrayList<CardModel> communalPile = new ArrayList<CardModel>();
+	protected ArrayList<CardModel> communalPile = new ArrayList<CardModel>();
 
 	/**
 	 * The shuffleDeck method creates a shuffled deck of virtual cards.
@@ -225,6 +221,7 @@ public class GameLogic {
 					log.writeFile("You have selected an incorrect value." + "\n");
 					manuallySelectCategory();
 				}
+				s.close();
 				return activeCategory;
 	}
 

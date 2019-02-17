@@ -100,7 +100,7 @@ public class GameController {
 			System.out.println("\nGame End\n");
 			System.out.println("Overall winner was: " + theModel.returnWinningPlayer().getName() + "!\n");
 			System.out.println(sql.getAllPlayersScores());
-			log.writeFileToTestLog();
+			//log.writeFileToTestLog();
 			sql.setGameDataToSQL(gameID, roundID, theModel.returnWinningPlayer().getName(), drawNum,
 					theModel.humanIsActivePlayer);
 		}

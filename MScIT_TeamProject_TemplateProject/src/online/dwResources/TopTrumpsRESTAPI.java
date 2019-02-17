@@ -5,17 +5,17 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import commandline.CardModel;
 import commandline.Player;
 import commandline.SQL;
-import commandline.Test_log;
-import online.configuration.TopTrumpsJSONConfiguration;
-import commandline.GameLogic;
 
-import javax.validation.constraints.Null;
+import online.configuration.TopTrumpsJSONConfiguration;
+
+
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+
 
 @Path("/toptrumps") // Resources specified here should be hosted at http://localhost:7777/toptrumps
 @Produces(MediaType.APPLICATION_JSON) // This resource returns JSON content
@@ -33,7 +33,7 @@ import java.util.List;
 public class TopTrumpsRESTAPI {
 
 	private SQL sql = new SQL();
-	private Test_log log = new Test_log();
+	//private Test_log log = new Test_log();
 	private ArrayList<CardModel> shuffledDeck = new ArrayList<CardModel>();
 	protected Player activePlayer;
 	int cardsPerPlayer = 0;
@@ -45,7 +45,7 @@ public class TopTrumpsRESTAPI {
 	private Player dummyPlayer;
 	private Boolean isHumanPlayerOutGame = false;
 	private Boolean gameOver = false;
-	private Player loser = new Player("loser");
+	//private Player loser = new Player("loser");
 	private Player roundWinner;
 //	private ArrayList<Player> players = new ArrayList<Player>();
 //	private ArrayList<Player> maximumPlayers = new ArrayList<Player>();
@@ -80,7 +80,7 @@ public class TopTrumpsRESTAPI {
 		// ----------------------------------------------------
 		// Add relevant initalization here
 		// ----------------------------------------------------
-		System.err.println("restart!!!!!!!!!!!!!!");
+		System.err.println("Hello TopTrumps!!!!!!!!!!!!!!");
 	}
 
 	// ----------------------------------------------------
@@ -92,17 +92,12 @@ public class TopTrumpsRESTAPI {
 	@Path("/setPlayerNum")
 	public int setPlayerNum(@QueryParam("num") int num) throws IOException {
 		
+		
 		this.aiPlayerNum = num;
 		
 		System.err.println("aiPlayer: "+aiPlayerNum);
 		
 		return this.aiPlayerNum;
-	}
-	// init the loser
-	public void setLoserPlayer() {
-		
-		loser.setCurrentCards(null);
-
 	}
 
 	/*
@@ -157,7 +152,6 @@ public class TopTrumpsRESTAPI {
 	public ArrayList<Player> createPlayers() throws IOException {
 	
 		int oneHumanPlayer = 1;
-
 		players = new ArrayList<Player>();
 		maximumPlayers = new ArrayList<Player>();
 		//shuffledDeck = shuffleDeck();
@@ -170,11 +164,13 @@ public class TopTrumpsRESTAPI {
 		}
 		humanPlayer = players.get(0);
 		jj=0;
-		roundNum=0;
+		roundNum=1;
+		gameOver = false;
+		isHumanPlayerOutGame = false;
 		communalPile = new ArrayList<CardModel>();
-		
 		distributeCards();
 		System.err.println(players.get(1).getCurrentCards());
+		aiPlayerNum = 0;
 		//setLoserPlayer();
 		return players;
 	}
@@ -198,6 +194,7 @@ public class TopTrumpsRESTAPI {
 		for(Player player: players) {
 			if (activePlayer.name.equals(player.name)) {	
 			 index = players.indexOf(player);
+			 roundWinner = activePlayer;
 			}
 		}
 		return index;

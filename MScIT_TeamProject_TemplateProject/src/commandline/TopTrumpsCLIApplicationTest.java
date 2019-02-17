@@ -617,7 +617,7 @@ class TopTrumpsCLIApplicationTest {
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 		
 		
-		g.humanPlayer.removeAllCard();
+		g.humanPlayer.removeAllCardsInHand();
 		g.checkIfPlayersOutTheGame();
 		assertTrue(g.humanPlayerOutGame==true);
 		assertFalse(g.players.contains(g.humanPlayer));
@@ -641,10 +641,10 @@ class TopTrumpsCLIApplicationTest {
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 		
 		
-		g.aiPlayer1.removeAllCard();
-		g.aiPlayer2.removeAllCard();
-		g.aiPlayer3.removeAllCard();
-		g.aiPlayer4.removeAllCard();
+		g.aiPlayer1.removeAllCardsInHand();
+		g.aiPlayer2.removeAllCardsInHand();
+		g.aiPlayer3.removeAllCardsInHand();
+		g.aiPlayer4.removeAllCardsInHand();
 		g.checkIfPlayersOutTheGame();
 		g.checkIfGameHasBeenWon();
 		assertTrue(g.gameOver==true);
@@ -666,8 +666,8 @@ class TopTrumpsCLIApplicationTest {
 		g.createPlayerArray();
 		g.setFirstActivePlayerAndReturnTrueIfHuman();
 				
-		g.aiPlayer1.removeAllCard();
-		g.aiPlayer2.removeAllCard();
+		g.aiPlayer1.removeAllCardsInHand();
+		g.aiPlayer2.removeAllCardsInHand();
 				
 		g.checkIfPlayersOutTheGame();
 		assertTrue(g.gameOver==false);

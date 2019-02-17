@@ -64,7 +64,7 @@
 		
 
 		<div class="panel panel-default">
-        	<div class="panel-heading" onclick="javascript:window.location.href='http://localhost:7777/toptrumps/game'">START NEW GAME</div>
+        	<div class="panel-heading" onclick="javascript:window.location.href='http://localhost:7777/toptrumps/'">RETURN TO HOMEPAGE</div>
                 <div id="statis" class="panel-body new-game">
                     
                 </div>
